@@ -12,10 +12,10 @@ sudo apt install ansible
 
 ## Running the playbooks to configure your system
 
-Invoke the following as yourself, the primary use. Not `root`. Change `local_username` with your own username.
+Invoke the following as yourself, the primary use. Not `root`. Change the value of `local_username` with your own username.
 
 ```
-sudo ansible-playbook site.yml -e "{ laptop_mode: True }" -e "local_username=USER"
+ansible-playbook site.yml -e "{ laptop_mode: True }" -e "local_username=$(logname)" -K
 ```
 
 ### What is this `laptop_mode`?
