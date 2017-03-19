@@ -9,7 +9,7 @@
     - name: copy systemd file (2/5)
       copy:
         src: /usr/share/systemd/tmp.mount
-        dest: /etc/systemd/system/tmp.mount
+        dest: /lib/systemd/system/tmp.mount
         remote_src: True
 
     - name: create dir /etc/systemd/system/tmp.mount.d (3/5)
@@ -25,10 +25,11 @@
           Options=mode=1777,strictatime,nosuid,nodev,size=1073741824
 
     - name: start and enable tmp.mount on boot (5/5)
-      service:
+      systemd:
         name: tmp.mount
         enabled: yes
         state: started
+        daemon_reload: yes
 
 - name: enable ufw firewall but allow ssh
   ufw:
