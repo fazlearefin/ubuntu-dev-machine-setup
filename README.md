@@ -15,7 +15,7 @@ sudo apt install ansible
 Invoke the following as yourself, the primary use. Not `root`. Change `local_username` with your own username.
 
 ```
-ansible-playbook site.yml -e "{ laptop_mode: True }" -e "local_username=USER"
+sudo ansible-playbook site.yml -e "{ laptop_mode: True }" -e "local_username=USER"
 ```
 
 ### What is this `laptop_mode`?
