@@ -1,0 +1,22 @@
+---
+
+zsh_packages:
+  - zsh
+  - zsh-doc
+
+zsh_antigen_url: "https://cdn.rawgit.com/zsh-users/antigen/v1.4.1/bin/antigen.zsh"
+
+# adobe source code pro fonts
+zsh_adobe_source_code_pro_font_url: "https://github.com/adobe-fonts/source-code-pro/archive/2.030R-ro/1.050R-it.tar.gz"
+zsh_adobe_source_code_pro_font_dir: source-code-pro-2.030R-ro-1.050R-it
+zsh_adobe_source_code_pro_font_file: "{{ zsh_adobe_source_code_pro_font_dir }}.tar.gz"
+
+# powerline fonts
+zsh_powerline_font_url: "https://github.com/powerline/fonts.git"
+zsh_powerline_font_dir: powerline_fonts
+
+# awesome fonts
+zsh_awesome_font_url: "https://github.com/gabrielelana/awesome-terminal-fonts.git"
+zsh_awesome_font_git_version: patching-strategy
+zsh_awesome_font_dir: awesome_terminal_fonts
+...

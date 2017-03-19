@@ -1,0 +1,119 @@
+---
+
+- block:
+    - name: clear the existing /tmp dir (1/5)
+      shell: "/bin/rm -rf *"
+      args:
+        chdir: /tmp
+
+    - name: copy systemd file (2/5)
+      copy:
+        src: /usr/share/systemd/tmp.mount
+        dest: /etc/systemd/system/tmp.mount
+        remote_src: True
+
+    - name: create dir /etc/systemd/system/tmp.mount.d (3/5)
+      file:
+        path: /etc/systemd/system/tmp.mount.d
+        state: directory
+
+    - name: create tmp.mount custom options file (4/5)
+      copy:
+        dest: /etc/systemd/system/tmp.mount.d/options.conf
+        content: |
+          [Mount]
+          Options=mode=1777,strictatime,nosuid,nodev,size=1073741824
+
+    - name: start and enable tmp.mount on boot (5/5)
+      service:
+        name: tmp.mount
+        enabled: yes
+        state: started
+
+- name: enable ufw firewall but allow ssh
+  ufw:
+    rule: limit
+    port: ssh
+    proto: tcp
+    state: enabled
+
+- name: disable system crash reports
+  lineinfile:
+    dest: /etc/default/apport
+    regexp: "^enabled=(0|1)"
+    line: enabled=0
+    state: present
+
+- name: tune system swappiness
+  sysctl:
+    name: vm.swappiness
+    value: 1
+    state: present
+
+- name: perform a dist upgrade
+  apt:
+    update_cache: yes
+    upgrade: dist
+
+- name: install archiving tools
+  apt:
+    name: "{{ item }}"
+    state: latest
+  with_items: "{{ base_archiving_tools }}"
+
+- name: install system tools
+  apt:
+    name: "{{ item }}"
+    state: latest
+  with_items: "{{ base_system_tools }}"
+
+- name: install system tools for laptop
+  apt:
+    name: "{{ item }}"
+    state: latest
+  with_items: "{{ base_system_tools_laptop }}"
+  when: laptop_mode
+
+- name: install developer tools
+  apt:
+    name: "{{ item }}"
+    state: latest
+  with_items: "{{ base_developer_tools }}"
+
+- name: install download tools
+  apt:
+    name: "{{ item }}"
+    state: latest
+  with_items: "{{ base_download_tools }}"
+
+- name: install virtualbox extensions pack
+  shell: vboxmanage extpack install --replace /usr/share/virtualbox-ext-pack/Oracle*
+
+- name: install google chrome
+  apt:
+    deb: "{{ base_google_chrome_url }}"
+
+- name: install bash git prompt
+  git:
+    repo: "{{ base_git_bash_prompt_url }}"
+    dest: "~{{ local_username }}/.bash-helpers/bash-git-prompt"
+    clone: yes
+    update: yes
+  become: yes
+  become_user: "{{ local_username }}"
+
+- name: install qownnotes markdown notepad
+  apt:
+    deb: "{{ base_qownnotes_url }}"
+
+- block:
+    - name: install openssh-server package (1/2)
+      apt:
+        name: "{{ base_openssh_server.apt_package }}"
+        state: latest
+    - name: enable and start ssh (2/2)
+      service:
+        name: "{{ base_openssh_server.service }}"
+        state: started
+        enabled: yes
+  when: not laptop_mode

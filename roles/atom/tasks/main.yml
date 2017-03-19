@@ -1,0 +1,11 @@
+---
+
+- name: download and install atom editor
+  apt:
+    deb: "{{ atom_package_url }}"
+
+- name: install atom editor packages
+  command: apm install {{ item }}
+  with_items: "{{ atom_packages }}"
+  become: yes
+  become_user: "{{ local_username }}"

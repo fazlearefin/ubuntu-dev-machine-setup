@@ -1,0 +1,7 @@
+---
+- include: base.yml
+- include: atom.yml
+- include: vim.yml
+- include: zsh.yml
+- include: post_install.yml
+...

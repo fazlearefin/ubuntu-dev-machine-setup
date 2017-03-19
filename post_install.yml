@@ -1,0 +1,12 @@
+---
+
+- hosts: localhost
+  tasks:
+    - name: display post install message
+      debug:
+        msg:
+          - 'Things left to do:'
+          - '- enable dash to dock gnome plugin in gnome tweal tool'
+          - '- install SpaceVim plugins: vim "+call dein#install()" +qa'
+          - '- git clone the dotfiles repo'
+...
