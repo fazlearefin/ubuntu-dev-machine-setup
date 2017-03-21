@@ -9,4 +9,5 @@
           - '- enable dash to dock gnome plugin in gnome tweal tool'
           - '- install SpaceVim plugins: vim "+call dein#install()" +qa'
           - '- git clone the dotfiles repo'
+          - '- add noatime option for your SSD mounts points in /etc/fstab'
 ...
