@@ -22,7 +22,7 @@
         dest: /etc/systemd/system/tmp.mount.d/options.conf
         content: |
           [Mount]
-          Options=mode=1777,strictatime,nosuid,nodev,size=1073741824
+          Options=mode=1777,strictatime,nosuid,nodev,size=512M
 
     - name: start and enable tmp.mount on boot (5/5)
       systemd:
