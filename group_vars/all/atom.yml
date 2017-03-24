@@ -36,7 +36,7 @@ atom_packages:
   - linter-ui-default
   - merge-conflicts
   - script
-  - terminal-panel
+  - terminal-plus
   - todo-show
   - vim-mode-plus
   - vim-mode-plus-ex-mode
