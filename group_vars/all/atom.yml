@@ -35,8 +35,8 @@ atom_packages:
   - linter-shellcheck
   - linter-ui-default
   - merge-conflicts
+  - platformio-ide-terminal
   - script
-  - terminal-plus
   - todo-show
   - vim-mode-plus
   - vim-mode-plus-ex-mode
