@@ -35,7 +35,9 @@ atom_packages:
   - linter-shellcheck
   - linter-ui-default
   - merge-conflicts
+  - minimap
   - platformio-ide-terminal
+  - project-manager
   - script
   - todo-show
   - vim-mode-plus
