@@ -11,16 +11,10 @@
     name: "{{ local_username }}"
     shell: /bin/zsh
 
-- block:
-    - name: create antigen directory (1/2)
-      file:
-        path: "~{{ local_username }}/.antigen"
-        state: directory
-
-    - name: install antigen (2/2)
-      get_url:
-        dest: "~{{ local_username }}/.antigen/antigen.zsh"
-        url: "{{ zsh_antigen_url }}"
+- name: install antigen
+  git:
+    dest: "~{{ local_username }}/.antigen"
+    repo: "{{ zsh_antigen_url }}"
   become: yes
   become_user: "{{ local_username }}"
 
@@ -79,7 +73,7 @@
         src: "{{ item }}"
         dest: "~{{ local_username }}/.local/share/fonts/"
       with_fileglob:
-        - "/tmp/{{ zsh_awesome_font_dir }}/patched/*.ttf" 
+        - "/tmp/{{ zsh_awesome_font_dir }}/patched/*.ttf"
 
   become: yes
   become_user: "{{ local_username }}"
