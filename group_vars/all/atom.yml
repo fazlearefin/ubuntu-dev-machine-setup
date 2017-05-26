@@ -15,6 +15,7 @@ atom_packages:
   - auto-detect-indentation
   - busy-signal
   - emmet
+  - ex-mode
   - file-icons
   - fonts
   - git-blame
@@ -41,6 +42,5 @@ atom_packages:
   - script
   - todo-show
   - vim-mode-plus
-  - vim-mode-plus-ex-mode
 
 ...
