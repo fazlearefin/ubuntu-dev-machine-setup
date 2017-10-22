@@ -19,9 +19,9 @@ base_system_tools:
   - bleachbit
   - blueman
   - fatrace
-  - gnome-shell-extension-dashtodock
+  #- gnome-shell-extension-dashtodock
   #- gnome-shell-extension-redshift
-  - gnome-shell-extension-weather
+  #- gnome-shell-extension-weather
   - progress
   - pwgen
   #- syncthing
@@ -93,7 +93,7 @@ base_developer_tools:
   - socat
   - sshfs
   - sshpass
-  - terminix  # will most likely be renamed to Tilix later
+  - tilix
   - tmux
   - tree
   - uget
