@@ -6,7 +6,6 @@
       debug:
         msg:
           - 'Things left to do:'
-          - '- enable dash to dock gnome plugin in gnome tweal tool'
           - '- git clone the dotfiles repo'
           - '- add noatime option for your SSD mounts points in /etc/fstab'
           - '- Reboot your system'
