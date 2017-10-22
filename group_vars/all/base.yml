@@ -60,7 +60,6 @@ base_developer_tools:
   - kwalify
   - makeself
   - meld
-  - mitmproxy
   - most
   - netcat
   - nmap
