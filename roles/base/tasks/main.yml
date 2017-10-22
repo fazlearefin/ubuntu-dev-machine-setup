@@ -1,5 +1,6 @@
 ---
 
+# mount /tmp on tmpfs
 - block:
     - name: clear the existing /tmp dir (1/5)
       shell: "/bin/rm -rf *"
