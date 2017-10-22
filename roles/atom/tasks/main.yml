@@ -1,5 +1,10 @@
 ---
 
+- name: install dependency package for atom editor
+  apt:
+    name: gconf2
+    state: present
+
 - name: download and install atom editor
   apt:
     deb: "{{ atom_package_url }}"
