@@ -29,3 +29,7 @@ ansible-playbook site.yml -e "{ laptop_mode: True }" -e "local_username=$(lognam
 
 - will not install some packages like `powertop` for battery economy
 - will install and configure ssh server
+
+## Pull Requests and Forks
+
+You are more than welcome to send any pull requests. However, the interntion of this repo is to suit my development needs. So it might be better if you *fork* this repo instead for your own needs and personalization.
