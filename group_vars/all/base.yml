@@ -17,7 +17,7 @@ base_archiving_tools:
 
 base_system_tools:
   - bleachbit
-  - blueman
+  #- blueman
   - fatrace
   #- gnome-shell-extension-dashtodock
   #- gnome-shell-extension-redshift
