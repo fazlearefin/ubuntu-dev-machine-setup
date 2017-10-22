@@ -22,6 +22,7 @@ base_system_tools:
   #- gnome-shell-extension-dashtodock
   #- gnome-shell-extension-redshift
   #- gnome-shell-extension-weather
+  - gnome-tweak-tool
   - progress
   - pwgen
   #- syncthing
