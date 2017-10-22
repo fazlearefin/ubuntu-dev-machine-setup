@@ -113,11 +113,11 @@
       lineinfile:
         line: load-module module-switch-on-connect
         state: present
-        dest: /tmp/default.pa
+        dest: /etc/pulse/default.pa
 
     - name: fix bluetooth a2dp profile (2/2)
       blockinfile:
-        dest: /tmp/client.conf
+        dest: /etc/bluetooth/client.conf
         state: present
         create: yes
         block: |
