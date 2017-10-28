@@ -48,7 +48,7 @@ Summary of packages that get installed and configured:
 - zsh shell, antigen plugin manager, oh-my-zsh plugins
 - Powerline Fonts
 - Reduce swappiness for better perfomance
-- Mount /tmp on tmpfs
+- Mount `/tmp` on tmpfs
 - Enable ufw firewall and configure for incoming ssh
 
 ## Pull Requests and Forks
