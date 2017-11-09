@@ -84,6 +84,7 @@ base_developer_tools:
   - python-pep8
   - python-pep8-naming
   - python-pip
+  - python-pygments
   - ranger
   - recode
   - ruby
