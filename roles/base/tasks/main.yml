@@ -108,23 +108,23 @@
   apt:
     deb: "{{ base_qownnotes_url }}"
 
-- block:
-    - name: fix bluetooth a2dp profile (1/2)
-      lineinfile:
-        line: load-module module-switch-on-connect
-        state: present
-        dest: /etc/pulse/default.pa
-
-    - name: fix bluetooth a2dp profile (2/2)
-      blockinfile:
-        dest: /etc/bluetooth/client.conf
-        state: present
-        create: yes
-        block: |
-          autospawn = no
-          daemon-binary = /bin/true
-        owner: gdm
-        group: gdm
+#- block:
+#    - name: fix bluetooth a2dp profile (1/2)
+#      lineinfile:
+#        line: load-module module-switch-on-connect
+#        state: present
+#        dest: /etc/pulse/default.pa
+#
+#    - name: fix bluetooth a2dp profile (2/2)
+#      blockinfile:
+#        dest: /etc/bluetooth/client.conf
+#        state: present
+#        create: yes
+#        block: |
+#          autospawn = no
+#          daemon-binary = /bin/true
+#        owner: gdm
+#        group: gdm
 
 - block:
     - name: install openssh-server package (1/2)
