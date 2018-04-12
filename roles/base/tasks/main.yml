@@ -104,9 +104,9 @@
   become: yes
   become_user: "{{ local_username }}"
 
-- name: install qownnotes markdown notepad
-  apt:
-    deb: "{{ base_qownnotes_url }}"
+#- name: install qownnotes markdown notepad
+#  apt:
+#    deb: "{{ base_qownnotes_url }}"
 
 #- block:
 #    - name: fix bluetooth a2dp profile (1/2)
