@@ -60,6 +60,10 @@ Summary of packages that get installed and configured:
 - Mount `/tmp` on tmpfs
 - Enable ufw firewall and configure for incoming ssh
 
+## Known Issues
+
+Installation of Atom Editor might fail on first run of the Ansible playbook. In case you get Atom Editor installation error, simply run the playbook again. Most of the tasks are idempotent, so running the playbook multiple times is safe.
+
 ## Pull Requests and Forks
 
 You are more than welcome to send any pull requests. However, the interntion of this repo is to suit my development needs. So it might be better if you *fork* this repo instead for your own needs and personalization.
