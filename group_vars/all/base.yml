@@ -100,7 +100,7 @@ base_developer_tools:
   - uget
   - vagrant
   - virtualbox
-  - virtualbox-ext-pack
+#  - virtualbox-ext-pack
   - virtualenv
   - virtualenvwrapper
   - xclip

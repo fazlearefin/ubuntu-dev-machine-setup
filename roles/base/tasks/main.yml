@@ -88,8 +88,8 @@
     state: latest
   with_items: "{{ base_download_tools }}"
 
-- name: install virtualbox extensions pack
-  shell: echo 'y' | vboxmanage extpack install --replace /usr/share/virtualbox-ext-pack/Oracle*
+#- name: install virtualbox extensions pack
+#  shell: echo 'y' | vboxmanage extpack install --replace /usr/share/virtualbox-ext-pack/Oracle*
 
 - name: install google chrome
   apt:
