@@ -91,6 +91,12 @@
 #- name: install virtualbox extensions pack
 #  shell: echo 'y' | vboxmanage extpack install --replace /usr/share/virtualbox-ext-pack/Oracle*
 
+- name: install media packages
+  apt:
+    name: "{{ item }}"
+    state: latest
+  with_items: "{{ base_media_tools }}"
+
 - name: install google chrome
   apt:
     deb: "{{ base_google_chrome_url }}"
