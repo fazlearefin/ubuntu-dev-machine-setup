@@ -87,6 +87,7 @@ base_developer_tools:
   - python-pygments
   - ranger
   - recode
+  - rename
   - ruby
   - ruby-dev
   - shellcheck
