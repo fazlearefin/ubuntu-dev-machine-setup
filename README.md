@@ -59,6 +59,7 @@ Summary of packages that get installed and configured:
 - Reduce swappiness for better perfomance
 - Mount `/tmp` on tmpfs
 - Enable ufw firewall and configure for incoming ssh
+- Install Janus Vim Distribution
 
 ## Known Issues
 
