@@ -6,16 +6,11 @@
     state: latest
   with_items: "{{ vim_apt_packages }}"
 
-#- block:
-#    - name: install spacevim (1/2)
-#      shell: "curl -sLf {{ vim_spacevim_url }} | bash -s -- install vim"
-#
-#    - name: create spacevim customization directory (2/2)
-#      file:
-#        dest: "~{{ local_username }}/.SpaceVim.d"
-#        state: directory
-#
-#  become: yes
-#  become_user: "{{ local_username }}"
+- block:
+    - name: install Janus Vim Distribution
+      shell: "curl -sLf {{ vim_janusvim_url }} | bash"
+
+  become: yes
+  become_user: "{{ local_username }}"
 
 ...

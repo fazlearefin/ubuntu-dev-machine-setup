@@ -3,6 +3,6 @@
 vim_apt_packages:
   - vim-gnome  # this one has +lua enabled
 
-#vim_spacevim_url: "https://spacevim.org/install.sh"
+vim_janusvim_url: "https://bit.ly/janus-bootstrap"
 
 ...
