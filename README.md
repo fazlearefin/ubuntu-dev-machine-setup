@@ -68,3 +68,11 @@ Installation of Atom Editor might fail on first run of the Ansible playbook. In 
 ## Pull Requests and Forks
 
 You are more than welcome to send any pull requests. However, the interntion of this repo is to suit my development needs. So it might be better if you *fork* this repo instead for your own needs and personalization.
+
+## Donations
+
+Bitcoin (BTC): `38uvDLV4GzcAB7qMUEM5chqivESqNPWPZW`
+
+Litecoin (LTC):`MRAwH2WHUprCn5RcpKWKMkfaUJicTpsbWr` or `3Jxny96KXhzmya9iiSWyY7RB9c8AXRGN3n`
+
+
