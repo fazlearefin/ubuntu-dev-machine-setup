@@ -88,9 +88,6 @@
     state: latest
   with_items: "{{ base_download_tools }}"
 
-#- name: install virtualbox extensions pack
-#  shell: echo 'y' | vboxmanage extpack install --replace /usr/share/virtualbox-ext-pack/Oracle*
-
 - name: install media packages
   apt:
     name: "{{ item }}"
@@ -131,6 +128,17 @@
 #          daemon-binary = /bin/true
 #        owner: gdm
 #        group: gdm
+
+- block:
+    - name: install virtualization tools
+      apt:
+        name: "{{ item }}"
+        state: latest
+      with_items: "{{ base_virtualization_tools }}"
+
+    - name: install virtualbox extensions pack
+      shell: echo 'y' | vboxmanage extpack install --replace /usr/share/virtualbox-ext-pack/Oracle*
+  when: not virtual_machine_mode
 
 - block:
     - name: install openssh-server package (1/2)
