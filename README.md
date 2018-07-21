@@ -24,7 +24,7 @@ cd ubuntu-dev-machine-setup
 Invoke the following as yourself, the primary use. Not `root`.
 
 ```
-ansible-playbook site.yml -e "{ laptop_mode: True }" -e "local_username=$(logname)" -K
+ansible-playbook site.yml -e "{ laptop_mode: True }" -e "{ virtual_machine_mode: False }" -e "local_username=$(logname)" -K
 ```
 
 ### What is this `laptop_mode`?
@@ -38,6 +38,14 @@ ansible-playbook site.yml -e "{ laptop_mode: True }" -e "local_username=$(lognam
 
 - will not install some packages like `powertop` for battery economy
 - will install and configure ssh server
+
+### What is this `virtual_machine_mode`?
+
+This is to tell if you are configuring Ubuntu on a virtual machine.
+
+#### Setting this to `True`
+
+- will not install virtualbox and vagrant
 
 ## What gets installed and cofigured?
 
@@ -74,5 +82,3 @@ You are more than welcome to send any pull requests. However, the interntion of 
 Bitcoin (BTC): `38uvDLV4GzcAB7qMUEM5chqivESqNPWPZW`
 
 Litecoin (LTC):`MRAwH2WHUprCn5RcpKWKMkfaUJicTpsbWr` or `3Jxny96KXhzmya9iiSWyY7RB9c8AXRGN3n`
-
-

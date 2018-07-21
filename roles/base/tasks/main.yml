@@ -132,6 +132,13 @@
 #        owner: gdm
 #        group: gdm
 
+- name: install virtualization tools
+  apt:
+    name: "{{ item }}"
+    state: latest
+    with_items: "{{ base_virtualization_tools }}"
+  when: not virtual_machine_mode
+
 - block:
     - name: install openssh-server package (1/2)
       apt:

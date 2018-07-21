@@ -99,13 +99,15 @@ base_developer_tools:
   - tmux
   - tree
   - uget
-  - vagrant
-  - virtualbox
-#  - virtualbox-ext-pack
   - virtualenv
   - virtualenvwrapper
   - xclip
   - zeal
+
+base_virtualization_tools:
+  - vagrant
+  - virtualbox
+  - virtualbox-ext-pack
 
 base_media_tools:
   - ffmpeg
