@@ -75,7 +75,7 @@ Installation of Atom Editor might fail on first run of the Ansible playbook. In 
 
 ## Pull Requests and Forks
 
-You are more than welcome to send any pull requests. However, the interntion of this repo is to suit my development needs. So it might be better if you *fork* this repo instead for your own needs and personalization.
+You are more than welcome to send any pull requests. However, the intention of this repo is to suit my development needs. So it might be better if you *fork* this repo instead for your own needs and personalization.
 
 ## Donations
 
