@@ -45,7 +45,7 @@ This is to tell if you are configuring Ubuntu on a virtual machine.
 
 #### Setting this to `True`
 
-- will not install virtualbox and vagrant
+- will not install docker, virtualbox and vagrant
 
 ## What gets installed and cofigured?
 
@@ -57,7 +57,7 @@ Summary of packages that get installed and configured:
 - Customization tools like gnome-tweak-tool, etc
 - Power management tools like cpufrequtils, powertop, etc
 - Download utils like aria2, wget, axel, etc
-- Developer tools like awscli, httpie, parallel-ssh, clusterssh, vagrant, virtualbox, etc
+- Developer tools like awscli, httpie, parallel-ssh, clusterssh, docker, vagrant, virtualbox, etc
 - Google Chrome
 - Atom Editor and Atom packages
 - Git Bash Prompt
