@@ -114,6 +114,7 @@ base_virtualization_tools:
 base_media_tools:
   - ffmpeg
   - gimp
+  - libimage-exiftool-perl
   - mediainfo
   - soundconverter
   - vlc
