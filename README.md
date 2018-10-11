@@ -59,7 +59,7 @@ Summary of packages that get installed and configured:
 - Download utils like aria2, wget, axel, etc
 - Developer tools like awscli, httpie, parallel-ssh, clusterssh, docker, vagrant, virtualbox, etc
 - Google Chrome
-- Atom Editor and Atom packages
+- Visual Studio Code and some popular extensions
 - Git Bash Prompt
 - ssh server
 - zsh shell, antigen plugin manager, oh-my-zsh plugins
@@ -71,7 +71,7 @@ Summary of packages that get installed and configured:
 
 ## Known Issues
 
-Installation of Atom Editor might fail on first run of the Ansible playbook. In case you get Atom Editor installation error, simply run the playbook again. Most of the tasks are idempotent, so running the playbook multiple times is safe.
+None
 
 ## Pull Requests and Forks
 
