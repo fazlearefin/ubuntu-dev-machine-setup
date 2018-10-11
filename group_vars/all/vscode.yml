@@ -1,7 +1,6 @@
 ---
 
-vscode_package_url: "https://vscode-update.azurewebsites.net/latest/linux-deb-x64/stable
-"
+vscode_package_url: "https://vscode-update.azurewebsites.net/latest/linux-deb-x64/stable"
 
 vscode_extensions:
   - donjayamanne.githistory
