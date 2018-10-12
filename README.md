@@ -71,7 +71,7 @@ Summary of packages that get installed and configured:
 
 ## Known Issues
 
-None
+If the ansible playbook halts after completing a few tasks, simply run the playbook again. There is no hard running the playbook multiple times since most of the tasks are idempotent.
 
 ## Pull Requests and Forks
 
