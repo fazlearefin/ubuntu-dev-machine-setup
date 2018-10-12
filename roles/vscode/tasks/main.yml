@@ -5,7 +5,7 @@
     deb: "{{ vscode_package_url }}"
 
 - name: install some popular vscode extensions
-  command: code --install-extension --force {{ item }}
+  command: code --install-extension {{ item }}
   with_items: "{{ vscode_extensions }}"
   become: yes
   become_user: "{{ local_username }}"
