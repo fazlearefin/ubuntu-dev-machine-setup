@@ -43,6 +43,7 @@ base_developer_tools:
   - android-tools-fastboot
   - ansible
   - awscli
+  - cloc
   - clusterssh
   - colordiff
   - curl
