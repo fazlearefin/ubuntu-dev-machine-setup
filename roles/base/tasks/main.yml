@@ -59,40 +59,34 @@
 
 - name: install archiving tools
   apt:
-    name: "{{ item }}"
+    name: "{{ base_archiving_tools }}"
     state: latest
-  with_items: "{{ base_archiving_tools }}"
 
 - name: install system tools
   apt:
-    name: "{{ item }}"
+    name: "{{ base_system_tools }}"
     state: latest
-  with_items: "{{ base_system_tools }}"
 
 - name: install system tools for laptop
   apt:
-    name: "{{ item }}"
+    name: "{{ base_system_tools_laptop }}"
     state: latest
-  with_items: "{{ base_system_tools_laptop }}"
   when: laptop_mode
 
 - name: install developer tools
   apt:
-    name: "{{ item }}"
+    name: "{{ base_developer_tools }}"
     state: latest
-  with_items: "{{ base_developer_tools }}"
 
 - name: install download tools
   apt:
-    name: "{{ item }}"
+    name: "{{ base_download_tools }}"
     state: latest
-  with_items: "{{ base_download_tools }}"
 
 - name: install media packages
   apt:
-    name: "{{ item }}"
+    name: "{{ base_media_tools }}"
     state: latest
-  with_items: "{{ base_media_tools }}"
 
 - name: install google chrome
   apt:
@@ -132,9 +126,8 @@
 - block:
     - name: install virtualization tools
       apt:
-        name: "{{ item }}"
+        name: "{{ base_virtualization_tools }}"
         state: latest
-      with_items: "{{ base_virtualization_tools }}"
 
     - name: install virtualbox extensions pack
       shell: echo 'y' | vboxmanage extpack install --replace /usr/share/virtualbox-ext-pack/Oracle*

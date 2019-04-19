@@ -47,6 +47,7 @@ base_developer_tools:
   - clusterssh
   - colordiff
   - curl
+  - default-jre-headless
   - expect
   - filezilla
   - g++
@@ -66,7 +67,6 @@ base_developer_tools:
   - most
   - netcat
   - nmap
-  - openjdk-8-jre-headless
   - pandoc
   - parallel
   - pep8
