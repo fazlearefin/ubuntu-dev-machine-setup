@@ -2,9 +2,8 @@
 
 - name: install zsh and other related packages
   apt:
-    name: "{{ item }}"
+    name: "{{ zsh_packages }}"
     state: latest
-  with_items: "{{ zsh_packages }}"
 
 - name: change user's shell to zsh
   user:
