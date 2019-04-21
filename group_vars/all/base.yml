@@ -15,6 +15,9 @@ base_archiving_tools:
   - uudeview
   - zip
 
+base_productivity_tools:
+  - libreoffice
+
 base_system_tools:
   - bleachbit
   #- blueman
