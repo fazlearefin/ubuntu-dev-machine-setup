@@ -38,6 +38,7 @@ base_system_tools_laptop:
 base_download_tools:
   - aria2
   - axel
+  - qbittorrent
   - wget
   - youtube-dl
 
