@@ -52,6 +52,7 @@ base_developer_tools:
   - colordiff
   - curl
   - default-jre-headless
+  - dos2unix
   - expect
   - filezilla
   - g++
