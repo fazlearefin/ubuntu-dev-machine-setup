@@ -102,6 +102,7 @@ base_developer_tools:
   - socat
   - sshfs
   - sshpass
+  - sslscan
   - tilix
   - tmux
   - tree
