@@ -70,12 +70,13 @@ Summary of packages that get installed and configured:
 - Install Janus Vim Distribution
 - Generate a `.zshrc` to enjoy zsh right away
   - Enable `oh-my-zsh` and some bundled plugins
-  - Enable [bullet-train zsh theme](https://github.com/caiogondim/bullet-train.zsh). Change fonts to Powerline Fonts if some characters look weird
+  - Enable [bullet-train zsh theme](https://github.com/caiogondim/bullet-train.zsh)
   - Function to stop ssh-agent from asking for encrypted ssh key password repeatedly when launching new terminal
 
 ## Known Issues
 
-If the ansible playbook halts after completing a few tasks, simply run the playbook again. There is no hard running the playbook multiple times since most of the tasks are idempotent.
+- If the ansible playbook halts after completing a few tasks, simply run the playbook again. Since most of the tasks are idempotent, running the playbook multiple times won't break anything.
+- If your terminal shows any weird characters because of installing one of the zsh themes, simply change the font to a suitable Powerline Font from the terminal's settings.
 
 ## Pull Requests and Forks
 
