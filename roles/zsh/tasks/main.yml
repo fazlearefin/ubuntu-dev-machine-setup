@@ -82,4 +82,12 @@
   become: yes
   become_user: "{{ local_username }}"
 
+- name: copy the sample .zshrc file
+  copy:
+    src: .zshrc
+    dest: "~{{ local_username }}/.zshrc"
+    force: yes
+  become: yes
+  become_user: "{{ local_username }}"
+
 ...

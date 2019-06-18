@@ -68,6 +68,10 @@ Summary of packages that get installed and configured:
 - Mount `/tmp` on tmpfs
 - Enable ufw firewall and configure for incoming ssh
 - Install Janus Vim Distribution
+- Generate a `.zshrc` to enjoy zsh right away
+  - Enable `oh-my-zsh` and some bundled plugins
+  - Enable [bullet-train zsh theme](https://github.com/caiogondim/bullet-train.zsh). Change fonts to Powerline Fonts if some characters look weird
+  - Function to stop ssh-agent from asking for encrypted ssh key password repeatedly when launching new terminal
 
 ## Known Issues
 
