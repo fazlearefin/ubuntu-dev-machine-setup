@@ -39,6 +39,7 @@ base_download_tools:
   - aria2
   - axel
   - qbittorrent
+  - speedtest-cli
   - wget
   - youtube-dl
 
@@ -121,6 +122,7 @@ base_virtualization_tools:
 base_media_tools:
   - ffmpeg
   - gimp
+  - imagemagick
   - libimage-exiftool-perl
   - mediainfo
   - soundconverter
