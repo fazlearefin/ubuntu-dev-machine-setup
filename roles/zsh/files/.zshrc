@@ -27,8 +27,9 @@ antigen bundle sudo
 antigen bundle vagrant
 antigen bundle yarn
 
-# Syntax highlighting bundle.
+# Syntax highlighting and autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-autosuggestions
 
 # pure theme
 # https://github.com/sindresorhus/pure
