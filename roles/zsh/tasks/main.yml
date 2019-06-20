@@ -82,11 +82,23 @@
   become: yes
   become_user: "{{ local_username }}"
 
-- name: copy the sample .zshrc file
-  copy:
-    src: .zshrc
-    dest: "~{{ local_username }}/.zshrc"
-    force: yes
+- block:
+    - name: check if .zshrc exists in user's home dir
+      stat:
+        path: "~{{ local_username }}/.zshrc"
+      register: dotzshrc
+
+    - name: backup .zshrc if it exists
+      copy:
+        src: "~{{ local_username }}/.zshrc"
+        dest: "~{{ local_username }}/.zshrc.orig"
+      when: dotzshrc.stat.exists
+
+    - name: copy the sample .zshrc file
+      copy:
+        src: .zshrc
+        dest: "~{{ local_username }}/.zshrc"
+        force: yes
   become: yes
   become_user: "{{ local_username }}"
 
