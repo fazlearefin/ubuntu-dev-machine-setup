@@ -86,4 +86,6 @@ You are more than welcome to send any pull requests. However, the intention of t
 
 Bitcoin (BTC): `38uvDLV4GzcAB7qMUEM5chqivESqNPWPZW`
 
+Ethereum (ETH): `0xb87A10e8e3fa4Ea71b478f8f0c8798977dBe28Ed`
+
 Litecoin (LTC):`MRAwH2WHUprCn5RcpKWKMkfaUJicTpsbWr` or `3Jxny96KXhzmya9iiSWyY7RB9c8AXRGN3n`
