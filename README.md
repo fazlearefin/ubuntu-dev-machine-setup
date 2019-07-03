@@ -25,7 +25,7 @@ cd ubuntu-dev-machine-setup
 
 ## Running the playbooks to configure your system
 
-Invoke the following as yourself, the primary use. Not `root`.
+Invoke the following as yourself, the primary user. Not `root`.
 
 ```
 ansible-playbook site.yml -e "{ laptop_mode: True }" -e "{ virtual_machine_mode: False }" -e "local_username=$(logname)" -K
