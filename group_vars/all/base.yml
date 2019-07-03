@@ -73,6 +73,7 @@ base_developer_tools:
   - most
   - netcat
   - nmap
+  - nodejs
   - pandoc
   - parallel
   - pep8
