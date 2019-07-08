@@ -3,15 +3,22 @@
 vscode_package_url: "https://vscode-update.azurewebsites.net/latest/linux-deb-x64/stable"
 
 vscode_extensions:
+  - aaron-bond.better-comments
+  - formulahendry.code-runner
   - donjayamanne.githistory
   - eamodio.gitlens
-  - Equinusocio.vsc-material-theme
-  - formulahendry.code-runner
-  - ms-python.python
   - ms-vscode.Go
+  - vincaslt.highlight-matching-tag
+  - oderwat.indent-rainbow
+  - yzhang.markdown-all-in-one
   - PKief.material-icon-theme
+  - ms-python.python
+  - humao.rest-client
+  - Gruntfuggly.todo-tree
+  - shardulm94.trailing-spaces
+  - Equinusocio.vsc-material-theme
   - vscodevim.vim
   - vscoss.vscode-ansible
-  - yzhang.markdown-all-in-one
+  - wayou.vscode-todo-highlight
 
 ...
