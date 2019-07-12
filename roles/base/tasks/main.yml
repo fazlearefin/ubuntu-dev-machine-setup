@@ -101,6 +101,7 @@
   git:
     repo: "{{ base_git_bash_prompt_url }}"
     dest: "~{{ local_username }}/.bash-helpers/bash-git-prompt"
+    version: master
     clone: yes
     update: yes
   become: yes
