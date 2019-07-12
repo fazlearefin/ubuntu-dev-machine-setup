@@ -47,6 +47,7 @@ base_developer_tools:
   - android-tools-adb
   - android-tools-fastboot
   - ansible
+  - ansible-lint
   - awscli
   - cloc
   - clusterssh
