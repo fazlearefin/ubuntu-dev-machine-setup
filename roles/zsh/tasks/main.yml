@@ -3,7 +3,7 @@
 - name: install zsh and other related packages
   apt:
     name: "{{ zsh_packages }}"
-    state: latest
+    state: present
 
 - name: change user's shell to zsh
   user:

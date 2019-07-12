@@ -3,7 +3,7 @@
 - name: install vim apt packages
   apt:
     name: "{{ vim_apt_packages }}"
-    state: latest
+    state: present
 
 - block:
     - name: install Janus Vim Distribution
