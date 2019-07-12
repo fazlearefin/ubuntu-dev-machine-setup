@@ -5,6 +5,7 @@ zsh_packages:
   - zsh-doc
 
 zsh_antigen_url: "https://github.com/zsh-users/antigen.git"
+zsh_antigen_git_version: v2.2.3
 
 # adobe source code pro fonts
 zsh_adobe_source_code_pro_font_url: "https://github.com/adobe-fonts/source-code-pro/archive/2.030R-ro/1.050R-it.tar.gz"

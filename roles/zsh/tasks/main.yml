@@ -14,6 +14,7 @@
   git:
     dest: "~{{ local_username }}/.antigen"
     repo: "{{ zsh_antigen_url }}"
+    version: "{{ zsh_antigen_git_version }}"
   become: yes
   become_user: "{{ local_username }}"
 
