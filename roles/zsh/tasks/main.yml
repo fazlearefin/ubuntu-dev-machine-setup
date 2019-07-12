@@ -51,6 +51,7 @@
         dest: "/tmp/{{ zsh_powerline_font_dir }}"
         repo: "{{ zsh_powerline_font_url }}"
         update: yes
+        version: "{{ zsh_powerline_font_git_version }}"
 
     - name: install the powerline patched fonts (2/2)
       shell: ./install.sh

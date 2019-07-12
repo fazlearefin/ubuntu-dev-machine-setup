@@ -15,6 +15,7 @@ zsh_adobe_source_code_pro_font_file: "{{ zsh_adobe_source_code_pro_font_dir }}.t
 # powerline fonts
 zsh_powerline_font_url: "https://github.com/powerline/fonts.git"
 zsh_powerline_font_dir: powerline_fonts
+zsh_powerline_font_git_version: master
 
 # awesome fonts
 zsh_awesome_font_url: "https://github.com/gabrielelana/awesome-terminal-fonts.git"
