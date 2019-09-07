@@ -62,6 +62,7 @@ base_developer_tools:
   - git
   - git-extras
   - gitg
+  - golang-go
   - htop
   - httpie
   - inotify-tools

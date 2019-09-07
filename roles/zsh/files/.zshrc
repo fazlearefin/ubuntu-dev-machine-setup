@@ -72,3 +72,7 @@ else
      start_agent;
 fi
 ##### } END Fix for ssh-agent
+
+# golang
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin

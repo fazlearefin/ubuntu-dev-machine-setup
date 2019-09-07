@@ -83,6 +83,25 @@
     name: "{{ base_developer_tools }}"
     state: present
 
+- block:
+    - name: Create directories for golang
+      file:
+        path: "~{{ local_username }}/{{ item }}"
+        state: directory
+      with_items:
+       - go
+       - go/src
+       - go/bin
+
+    - name: Make GOPATH available in .bashrc
+      lineinfile:
+        path: "~{{ local_username }}/.bashrc"
+        line: "{{ item }}"
+        create: yes
+      with_items:
+        - export GOPATH=$HOME/go
+        - export PATH=$PATH:$GOPATH/bin
+
 - name: install download tools
   apt:
     name: "{{ base_download_tools }}"
