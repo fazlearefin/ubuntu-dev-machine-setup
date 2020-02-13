@@ -6,8 +6,14 @@
     state: present
 
 - block:
-    - name: install Janus Vim Distribution
-      shell: "curl -sLf {{ vim_janusvim_url }} | bash"
+    - name: clone amix vimrc git repo
+      git:
+        repo: "{{ vim_amix_vimrc_url }}"
+        dest: "~{{ local_username }}/.vim_runtime"
+        depth: 1
+
+    - name: install amix vimrc
+      shell: "sh ~/.vim_runtime/install_awesome_vimrc.sh"
 
   become: yes
   become_user: "{{ local_username }}"

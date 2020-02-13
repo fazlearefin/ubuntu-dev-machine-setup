@@ -71,7 +71,7 @@ Summary of packages that get installed and configured:
 - Reduce swappiness for better perfomance
 - Mount `/tmp` on tmpfs
 - Enable ufw firewall and configure for incoming ssh
-- Install Janus Vim Distribution
+- Install [amix/vimrc](https://github.com/amix/vimrc) Vim Distribution
 - Generate a `.zshrc` to enjoy zsh right away
   - Enable `oh-my-zsh` and some bundled plugins
   - Enable [bullet-train zsh theme](https://github.com/caiogondim/bullet-train.zsh)
