@@ -1,7 +1,7 @@
 ---
 
-laptop_mode: True
-virtual_machine_mode: False
+laptop_mode: True              # True => this device is a laptop computer
+virtual_machine_mode: False    # False => this device os is running on bare metal
 local_username: fazle
 
 ...
