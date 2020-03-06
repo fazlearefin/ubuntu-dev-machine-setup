@@ -2,6 +2,6 @@
 
 laptop_mode: True              # True => this device is a laptop computer
 virtual_machine_mode: False    # False => this device os is running on bare metal
-local_username: fazle
+local_username: fazle          # This is the primary username used when logging in to the desktop
 
 ...
