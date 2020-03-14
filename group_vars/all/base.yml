@@ -122,7 +122,7 @@ base_developer_tools:
 base_virtualization_tools:
   - vagrant
   - virtualbox
-  - virtualbox-ext-pack
+#  - virtualbox-ext-pack
   - docker.io
 
 base_media_tools:

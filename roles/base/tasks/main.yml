@@ -140,8 +140,8 @@
         groups:
           - docker
 
-    - name: install virtualbox extensions pack
-      shell: echo 'y' | vboxmanage extpack install --replace /usr/share/virtualbox-ext-pack/Oracle*
+#    - name: install virtualbox extensions pack
+#      shell: echo 'y' | vboxmanage extpack install --replace /usr/share/virtualbox-ext-pack/Oracle*
   when: not virtual_machine_mode
 
 - block:
