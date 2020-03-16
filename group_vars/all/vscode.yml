@@ -20,5 +20,6 @@ vscode_extensions:
   - vscodevim.vim
   - vscoss.vscode-ansible
   - wayou.vscode-todo-highlight
+  - visualstudioexptteam.vscodeintellicode
 
 ...
