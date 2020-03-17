@@ -6,7 +6,7 @@
       debug:
         msg:
           - 'Things left to do:'
-          - '- git clone the dotfiles repo'
-          - '- add noatime option for your SSD mounts points in /etc/fstab'
+          - '- git clone the dotfiles repo (optional)'
+          - '- add noatime option for your SSD mounts points in /etc/fstab (optional)'
           - '- Reboot your system'
 ...
