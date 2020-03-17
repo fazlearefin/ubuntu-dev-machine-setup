@@ -1,7 +1,7 @@
 ---
 
 vim_apt_packages:
-  - vim-gnome  # this one has +lua enabled
+  - vim
 
 vim_amix_vimrc_url: "https://github.com/amix/vimrc"
 
