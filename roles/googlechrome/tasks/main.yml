@@ -1,0 +1,6 @@
+---
+
+- name: install google chrome
+  apt:
+    deb: "{{ googlechrome_deb_url }}"
+...

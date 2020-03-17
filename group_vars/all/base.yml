@@ -125,8 +125,6 @@ base_media_tools:
   - soundconverter
   - vlc
 
-base_google_chrome_url: "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
-
 base_git_bash_prompt_url: "https://github.com/magicmonty/bash-git-prompt.git"
 
 # direct install link instead of using ppa

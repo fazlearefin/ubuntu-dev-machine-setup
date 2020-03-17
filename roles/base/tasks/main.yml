@@ -114,10 +114,6 @@
     name: "{{ base_media_tools }}"
     state: present
 
-- name: install google chrome
-  apt:
-    deb: "{{ base_google_chrome_url }}"
-
 - name: install bash git prompt
   git:
     repo: "{{ base_git_bash_prompt_url }}"
