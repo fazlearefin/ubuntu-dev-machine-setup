@@ -6,6 +6,7 @@
       shell: "/bin/rm -rf *"
       args:
         chdir: /tmp
+        warn: no
 
     - name: copy systemd file (2/5)
       copy:
@@ -56,6 +57,7 @@
   apt:
     update_cache: yes
     upgrade: dist
+    force_apt_get: yes
 
 - name: install archiving tools
   apt:
