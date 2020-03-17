@@ -69,22 +69,26 @@
   apt:
     name: "{{ base_productivity_tools }}"
     state: present
+    force_apt_get: yes
 
 - name: install system tools
   apt:
     name: "{{ base_system_tools }}"
     state: present
+    force_apt_get: yes
 
 - name: install system tools for laptop
   apt:
     name: "{{ base_system_tools_laptop }}"
     state: present
+    force_apt_get: yes
   when: laptop_mode
 
 - name: install developer tools
   apt:
     name: "{{ base_developer_tools }}"
     state: present
+    force_apt_get: yes
 
 - block:
     - name: Create directories for golang
@@ -111,11 +115,13 @@
   apt:
     name: "{{ base_download_tools }}"
     state: present
+    force_apt_get: yes
 
 - name: install media packages
   apt:
     name: "{{ base_media_tools }}"
     state: present
+    force_apt_get: yes
 
 - name: install bash git prompt
   git:
@@ -132,6 +138,7 @@
       apt:
         name: "{{ base_virtualization_tools }}"
         state: present
+        force_apt_get: yes
 
     # add user to docker group to run docker commands without sudo
     - name: add user to docker group
@@ -150,6 +157,7 @@
       apt:
         name: "{{ base_openssh_server.apt_package }}"
         state: present
+        force_apt_get: yes
     - name: enable and start ssh (2/2)
       service:
         name: "{{ base_openssh_server.service }}"

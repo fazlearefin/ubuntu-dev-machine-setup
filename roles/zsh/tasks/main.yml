@@ -4,6 +4,7 @@
   apt:
     name: "{{ zsh_packages }}"
     state: present
+    force_apt_get: yes
 
 - name: change user's shell to zsh
   user:

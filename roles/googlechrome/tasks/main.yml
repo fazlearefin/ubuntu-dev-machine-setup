@@ -3,4 +3,5 @@
 - name: install google chrome
   apt:
     deb: "{{ googlechrome_deb_url }}"
+    force_apt_get: yes
 ...

@@ -3,6 +3,7 @@
 - name: download and install latest visual studio code
   apt:
     deb: "{{ vscode_package_url }}"
+    force_apt_get: yes
 
 - name: install some popular vscode extensions
   command: code --install-extension {{ item }}
