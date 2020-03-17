@@ -19,7 +19,6 @@ base_productivity_tools:
   - libreoffice
 
 base_system_tools:
-  - bleachbit
   - fatrace
   - gnome-calculator
   - gnome-tweak-tool
