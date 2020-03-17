@@ -49,7 +49,7 @@
 - name: tune system swappiness
   sysctl:
     name: vm.swappiness
-    value: 1
+    value: '1'
     state: present
 
 - name: perform a dist upgrade
