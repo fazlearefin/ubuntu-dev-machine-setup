@@ -67,7 +67,6 @@ base_developer_tools:
   - htop
   - httpie
   - inotify-tools
-  - ipython
   - ipython3
   - jq
   - kwalify
@@ -87,17 +86,11 @@ base_developer_tools:
   #- puppet-lint
   - pv
   - pylint
-  - pylint3
   - python3-demjson  # provides jsonlint-py3 for json lint
+  - python3-jmespath
   - python3-pep8
-  - python3-pep8-naming
   - python3-pip
-  - python-autopep8
-  - python-jmespath
-  - python-pep8
-  - python-pep8-naming
-  - python-pip
-  - python-pygments
+  - python3-pygments
   - ranger
   - recode
   - rename
@@ -113,8 +106,6 @@ base_developer_tools:
   - tmux
   - tree
   - uget
-  - virtualenv
-  - virtualenvwrapper
   - xclip
   - yamllint
   - zeal
