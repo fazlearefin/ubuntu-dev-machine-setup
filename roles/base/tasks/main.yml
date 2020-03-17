@@ -89,9 +89,9 @@
         path: "~{{ local_username }}/{{ item }}"
         state: directory
       with_items:
-       - go
-       - go/src
-       - go/bin
+        - go
+        - go/src
+        - go/bin
 
     - name: Make GOPATH available in .bashrc
       lineinfile:
@@ -101,6 +101,8 @@
       with_items:
         - export GOPATH=$HOME/go
         - export PATH=$PATH:$GOPATH/bin
+  become: yes
+  become_user: "{{ local_username }}"
 
 - name: install download tools
   apt:
