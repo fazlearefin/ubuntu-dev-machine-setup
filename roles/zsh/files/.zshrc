@@ -63,10 +63,10 @@ function start_agent {
 
 # Source SSH settings, if applicable
 if [ -f "${SSH_ENV}" ]; then
-     . "${SSH_ENV}" > /dev/null
+     source "${SSH_ENV}" > /dev/null
      #ps ${SSH_AGENT_PID} doesn't work under cywgin
      ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
-        start_agent;
+          start_agent;
      }
 else
      start_agent;
@@ -76,3 +76,14 @@ fi
 # golang
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
+
+# make sure pipenv creates virtualenv dir in current dir under .venv
+export PIPENV_VENV_IN_PROJECT=1
+
+# make vagrant use virtualbox as the default provider
+export VAGRANT_DEFAULT_PROVIDER='virtualbox'
+
+# extra aliases, functions and variables can be defined in these files
+[ -f ~/.shell_aliases  ] && source ~/.shell_aliases
+[ -f ~/.shell_functions  ] && source ~/.shell_functions
+[ -f ~/.shell_variables ] && source ~/.shell_variables
