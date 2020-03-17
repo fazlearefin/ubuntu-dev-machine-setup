@@ -1,6 +1,6 @@
 # ubuntu-dev-machine-setup
 
-This repo contains Ansible playbooks to configure your system as a development machine upon a clean install. The playbooks should run in Debian based system but was only tested with **Ubuntu 19.10**
+This repo contains Ansible playbooks to configure your system as a development machine upon a clean install. The playbooks should run in Debian based system but was only tested with **Ubuntu 19.10**. For other versions of Ubuntu, change to the other branches of this git repo.
 
 ![bullet-train-zsh-theme](.screenshot.png)
 
