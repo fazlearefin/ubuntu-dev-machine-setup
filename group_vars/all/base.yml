@@ -20,12 +20,8 @@ base_productivity_tools:
 
 base_system_tools:
   - bleachbit
-  #- blueman
   - fatrace
   - gnome-calculator
-  #- gnome-shell-extension-dashtodock
-  #- gnome-shell-extension-redshift
-  #- gnome-shell-extension-weather
   - gnome-tweak-tool
   - progress
   - pwgen
@@ -101,7 +97,6 @@ base_developer_tools:
   - socat
   - sshfs
   - sshpass
-  - sslscan
   - tilix
   - tmux
   - tree
@@ -126,9 +121,6 @@ base_media_tools:
   - vlc
 
 base_git_bash_prompt_url: "https://github.com/magicmonty/bash-git-prompt.git"
-
-# direct install link instead of using ppa
-#base_qownnotes_url: "https://launchpad.net/~pbek/+archive/ubuntu/qownnotes/+build/13855881/+files/qownnotes_17.12.5-1ubuntu3ppa1~artful1_amd64.deb"
 
 base_openssh_server:
   apt_package: openssh-server
