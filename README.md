@@ -13,7 +13,7 @@ On the system which you are going to setup using Ansible, perform these steps.
 You need to install Ansible and git before running the playbooks. You can either install it using `pip` or though `apt`.
 
 ```
-sudo apt install ansible git
+sudo apt install ansible git python3-distutils
 ```
 
 And clone this repo
