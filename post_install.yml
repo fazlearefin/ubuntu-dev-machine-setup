@@ -2,6 +2,11 @@
 
 - hosts: localhost
   tasks:
+    - name: remove redundant packages
+      apt:
+          autoremove: yes
+          force_apt_get: yes
+
     - name: display post install message
       debug:
         msg:
@@ -9,4 +14,5 @@
           - '- git clone the dotfiles repo (optional)'
           - '- add noatime option for your SSD mounts points in /etc/fstab (optional)'
           - '- Reboot your system'
+
 ...
