@@ -28,7 +28,6 @@ base_system_tools:
 
 base_system_tools_laptop:
   - cpufrequtils
-  - laptop-mode-tools
   - powertop
 
 base_download_tools:
