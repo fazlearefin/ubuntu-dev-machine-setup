@@ -21,6 +21,7 @@ base_productivity_tools:
 base_system_tools:
   - fatrace
   - gnome-calculator
+  - gnome-shell-extension-bluetooth-quick-connect  # enable in gnome-tweak-tools > Extensions
   - gnome-tweak-tool
   - progress
   - pwgen
