@@ -72,6 +72,7 @@ base_developer_tools:
   - pandoc
   - parallel
   - pep8
+  - pipenv
   - powerline
   - pry
   #- puppet
