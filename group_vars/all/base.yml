@@ -75,6 +75,7 @@ base_developer_tools:
   - pipenv
   - powerline
   - pry
+  - pssh
   #- puppet
   #- puppet-lint
   - pv
