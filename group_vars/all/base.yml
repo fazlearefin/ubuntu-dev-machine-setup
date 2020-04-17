@@ -67,6 +67,7 @@ base_developer_tools:
   - kwalify
   - makeself
   - meld
+  - miller
   - most
   - netcat
   - nmap
