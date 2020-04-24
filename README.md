@@ -1,4 +1,4 @@
-# ubuntu-dev-machine-setup
+# ubuntu-dev-machine-setup | Ubuntu 20.04 LTS
 
 This repo contains Ansible playbooks to configure your system as a development machine upon a clean install. The playbooks should run in Debian based system but was only tested with **Ubuntu 20.04**. For other versions of Ubuntu, change to the other branches of this git repo.
 
