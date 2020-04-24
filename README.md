@@ -1,6 +1,6 @@
 # ubuntu-dev-machine-setup
 
-This repo contains Ansible playbooks to configure your system as a development machine upon a clean install. The playbooks should run in Debian based system but was only tested with **Ubuntu 19.10**. For other versions of Ubuntu, change to the other branches of this git repo.
+This repo contains Ansible playbooks to configure your system as a development machine upon a clean install. The playbooks should run in Debian based system but was only tested with **Ubuntu 20.04**. For other versions of Ubuntu, change to the other branches of this git repo.
 
 ![bullet-train-zsh-theme](.screenshot-bullet-train.png)
 
@@ -17,7 +17,7 @@ On the system which you are going to setup using Ansible, perform these steps.
 You need to install Ansible and git before running the playbooks. You can either install it using `pip` or though `apt`.
 
 ```
-sudo apt install ansible git python3-distutils
+sudo apt install ansible git
 ```
 
 And clone this repo
@@ -34,6 +34,8 @@ Invoke the following as yourself, the primary user. Not `root`.
 ```
 ansible-playbook main.yml -e "{ laptop_mode: True }" -e "{ virtual_machine_mode: False }" -e "local_username=$(logname)" -K
 ```
+
+Enter the sudo password when asked for `BECOME password:`.
 
 ### What is this `laptop_mode`?
 
