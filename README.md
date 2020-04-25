@@ -37,6 +37,8 @@ ansible-playbook main.yml -e "{ laptop_mode: True }" -e "{ virtual_machine_mode:
 
 Enter the sudo password when asked for `BECOME password:`.
 
+The `main.yml` playbook will take around 30 minutes to an hour to complete.
+
 ### What is this `laptop_mode`?
 
 #### Setting this to `True`
