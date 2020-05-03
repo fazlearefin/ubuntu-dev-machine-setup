@@ -164,3 +164,28 @@
         state: started
         enabled: yes
   when: not laptop_mode
+
+# fix for https://github.com/gnunn1/tilix/wiki/VTE-Configuration-Issue using option 2
+# also, set font to SourceCodePro+Powerline+Awesome Regular for tmux powerline
+- block:
+    - name: export tilix config
+      shell: dconf dump /com/gexperts/Tilix/ > /tmp/tilix.dconf
+      become: yes
+      become_user: "{{ local_username  }}"
+
+    - name: enable login shell in tilix config
+      lineinfile:
+        path: /tmp/tilix.dconf
+        regexp: '^login-shell='
+        line: login-shell=true
+
+    - name: set font to SourceCodePro+Powerline+Awesome Regular
+      lineinfile:
+        path: /tmp/tilix.dconf
+        regexp: '^font='
+        line: font='SourceCodePro+Powerline+Awesome Regular, 10'
+
+    - name: import modified tilix config
+      shell: dconf load /com/gexperts/Tilix/ < /tmp/tilix.dconf
+      become: yes
+      become_user: "{{ local_username  }}"
