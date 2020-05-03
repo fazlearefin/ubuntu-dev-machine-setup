@@ -183,7 +183,13 @@
       lineinfile:
         path: /tmp/tilix.dconf
         regexp: '^font='
-        line: font='SourceCodePro+Powerline+Awesome Regular, 10'
+        line: font='SourceCodePro+Powerline+Awesome Regular, 11'
+
+    - name: set tilix to use the font set above
+      lineinfile:
+        path: /tmp/tilix.dconf
+        regexp: '^use-system-font='
+        line: use-system-font=false
 
     - name: import modified tilix config
       shell: dconf load /com/gexperts/Tilix/ < /tmp/tilix.dconf
