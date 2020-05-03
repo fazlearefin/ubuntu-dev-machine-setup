@@ -168,36 +168,16 @@
 # fix for https://github.com/gnunn1/tilix/wiki/VTE-Configuration-Issue using option 2
 # also, set font to SourceCodePro+Powerline+Awesome Regular for tmux powerline
 - block:
-    - name: export tilix config
-      shell: dconf dump /com/gexperts/Tilix/ > /tmp/tilix.dconf
-      become: yes
-      become_user: "{{ local_username  }}"
-
-    - name: enable login shell in tilix config
-      lineinfile:
-        path: /tmp/tilix.dconf
-        regexp: '^login-shell='
-        line: login-shell=true
-
-    - name: set font to SourceCodePro+Powerline+Awesome Regular
-      lineinfile:
-        path: /tmp/tilix.dconf
-        regexp: '^font='
-        line: font='SourceCodePro+Powerline+Awesome Regular, 11'
-
-    - name: set tilix to use the font set above
-      lineinfile:
-        path: /tmp/tilix.dconf
-        regexp: '^use-system-font='
-        line: use-system-font=false
-
-    - name: do not warn about vte config issue
-      lineinfile:
-        path: /tmp/tilix.dconf
-        regexp: '^warn-vte-config-issue='
-        line: warn-vte-config-issue=false
+    - name: copy tilix config template
+      copy:
+        src: tilix.dconf
+        dest: /tmp/tilix.dconf
+        force: yes
 
     - name: import modified tilix config
       shell: dconf load /com/gexperts/Tilix/ < /tmp/tilix.dconf
-      become: yes
-      become_user: "{{ local_username  }}"
+      ignore_errors: yes
+  become: yes
+  become_user: "{{ local_username  }}"
+
+...
