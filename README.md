@@ -10,6 +10,11 @@ Screenshot above is using *bullet-train zsh theme*
 
 Screenshot above is using *pure zsh theme*
 
+![bullet-train-zsh-theme-tmux](.screenshot-bullet-train-tmux.png)
+
+Screenshot above is using *bullet-train zsh theme with tmux*
+
+
 ## Pre-requisites
 
 On the system which you are going to setup using Ansible, perform these steps.
@@ -86,6 +91,7 @@ Summary of packages that get installed and configured:
   - Enable `oh-my-zsh` and some bundled plugins
   - Enable [bullet-train zsh theme](https://github.com/caiogondim/bullet-train.zsh)
   - Function to stop ssh-agent from asking for encrypted ssh key password repeatedly when launching new terminal
+- Sample `.tmux.conf` file with powerline status bar and mouse support! (Open Tilix terminal and run `tmux` command)
 
 ## Known Issues
 
