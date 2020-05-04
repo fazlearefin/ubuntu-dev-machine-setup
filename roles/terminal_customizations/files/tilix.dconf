@@ -1,0 +1,11 @@
+[/]
+quake-specific-monitor=0
+warn-vte-config-issue=false
+
+[profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d]
+visible-name='Default'
+login-shell=true
+font='SourceCodePro+Powerline+Awesome Regular, 11'
+use-system-font=false
+custom-command='/usr/bin/zsh -c "tmux attach -t main || tmux new -s main"'
+use-custom-command=false
