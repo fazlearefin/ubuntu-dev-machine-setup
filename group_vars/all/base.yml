@@ -99,6 +99,7 @@ base_developer_tools:
   - sshfs
   - sshpass
   - tilix
+  - tldr
   - tmux
   - tree
   - uget
