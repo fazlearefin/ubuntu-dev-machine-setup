@@ -10,9 +10,10 @@
     - name: display post install message
       debug:
         msg:
-          - 'Things left to do:'
+          - 'Manual steps left to do:'
           - '- git clone the dotfiles repo (optional)'
           - '- add noatime option for your SSD mounts points in /etc/fstab (optional)'
+          - '- remove snapd: sudo apt purge snapd; sudo apt-mark hold snapd (optional)'
           - '- Reboot your system'
 
 ...
