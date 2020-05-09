@@ -120,6 +120,7 @@ base_media_tools:
   - libimage-exiftool-perl
   - mediainfo
   - soundconverter
+  - totem
   - vlc
 
 base_git_bash_prompt_url: "https://github.com/magicmonty/bash-git-prompt.git"
