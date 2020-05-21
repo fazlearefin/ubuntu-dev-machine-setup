@@ -90,6 +90,14 @@
     state: present
     force_apt_get: yes
 
+# Fix for bat syntax highlighting tool; Ubuntu packages it as batcat instead of just bat
+- name: create symlink for bat
+  file:
+    src: /usr/bin/batcat
+    dest: /usr/bin/bat
+    state: link
+    force: no
+
 - block:
     - name: Create directories for golang
       file:

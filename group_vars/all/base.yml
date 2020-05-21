@@ -45,6 +45,7 @@ base_developer_tools:
   - ansible
   - ansible-lint
   - awscli
+  - bat
   - cloc
   - clusterssh
   - colordiff
@@ -87,7 +88,6 @@ base_developer_tools:
   - python3-jmespath
   - python3-pep8
   - python3-pip
-  - python3-pygments
   - ranger
   - recode
   - rename
