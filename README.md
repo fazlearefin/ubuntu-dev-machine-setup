@@ -50,7 +50,7 @@ After all is done, give your laptop a new life by rebooting.
 
 #### Setting this to `True`
 
-- will install some packages like `powertop` for battery economy
+- will install some packages like [TLP](https://github.com/linrunner/TLP) for battery economy
 - will not install and configure ssh server
 
 #### Setting this to `False`
@@ -74,7 +74,7 @@ Summary of packages that get installed and configured:
 
 - Archiving tools like zip, rar, etc
 - Customization tools like gnome-tweak-tool, etc
-- Power management tools like cpufrequtils, powertop, etc
+- Power management tools like [TLP](https://github.com/linrunner/TLP)
 - Download utils like aria2, wget, axel, etc
 - Developer tools like awscli, httpie, clusterssh, docker, vagrant, virtualbox, etc
 - Google Chrome
@@ -82,6 +82,7 @@ Summary of packages that get installed and configured:
 - Git Bash Prompt
 - ssh server
 - zsh shell, antigen plugin manager, oh-my-zsh plugins
+- sample `.zshrc` with *bullet train theme* configured
 - Powerline Fonts
 - Reduce swappiness for better perfomance
 - Mount `/tmp` on tmpfs
