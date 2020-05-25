@@ -122,6 +122,7 @@ base_media_tools:
   - mediainfo
   - soundconverter
   - totem
+#  - ubuntu-restricted-extras
   - vlc
 
 base_git_bash_prompt_url: "https://github.com/magicmonty/bash-git-prompt.git"
