@@ -94,6 +94,7 @@ base_developer_tools:
   - python3-pip
   - ranger
   - recode
+  - remmina
   - rename
   - ruby
   - ruby-dev
