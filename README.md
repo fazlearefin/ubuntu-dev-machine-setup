@@ -82,7 +82,7 @@ Summary of packages that get installed and configured:
 - Git Bash Prompt
 - ssh server
 - zsh shell, antigen plugin manager, oh-my-zsh plugins
-- sample `.zshrc` with *bullet train theme* configured
+- remmina to connect to Windows over RDP
 - Powerline Fonts
 - Reduce swappiness for better perfomance
 - Mount `/tmp` on tmpfs
