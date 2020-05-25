@@ -28,8 +28,12 @@ base_system_tools:
   #- syncthing
 
 base_system_tools_laptop:
-  - cpufrequtils
-  - powertop
+#  - cpufrequtils
+#  - powertop
+  - tlp
+  - tlp-rdw
+  - acpi-call-dkms  # for newer ThinkPads (X220/T420 and later)
+#  - tp-smapi-dkms  # for older ThinkPads
 
 base_download_tools:
   - aria2
