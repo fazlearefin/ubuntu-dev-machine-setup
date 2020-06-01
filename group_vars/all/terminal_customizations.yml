@@ -1,9 +1,9 @@
 ---
 
 # adobe source code pro fonts
-terminal_customizations_adobe_source_code_pro_font_url: "https://github.com/adobe-fonts/source-code-pro/archive/2.030R-ro/1.050R-it.tar.gz"
-terminal_customizations_adobe_source_code_pro_font_dir: source-code-pro-2.030R-ro-1.050R-it
-terminal_customizations_adobe_source_code_pro_font_file: "{{ terminal_customizations_adobe_source_code_pro_font_dir }}.tar.gz"
+terminal_customizations_adobe_source_code_pro_fonts:
+  - "https://github.com/adobe-fonts/source-code-pro/releases/download/variable-fonts/SourceCodeVariable-Italic.otf"
+  - "https://github.com/adobe-fonts/source-code-pro/releases/download/variable-fonts/SourceCodeVariable-Roman.otf"
 
 # awesome fonts
 terminal_customizations_awesome_font_url: "https://github.com/gabrielelana/awesome-terminal-fonts.git"
