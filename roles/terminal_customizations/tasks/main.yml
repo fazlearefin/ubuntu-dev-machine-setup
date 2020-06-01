@@ -28,22 +28,6 @@
   become_user: "{{ local_username }}"
 
 - block:
-    - name: get the powerline patched fonts (1/2)
-      git:
-        dest: "/tmp/{{ terminal_customizations_powerline_font_dir }}"
-        repo: "{{ terminal_customizations_powerline_font_url }}"
-        update: yes
-        version: "{{ terminal_customizations_powerline_font_git_version }}"
-
-    - name: install the powerline patched fonts (2/2)
-      shell: ./install.sh
-      args:
-        chdir: "/tmp/{{ terminal_customizations_powerline_font_dir }}"
-
-  become: yes
-  become_user: "{{ local_username }}"
-
-- block:
     - name: get the awesome fonts (1/2)
       git:
         repo: "{{ terminal_customizations_awesome_font_url }}"

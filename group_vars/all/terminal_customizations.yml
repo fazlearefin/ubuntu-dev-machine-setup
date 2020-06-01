@@ -5,11 +5,6 @@ terminal_customizations_adobe_source_code_pro_font_url: "https://github.com/adob
 terminal_customizations_adobe_source_code_pro_font_dir: source-code-pro-2.030R-ro-1.050R-it
 terminal_customizations_adobe_source_code_pro_font_file: "{{ terminal_customizations_adobe_source_code_pro_font_dir }}.tar.gz"
 
-# powerline fonts
-terminal_customizations_powerline_font_url: "https://github.com/powerline/fonts.git"
-terminal_customizations_powerline_font_dir: powerline_fonts
-terminal_customizations_powerline_font_git_version: master
-
 # awesome fonts
 terminal_customizations_awesome_font_url: "https://github.com/gabrielelana/awesome-terminal-fonts.git"
 terminal_customizations_awesome_font_git_version: patching-strategy

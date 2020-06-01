@@ -58,6 +58,7 @@ base_developer_tools:
   - dos2unix
   - expect
   - filezilla
+  - fonts-powerline
   - g++
   - gedit-plugins
   - git
