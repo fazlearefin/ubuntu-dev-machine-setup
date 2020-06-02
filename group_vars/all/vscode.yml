@@ -1,6 +1,6 @@
 ---
 
-vscode_repo: "deb [arch=amd64] http://packages.microsoft.com/repos/vscode stable main"
+vscode_repo: "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
 
 vscode_extensions:
   - aaron-bond.better-comments

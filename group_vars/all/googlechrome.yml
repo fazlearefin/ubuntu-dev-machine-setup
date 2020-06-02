@@ -1,5 +1,5 @@
 ---
 
-googlechrome_repo: "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main"
+googlechrome_repo: "deb [arch=amd64] https://dl.google.com/linux/chrome/deb/ stable main"
 
 ...
