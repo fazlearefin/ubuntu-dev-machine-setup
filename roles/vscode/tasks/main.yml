@@ -1,5 +1,9 @@
 ---
 
+- name: add vscode apt key
+  apt_key:
+    url: "{{ vscode_apt_key }}"
+
 - name: add vscode repo
   apt_repository:
     repo: "{{ vscode_repo }}"
