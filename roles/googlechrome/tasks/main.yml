@@ -1,7 +1,14 @@
 ---
 
-- name: install google chrome
+- name: add google chrome repo
+  apt_repository:
+    repo: "{{ googlechrome_repo }}"
+    state: present
+    filename: google-chrome
+
+- name: install latest google chrome
   apt:
-    deb: "{{ googlechrome_deb_url }}"
+    name: google-chrome-stable
     force_apt_get: yes
+
 ...

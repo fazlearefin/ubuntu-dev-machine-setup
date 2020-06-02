@@ -1,5 +1,5 @@
 ---
 
-googlechrome_deb_url: "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
+googlechrome_repo: "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main"
 
 ...
