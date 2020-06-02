@@ -1,8 +1,14 @@
 ---
 
-- name: download and install latest visual studio code
+- name: add vscode repo
+  apt_repository:
+    repo: "{{ vscode_repo }}"
+    state: present
+    filename: vscode
+
+- name: install latest visual studio code
   apt:
-    deb: "{{ vscode_package_url }}"
+    name: code
     force_apt_get: yes
 
 - name: install some popular vscode extensions

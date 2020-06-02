@@ -1,6 +1,6 @@
 ---
 
-vscode_package_url: "https://vscode-update.azurewebsites.net/latest/linux-deb-x64/stable"
+vscode_repo: "deb [arch=amd64] http://packages.microsoft.com/repos/vscode stable main"
 
 vscode_extensions:
   - aaron-bond.better-comments
