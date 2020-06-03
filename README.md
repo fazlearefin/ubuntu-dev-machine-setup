@@ -1,6 +1,12 @@
 # ubuntu-dev-machine-setup | Ubuntu 20.04 LTS
 
-This repo contains Ansible playbooks to configure your system as a development machine upon a clean install. The playbooks should run in Debian based system but was only tested with **Ubuntu 20.04**. For other versions of Ubuntu, change to the other branches of this git repo.
+This repo contains Ansible playbooks to configure your system as a development machine upon a clean install.
+
+The playbooks should run in Debian based system but was only tested with:
+- **Ubuntu 20.04**
+- **Ubuntu Budgie 20.04**
+
+For other versions of Ubuntu, change to the other branches of this git repo.
 
 ![bullet-train-zsh-theme](.screenshot-bullet-train.png)
 
@@ -34,10 +40,10 @@ cd ubuntu-dev-machine-setup
 
 ## Running the playbooks to configure your system
 
-Invoke the following as yourself, the primary user. Not `root`.
+**Invoke the following as yourself, the primary user of the system. Do not run as `root`.**
 
 ```
-ansible-playbook main.yml -e "{ laptop_mode: True }" -e "{ virtual_machine_mode: False }" -e "local_username=$(logname)" -K
+ansible-playbook main.yml -e "{ laptop_mode: True }" -e "{ virtual_machine_mode: False }" -e "local_username=$(id -un)" -K
 ```
 
 Enter the sudo password when asked for `BECOME password:`.
