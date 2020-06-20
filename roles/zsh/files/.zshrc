@@ -36,9 +36,9 @@ antigen bundle zsh-users/zsh-autosuggestions
 #antigen bundle mafredri/zsh-async
 #antigen bundle sindresorhus/pure
 
-# powerlevel9k theme
-# https://github.com/bhilburn/powerlevel9k
-#antigen theme bhilburn/powerlevel9k powerlevel9k
+# powerlevel10k theme
+# https://github.com/romkatv/powerlevel10k
+#antigen theme romkatv/powerlevel10k
 
 # bullet train theme
 # https://github.com/caiogondim/bullet-train.zsh
