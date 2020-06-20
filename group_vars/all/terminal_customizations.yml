@@ -10,4 +10,6 @@ terminal_customizations_awesome_font_url: "https://github.com/gabrielelana/aweso
 terminal_customizations_awesome_font_git_version: patching-strategy
 terminal_customizations_awesome_font_dir: awesome_terminal_fonts
 
+terminal_customizations_packages:
+  - fonts-firacode
 ...

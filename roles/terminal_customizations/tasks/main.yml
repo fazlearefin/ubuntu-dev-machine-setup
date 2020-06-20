@@ -1,5 +1,11 @@
 ---
 
+- name: install terminal customization packages
+  apt:
+    name: "{{ terminal_customizations_packages }}"
+    state: present
+    force_apt_get: yes
+
 - block:
     - name: create local fonts directory
       file:
