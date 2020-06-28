@@ -61,6 +61,7 @@ base_developer_tools:
   - fonts-powerline
   - g++
   - gedit-plugins
+  - ghostwriter
   - git
   - git-extras
   - gitg
