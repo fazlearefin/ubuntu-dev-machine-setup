@@ -1,11 +1,5 @@
 ---
 
-- name: install terminal customization packages
-  apt:
-    name: "{{ terminal_customizations_packages }}"
-    state: present
-    force_apt_get: yes
-
 - block:
     - name: create local fonts directory
       file:
@@ -15,30 +9,11 @@
   become_user: "{{ local_username }}"
 
 - block:
-    - name: download adobe source code pro fonts to local fonts folder
+    - name: download nerd fonts to local fonts folder
       get_url:
         url: "{{ item  }}"
         dest: "~{{ local_username }}/.local/share/fonts/"
-      with_items: "{{ terminal_customizations_adobe_source_code_pro_fonts }}"
-
-  become: yes
-  become_user: "{{ local_username }}"
-
-- block:
-    - name: get the awesome fonts (1/2)
-      git:
-        repo: "{{ terminal_customizations_awesome_font_url }}"
-        version: "{{ terminal_customizations_awesome_font_git_version }}"
-        dest: "/tmp/{{ terminal_customizations_awesome_font_dir }}"
-        update: yes
-
-    - name: copy the awesome fonts (2/2)
-      copy:
-        src: "{{ item }}"
-        dest: "~{{ local_username }}/.local/share/fonts/"
-      with_fileglob:
-        - "/tmp/{{ terminal_customizations_awesome_font_dir }}/patched/*.ttf"
-
+      with_items: "{{ terminal_customizations_nerd_fonts }}"
   become: yes
   become_user: "{{ local_username }}"
 

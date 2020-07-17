@@ -5,7 +5,7 @@ warn-vte-config-issue=false
 [profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d]
 visible-name='Default'
 login-shell=true
-font='SourceCodePro+Powerline+Awesome Regular, 11'
+font='FiraCode Nerd Font Mono 10'
 use-system-font=false
 custom-command='/usr/bin/zsh -c "if ! tmux ls 2>/dev/null | grep -q -E \'^main.*attached\'; then tmux attach -t main || tmux new -s main; else /usr/bin/zsh; fi"'
 use-custom-command=false
