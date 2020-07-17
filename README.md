@@ -89,7 +89,7 @@ Summary of packages that get installed and configured:
 - ssh server
 - zsh shell, antigen plugin manager, oh-my-zsh plugins
 - remmina to connect to Windows over RDP (and also transfer files between your Linux machine and remote Windows host)
-- Powerline Fonts
+- Nerd Fonts
 - Reduce swappiness for better perfomance
 - Mount `/tmp` on tmpfs
 - Enable ufw firewall and configure for incoming ssh
@@ -103,7 +103,7 @@ Summary of packages that get installed and configured:
 ## Known Issues
 
 - If the ansible playbook halts after completing a few tasks, simply run the playbook again. Since most of the tasks are idempotent, running the playbook multiple times won't break anything.
-- If your terminal shows any weird characters because of installing one of the zsh themes, simply change the font to a suitable Powerline Font from the terminal's settings.
+- If your terminal shows any weird characters because of installing one of the zsh themes, simply change the font to a suitable Nerd Font from the terminal's settings.
 
 ## Pull Requests and Forks
 
