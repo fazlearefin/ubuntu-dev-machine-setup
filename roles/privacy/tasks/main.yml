@@ -13,11 +13,13 @@
 
 - block:
     - name: copy torrc file
-      file:
+      copy:
         src: etc/tor/torrc
         dest: /etc/tor/torrc
         owner: root
         group: root
+        mode: '0644'
+        backup: yes
 
     - name: ensure tor service runs on system startup
       service:
@@ -28,11 +30,13 @@
 
 - block:
     - name: copy proxychains4 config file
-      file:
+      copy:
         src: etc/proxychains4.conf
         dest: /etc/proxychains4.conf
         owner: root
         group: root
+        mode: '0644'
+        backup: yes
   when: '"proxychains4" in ansible_facts.packages'
 
 ...
