@@ -100,6 +100,7 @@ Summary of packages that get installed and configured:
   - Function to stop ssh-agent from asking for encrypted ssh key password repeatedly when launching new terminal
 - Sample `.tmux.conf` file with powerline status bar and mouse support! (Open Tilix terminal and run `tmux` command, or enable custom command option in Tilix)
 - `tor` and `proxychains4` for anonymous browsing. Visit [my blog post](https://fazlearefin.blogspot.com/2020/07/tunneling-traffic-over-tor-network.html) to see how to use it
+- `clamav` antivirus package to manually scan files for malicious code using the `clamscan` utility. The clamav daemon for real-time scanning is not installed for performance reasons
 
 ## Known Issues
 
