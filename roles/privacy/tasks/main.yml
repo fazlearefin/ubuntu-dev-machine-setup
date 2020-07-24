@@ -1,0 +1,38 @@
+---
+
+- name: install privacy packages
+  apt:
+    name: "{{ privacy_packages }}"
+    state: present
+    force_apt_get: yes
+
+# this is needed for checking if certain packages are installed
+- name: gather package facts
+  package_facts:
+    manager: auto
+
+- block:
+    - name: copy torrc file
+      file:
+        src: etc/tor/torrc
+        dest: /etc/tor/torrc
+        owner: root
+        group: root
+
+    - name: ensure tor service runs on system startup
+      service:
+        name: tor
+        state: started
+        enabled: yes
+  when: '"tor" in ansible_facts.packages'
+
+- block:
+    - name: copy proxychains4 config file
+      file:
+        src: etc/proxychains4.conf
+        dest: /etc/proxychains4.conf
+        owner: root
+        group: root
+  when: '"proxychains4" in ansible_facts.packages'
+
+...

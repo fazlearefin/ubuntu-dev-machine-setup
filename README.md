@@ -99,6 +99,7 @@ Summary of packages that get installed and configured:
   - Enable [bullet-train zsh theme](https://github.com/caiogondim/bullet-train.zsh)
   - Function to stop ssh-agent from asking for encrypted ssh key password repeatedly when launching new terminal
 - Sample `.tmux.conf` file with powerline status bar and mouse support! (Open Tilix terminal and run `tmux` command, or enable custom command option in Tilix)
+- `tor` and `proxychains4` for anonymous browsing. Visit [my blog post](https://fazlearefin.blogspot.com/2020/07/tunneling-traffic-over-tor-network.html) to see how to use it
 
 ## Known Issues
 
