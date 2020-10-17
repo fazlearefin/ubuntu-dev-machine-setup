@@ -78,6 +78,7 @@ base_developer_tools:
   - meld
   - miller
   - most
+  - ncat
   - netcat
   - nmap
   - nodejs

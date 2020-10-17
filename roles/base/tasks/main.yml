@@ -98,6 +98,11 @@
     state: link
     force: no
 
+- name: set nc to point to nmap's netcat implementation
+  alternatives:
+    name: nc
+    path: /usr/bin/ncat
+
 - block:
     - name: Create directories for golang
       file:
