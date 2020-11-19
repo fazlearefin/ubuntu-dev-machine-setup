@@ -51,6 +51,7 @@ base_developer_tools:
   - ansible-lint
   - awscli
   - bat
+  - black
   - cloc
   - clusterssh
   - colordiff
