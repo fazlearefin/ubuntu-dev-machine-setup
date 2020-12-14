@@ -58,6 +58,7 @@ base_developer_tools:
   - curl
   - default-jre-headless
   - dos2unix
+  - entr
   - expect
   - filezilla
   - fonts-powerline
