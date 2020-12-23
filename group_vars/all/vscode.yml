@@ -23,5 +23,6 @@ vscode_extensions:
   - vscoss.vscode-ansible
   - wayou.vscode-todo-highlight
   - visualstudioexptteam.vscodeintellicode
+  - ms-azuretools.vscode-docker
 
 ...
