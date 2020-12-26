@@ -96,6 +96,7 @@ Summary of packages that get installed and configured:
 - Mount `/tmp` on tmpfs
 - Enable ufw firewall and configure for incoming ssh
 - Install [amix/vimrc](https://github.com/amix/vimrc) Vim Distribution
+  - Additional vim settings are enabled in `~/.vim_runtime/my_configs.vim` which are not part of the Vim Distribution. Edit this file if necessary.
 - Generate a `.zshrc` to enjoy zsh right away
   - Enable `oh-my-zsh` and some bundled plugins
   - Enable [bullet-train zsh theme](https://github.com/caiogondim/bullet-train.zsh)

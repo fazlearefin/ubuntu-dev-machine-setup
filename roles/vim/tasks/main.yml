@@ -19,4 +19,21 @@
   become: yes
   become_user: "{{ local_username }}"
 
+- block:
+    - name: create vim undo directory
+      file:
+        path: "~{{ local_username }}/.vim/undodir"
+        state: directory
+        mode: '0775'
+
+    - name:
+      copy:
+        src: my_configs.vim
+        dest: "~{{ local_username }}/.vim_runtime/my_configs.vim"
+        mode: '0644'
+        force: yes
+        backup: yes
+
+  become: yes
+  become_user: "{{ local_username }}"
 ...
