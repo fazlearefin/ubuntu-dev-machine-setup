@@ -33,7 +33,7 @@ base_system_tools_laptop:
 #  - powertop
   - tlp
   - tlp-rdw
-  - acpi-call-dkms  # for newer ThinkPads (X220/T420 and later)
+#  - acpi-call-dkms  # for newer ThinkPads (X220/T420 and later) (superseded by bbswtich https://github.com/Bumblebee-Project/bbswitch)
 #  - tp-smapi-dkms  # for older ThinkPads
 
 base_download_tools:
