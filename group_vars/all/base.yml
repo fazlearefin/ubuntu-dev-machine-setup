@@ -75,6 +75,7 @@ base_developer_tools:
   - inotify-tools
   - ipython3
   - jq
+  - kitty #meow
   - kwalify
   - makeself
   - meld
