@@ -24,5 +24,6 @@ vscode_extensions:
   - wayou.vscode-todo-highlight
   - visualstudioexptteam.vscodeintellicode
   - ms-azuretools.vscode-docker
+  - haskell.haskell
 
 ...
