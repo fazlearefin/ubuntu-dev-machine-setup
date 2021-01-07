@@ -13,7 +13,7 @@
           - 'Manual steps left to do:'
           - '- git clone the dotfiles repo (optional)'
           - '- add noatime option for your SSD mounts points in /etc/fstab (optional)'
-          - '- remove snapd: sudo apt purge snapd; sudo apt-mark hold snapd (optional)'
+          - '- install android studi via snap "sudo snap install android-studio --classic"'
           - '- enable WebRender in firefox; about:config in address bar, then manually set the gfx.webrender.enabled or gfx.webrender.all pref to true (optional)'
           - '- install / configure backup software for user data, apps, etc (optional)'
           - '- Reboot your system'
