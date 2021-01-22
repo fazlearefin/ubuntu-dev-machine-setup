@@ -13,6 +13,7 @@
           - 'Manual steps left to do:'
           - '- git clone the dotfiles repo (optional)'
           - '- add noatime option for your SSD mounts points in /etc/fstab (optional)'
+          - '- Install Papirus theme https://github.com/PapirusDevelopmentTeam/papirus-icon-theme'
           - '- install android studi via snap "sudo snap install android-studio --classic"'
           - '- enable WebRender in firefox; about:config in address bar, then manually set the gfx.webrender.enabled or gfx.webrender.all pref to true (optional)'
           - '- install / configure backup software for user data, apps, etc (optional)'
