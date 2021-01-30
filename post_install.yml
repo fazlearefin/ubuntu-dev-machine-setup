@@ -11,8 +11,13 @@
       debug:
         msg:
           - 'Manual steps left to do:'
+          - '- review this list for any items that can be added to ansible rather than manually done'
           - '- git clone the dotfiles repo (optional)'
+<<<<<<< HEAD
           - '- install Poetry for python dependency management ()https://github.com/python-poetry/poetry)'
+=======
+          - '- install zsh plugins for python, django and others to .zshrc if desired (optional)'
+>>>>>>> 3a9e797d1baafcf3535be6c7a9197de28f782668
           - '- install and configure Postgres and libpq-dev if needed for dev'
           - '- add noatime option for your SSD mounts points in /etc/fstab (optional)'
           - '- Install Papirus theme https://github.com/PapirusDevelopmentTeam/papirus-icon-theme'
