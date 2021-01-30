@@ -12,6 +12,7 @@
         msg:
           - 'Manual steps left to do:'
           - '- git clone the dotfiles repo (optional)'
+          - '- install Poetry for python dependency management ()https://github.com/python-poetry/poetry)'
           - '- install and configure Postgres and libpq-dev if needed for dev'
           - '- add noatime option for your SSD mounts points in /etc/fstab (optional)'
           - '- Install Papirus theme https://github.com/PapirusDevelopmentTeam/papirus-icon-theme'
