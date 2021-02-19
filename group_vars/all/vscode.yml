@@ -25,5 +25,6 @@ vscode_extensions:
   - visualstudioexptteam.vscodeintellicode
   - ms-azuretools.vscode-docker
   - haskell.haskell
+  - msjsdiag.debugger-for-chrome #debugger for chrome (React)
 
 ...
