@@ -122,7 +122,6 @@ base_developer_tools:
   - zeal
 
 base_virtualization_tools:
-  - vagrant
   - virtualbox
 #  - virtualbox-ext-pack
   - docker.io
