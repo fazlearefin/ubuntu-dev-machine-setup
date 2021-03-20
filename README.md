@@ -84,7 +84,8 @@ Summary of packages that get installed and configured:
 - Customization tools like gnome-tweak-tool, etc
 - Power management tools like [TLP](https://github.com/linrunner/TLP)
 - Download utils like aria2, wget, axel, etc
-- Developer tools like awscli, httpie, clusterssh, docker, vagrant, virtualbox, ghostwriter markdown editor, etc
+- Developer tools like awscli, httpie, clusterssh, docker, virtualbox, ghostwriter markdown editor, etc
+- Hashicorp tools like vagrant, packer and terraform
 - Google Chrome
 - Visual Studio Code and some popular extensions
 - Git Bash Prompt

@@ -1,0 +1,12 @@
+---
+
+hashicorp_repo_focal: "deb [arch=amd64] https://apt.releases.hashicorp.com focal main"    # ubuntu 20.04 LTS
+hashicorp_repo_groovy: "deb [arch=amd64] https://apt.releases.hashicorp.com groovy main"  # ubuntu 20.10
+hashicorp_apt_key: "https://apt.releases.hashicorp.com/gpg"
+
+hashicorp_packages:
+  - vagrant
+  - terraform
+  - packer
+
+...
