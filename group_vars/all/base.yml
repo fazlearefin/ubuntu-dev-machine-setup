@@ -39,7 +39,7 @@ base_system_tools_laptop:
 base_download_tools:
   - aria2
   - axel
-  - qbittorrent
+  - transmission
   - speedtest-cli
   - wget
   - youtube-dl
