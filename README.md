@@ -46,7 +46,7 @@ cd ubuntu-dev-machine-setup
 **Invoke the following as yourself, the primary user of the system. Do not run as `root`.**
 
 ```
-ansible-playbook main.yml -e "{ laptop_mode: True }" -e "{ virtual_machine_mode: False }" -e "local_username=$(id -un)" -K
+ansible-playbook main.yml -e "{ laptop_mode: True }" -e "local_username=$(id -un)" -K
 ```
 
 Enter the sudo password when asked for `BECOME password:`.
@@ -55,7 +55,7 @@ The `main.yml` playbook will take anything from 15 minutes to an hour to complet
 
 After all is done, give your laptop a new life by rebooting.
 
-### What is this `laptop_mode`?
+> ### What is this `laptop_mode`?
 
 #### Setting this to `True`
 
@@ -66,14 +66,6 @@ After all is done, give your laptop a new life by rebooting.
 
 - will not install some packages like `powertop` for battery economy
 - will install and configure ssh server
-
-### What is this `virtual_machine_mode`?
-
-This is to tell if you are configuring Ubuntu on a virtual machine.
-
-#### Setting this to `True`
-
-- will not install docker, virtualbox and vagrant
 
 ## What gets installed and cofigured?
 

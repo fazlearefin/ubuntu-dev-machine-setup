@@ -146,26 +146,24 @@
   become: yes
   become_user: "{{ local_username }}"
 
-- block:
-    - name: install virtualization tools
-      apt:
-        name: "{{ base_virtualization_tools }}"
-        state: present
-        force_apt_get: yes
+- name: install virtualization tools
+  apt:
+    name: "{{ base_virtualization_tools }}"
+    state: present
+    force_apt_get: yes
 
-    # add user to docker group to run docker commands without sudo
-    # add user to vboxusers group so that user can attach usb devices to guest OS
-    - name: add user to docker and vboxusers groups
-      user:
-        name: "{{ local_username }}"
-        append: yes
-        groups:
-          - docker
-          - vboxusers
+# add user to docker group to run docker commands without sudo
+# add user to vboxusers group so that user can attach usb devices to guest OS
+- name: add user to docker and vboxusers groups
+  user:
+    name: "{{ local_username }}"
+    append: yes
+    groups:
+      - docker
+      - vboxusers
 
-#    - name: install virtualbox extensions pack
-#      shell: echo 'y' | vboxmanage extpack install --replace /usr/share/virtualbox-ext-pack/Oracle*
-  when: not virtual_machine_mode
+#- name: install virtualbox extensions pack
+#  shell: echo 'y' | vboxmanage extpack install --replace /usr/share/virtualbox-ext-pack/Oracle*
 
 - block:
     - name: install openssh-server package (1/2)
