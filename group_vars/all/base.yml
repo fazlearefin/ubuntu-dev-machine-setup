@@ -26,6 +26,7 @@ base_system_tools:
   - gnome-tweak-tool
   - progress
   - pwgen
+  - pavucontrol
   #- syncthing
 
 base_system_tools_laptop:
@@ -120,6 +121,9 @@ base_developer_tools:
   - xclip
   - yamllint
   - zeal
+  - google-chrome-stable
+  - chromium-browser
+  - vivaldi
 
 base_virtualization_tools:
   - virtualbox
@@ -137,6 +141,7 @@ base_media_tools:
   - totem
 #  - ubuntu-restricted-extras
   - vlc
+  - shutter
 
 base_git_bash_prompt_url: "https://github.com/magicmonty/bash-git-prompt.git"
 
