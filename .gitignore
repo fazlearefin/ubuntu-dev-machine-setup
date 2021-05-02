@@ -1,1 +1,7 @@
+/retry
 *.retry
+/docs/_build/
+*.swp
+
+# Jetbrains IDEs configuration
+/.idea

@@ -1,0 +1,8 @@
+---
+repos:
+    - repo: https://github.com/adrienverge/yamllint
+      rev: v1.17.0
+      hooks:
+          - id: yamllint
+            name: 'YAML Linting'
+            types: [yaml]
