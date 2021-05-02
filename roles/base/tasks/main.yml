@@ -97,6 +97,7 @@
     dest: /usr/bin/bat
     state: link
     force: no
+  ignore_errors: '{{ ansible_check_mode }}'
 
 - name: set nc to point to nmap's netcat implementation
   alternatives:
