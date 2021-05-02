@@ -123,7 +123,7 @@ base_developer_tools:
   - zeal
   - google-chrome-stable
   - chromium-browser
-  - vivaldi
+  - vivaldi-stable
 
 base_virtualization_tools:
   - virtualbox
