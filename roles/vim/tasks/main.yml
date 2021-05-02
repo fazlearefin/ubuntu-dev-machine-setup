@@ -4,7 +4,7 @@
   apt:
     name: "{{ vim_apt_packages }}"
     state: present
-    force_apt_get: yes
+    force_apt_get: true
 
 - block:
     - name: clone amix vimrc git repo
@@ -16,7 +16,7 @@
     - name: install amix vimrc
       shell: "sh ~/.vim_runtime/install_awesome_vimrc.sh"
 
-  become: yes
+  become: true
   become_user: "{{ local_username }}"
 
 - block:
@@ -31,9 +31,9 @@
         src: my_configs.vim
         dest: "~{{ local_username }}/.vim_runtime/my_configs.vim"
         mode: '0644'
-        force: yes
-        backup: yes
+        force: true
+        backup: true
 
-  become: yes
+  become: true
   become_user: "{{ local_username }}"
 ...

@@ -4,6 +4,6 @@
   apt:
     name: "{{ security_packages }}"
     state: present
-    force_apt_get: yes
+    force_apt_get: true
 
 ...

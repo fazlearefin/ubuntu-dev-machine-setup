@@ -5,7 +5,7 @@
       file:
         path: "~{{ local_username }}/.local/share/fonts"
         state: directory
-  become: yes
+  become: true
   become_user: "{{ local_username }}"
 
 - block:
@@ -14,12 +14,12 @@
         url: "{{ item  }}"
         dest: "~{{ local_username }}/.local/share/fonts/"
       with_items: "{{ terminal_customizations_nerd_fonts }}"
-  become: yes
+  become: true
   become_user: "{{ local_username }}"
 
 - name: refresh fonts cache
   shell: "fc-cache -fv"
-  become: yes
+  become: true
   become_user: "{{ local_username }}"
 
 # fix for https://github.com/gnunn1/tilix/wiki/VTE-Configuration-Issue using option 2
@@ -29,12 +29,12 @@
       copy:
         src: tilix.dconf
         dest: /tmp/tilix.dconf
-        force: yes
+        force: true
 
     - name: import modified tilix config
       shell: dconf load /com/gexperts/Tilix/ < /tmp/tilix.dconf
-      ignore_errors: yes
-  become: yes
+      ignore_errors: true
+  become: true
   become_user: "{{ local_username  }}"
 
 # sample .tmux.conf file ready to use
@@ -54,8 +54,8 @@
       copy:
         src: .tmux.conf
         dest: "~{{ local_username }}/.tmux.conf"
-        force: yes
-  become: yes
+        force: true
+  become: true
   become_user: "{{ local_username }}"
 
 ...

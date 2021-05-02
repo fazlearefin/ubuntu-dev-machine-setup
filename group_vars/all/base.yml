@@ -27,11 +27,11 @@ base_system_tools:
   - progress
   - pwgen
   - pavucontrol
-  #- syncthing
+  # - syncthing
 
 base_system_tools_laptop:
-#  - cpufrequtils
-#  - powertop
+  # - cpufrequtils
+  # - powertop
   - tlp
   - tlp-rdw
   - acpi-call-dkms  # for newer ThinkPads (X220/T420 and later)
@@ -93,8 +93,8 @@ base_developer_tools:
   - powerline
   - pry
   - pssh
-  #- puppet
-  #- puppet-lint
+  # - puppet
+  # - puppet-lint
   - pv
   - pylint
   - python3-demjson  # provides jsonlint-py3 for json lint
@@ -126,9 +126,9 @@ base_developer_tools:
   - vivaldi-stable
 
 base_virtualization_tools:
-#  - virtualbox
-#  - virtualbox-ext-pack
-#  - docker.io
+  # - virtualbox
+  # - virtualbox-ext-pack
+  # - docker.io
   - docker-ce
   - docker-compose
 
@@ -140,7 +140,7 @@ base_media_tools:
   - mediainfo
   - soundconverter
   - totem
-#  - ubuntu-restricted-extras
+  # - ubuntu-restricted-extras
   - vlc
   - shutter
 

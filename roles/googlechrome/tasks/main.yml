@@ -13,6 +13,6 @@
 - name: install latest google chrome
   apt:
     name: google-chrome-stable
-    force_apt_get: yes
+    force_apt_get: true
 
 ...

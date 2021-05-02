@@ -13,12 +13,12 @@
 - name: install latest visual studio code
   apt:
     name: code
-    force_apt_get: yes
+    force_apt_get: true
 
 - name: install some popular vscode extensions
   command: code --install-extension {{ item }}
   with_items: "{{ vscode_extensions }}"
-  become: yes
+  become: true
   become_user: "{{ local_username }}"
 
 ...

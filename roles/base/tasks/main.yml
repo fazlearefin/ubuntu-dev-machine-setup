@@ -6,13 +6,13 @@
       shell: "/bin/rm -rf *"
       args:
         chdir: /tmp
-        warn: no
+        warn: false
 
     - name: copy systemd file (2/5)
       copy:
         src: /usr/share/systemd/tmp.mount
         dest: /lib/systemd/system/tmp.mount
-        remote_src: True
+        remote_src: true
 
     - name: create dir /etc/systemd/system/tmp.mount.d (3/5)
       file:
@@ -24,14 +24,14 @@
         dest: /etc/systemd/system/tmp.mount.d/options.conf
         content: |
           [Mount]
-          Options=mode=1777,strictatime,nosuid,nodev,size=512M
+          Options=mode=1777,strictatime,falsesuid,falsedev,size=512M
 
     - name: start and enable tmp.mount on boot (5/5)
       systemd:
         name: tmp.mount
-        enabled: yes
+        enabled: true
         state: started
-        daemon_reload: yes
+        daemon_reload: true
 
 - name: enable ufw firewall but allow ssh
   ufw:
@@ -55,40 +55,40 @@
 
 - name: perform a dist upgrade
   apt:
-    update_cache: yes
+    update_cache: true
     upgrade: dist
-    force_apt_get: yes
+    force_apt_get: true
 
 - name: install archiving tools
   apt:
     name: "{{ base_archiving_tools }}"
     state: present
-    force_apt_get: yes
+    force_apt_get: true
 
 - name: install productivity tools
   apt:
     name: "{{ base_productivity_tools }}"
     state: present
-    force_apt_get: yes
+    force_apt_get: true
 
 - name: install system tools
   apt:
     name: "{{ base_system_tools }}"
     state: present
-    force_apt_get: yes
+    force_apt_get: true
 
 - name: install system tools for laptop
   apt:
     name: "{{ base_system_tools_laptop }}"
     state: present
-    force_apt_get: yes
+    force_apt_get: true
   when: laptop_mode
 
 - name: install developer tools
   apt:
     name: "{{ base_developer_tools }}"
     state: present
-    force_apt_get: yes
+    force_apt_get: true
 
 # Fix for bat syntax highlighting tool; Ubuntu packages it as batcat instead of just bat
 - name: create symlink for bat
@@ -96,8 +96,8 @@
     src: /usr/bin/batcat
     dest: /usr/bin/bat
     state: link
-    force: no
-  ignore_errors: '{{ ansible_check_mode }}'
+    force: false
+  igfalsere_errors: '{{ ansible_check_mode }}'
 
 - name: set nc to point to nmap's netcat implementation
   alternatives:
@@ -118,65 +118,65 @@
       lineinfile:
         path: "~{{ local_username }}/.bashrc"
         line: "{{ item }}"
-        create: yes
+        create: true
       with_items:
         - export GOPATH=$HOME/go
         - export PATH=$PATH:$GOPATH/bin
-  become: yes
+  become: true
   become_user: "{{ local_username }}"
 
 - name: install download tools
   apt:
     name: "{{ base_download_tools }}"
     state: present
-    force_apt_get: yes
+    force_apt_get: true
 
 - name: install media packages
   apt:
     name: "{{ base_media_tools }}"
     state: present
-    force_apt_get: yes
+    force_apt_get: true
 
 - name: install bash git prompt
   git:
     repo: "{{ base_git_bash_prompt_url }}"
     dest: "~{{ local_username }}/.bash-helpers/bash-git-prompt"
     version: master
-    clone: yes
-    update: yes
-  become: yes
+    clone: true
+    update: true
+  become: true
   become_user: "{{ local_username }}"
 
 - name: install virtualization tools
   apt:
     name: "{{ base_virtualization_tools }}"
     state: present
-    force_apt_get: yes
+    force_apt_get: true
 
 # add user to docker group to run docker commands without sudo
 # add user to vboxusers group so that user can attach usb devices to guest OS
 - name: add user to docker and vboxusers groups
   user:
     name: "{{ local_username }}"
-    append: yes
+    append: true
     groups:
       - docker
-      - vboxusers
+#      - vboxusers
 
-#- name: install virtualbox extensions pack
-#  shell: echo 'y' | vboxmanage extpack install --replace /usr/share/virtualbox-ext-pack/Oracle*
+# - name: install virtualbox extensions pack
+#   shell: echo 'y' | vboxmanage extpack install --replace /usr/share/virtualbox-ext-pack/Oracle*
 
 - block:
     - name: install openssh-server package (1/2)
       apt:
         name: "{{ base_openssh_server.apt_package }}"
         state: present
-        force_apt_get: yes
+        force_apt_get: true
     - name: enable and start ssh (2/2)
       service:
         name: "{{ base_openssh_server.service }}"
         state: started
-        enabled: yes
-  when: not laptop_mode
+        enabled: true
+  when: falset laptop_mode
 
 ...

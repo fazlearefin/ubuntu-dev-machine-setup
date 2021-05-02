@@ -4,8 +4,8 @@
   tasks:
     - name: remove redundant packages
       apt:
-          autoremove: yes
-          force_apt_get: yes
+        autoremove: true
+        force_apt_get: true
 
     - name: display post install message
       debug:
