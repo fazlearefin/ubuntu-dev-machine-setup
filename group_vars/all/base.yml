@@ -126,9 +126,10 @@ base_developer_tools:
   - vivaldi-stable
 
 base_virtualization_tools:
-  - virtualbox
+#  - virtualbox
 #  - virtualbox-ext-pack
-  - docker.io
+#  - docker.io
+  - docker-ce
   - docker-compose
 
 base_media_tools:
