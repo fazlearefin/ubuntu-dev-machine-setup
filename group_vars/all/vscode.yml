@@ -25,5 +25,7 @@ vscode_extensions:
   - ms-azuretools.vscode-docker
   - vscode-icons-team.vscode-icons
   - esbenp.prettier-vscode
+  - redhat.vscode-yaml
+  - danielroedl.meld-diff
 
 ...
