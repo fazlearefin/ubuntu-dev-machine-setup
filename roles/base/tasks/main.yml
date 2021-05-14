@@ -33,6 +33,11 @@
         state: started
         daemon_reload: yes
 
+- name: Set default text editor to vi
+  community.general.alternatives:
+    name: editor
+    path: /usr/bin/vim.basic
+
 - name: enable ufw firewall but allow ssh
   ufw:
     rule: limit
