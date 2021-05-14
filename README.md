@@ -19,9 +19,9 @@ Screenshot above is using *bullet-train zsh theme*
 
 Screenshot above is using *pure zsh theme*
 
-![bullet-train-zsh-theme-tmux](.screenshot-bullet-train-tmux.png)
+![p10k-zsh-theme-tmux](.screenshot-p10k-tmux.png)
 
-Screenshot above is using *bullet-train zsh theme with tmux*
+Screenshot above is using *p10k zsh theme with tmux*
 
 
 ## Pre-requisites
