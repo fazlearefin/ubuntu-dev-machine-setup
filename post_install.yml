@@ -12,7 +12,7 @@
         msg:
           - 'Manual steps left to do:'
           - '- review this list for any items that can be added to ansible rather than manually done'
-          - '- git clone the dotfiles repo (optional)'
+          - '- git clone the dotfiles repo (optional - where is it?)'
           - '- Install sibiraj-s.vscode-scss-formatter extension for scss in VS Code'
           - '- install Poetry for python dependency management ()https://github.com/python-poetry/poetry)'
           - '- install Node.js, npm, nvm, weird this is deja vu'
