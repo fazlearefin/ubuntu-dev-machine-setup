@@ -14,15 +14,15 @@
           - '- review this list for any items that can be added to ansible rather than manually done'
           - '- git clone the dotfiles repo (optional - where is it?)'
           - '- Install sibiraj-s.vscode-scss-formatter extension for scss in VS Code'
-          - '- install Poetry for python dependency management ()https://github.com/python-poetry/poetry)'
+          - '- install Poetry for python dependency management (https://github.com/python-poetry/poetry)'
           - '- install Node.js, npm, nvm, weird this is deja vu'
           - '- install zsh plugins for python, django and others to .zshrc if desired (optional)'
           - '- install and configure Postgres and libpq-dev if needed for dev'
-          - '- Install Charles web proxy if you are going to be doing much web development'
+          - '- Install Charles web proxy if you are going to be doing much web development (optional - difficulties running on Ubuntu lately)
           - '- add noatime option for your SSD mounts points in /etc/fstab (optional)'
           - '- Install Papirus theme https://github.com/PapirusDevelopmentTeam/papirus-icon-theme'
-          - '- install android studi via snap "sudo snap install android-studio --classic"'
-          - '- enable WebRender in firefox; about:config in address bar, then manually set the gfx.webrender.enabled or gfx.webrender.all pref to true (optional)'
+          - '- install android studio via snap "sudo snap install android-studio --classic"' for app development
+          - '- for HiDPI display: enable WebRender in firefox; about:config in address bar, then manually set the gfx.webrender.enabled or gfx.webrender.all pref to true (optional)'
           - '- install / configure backup software for user data, apps, etc (optional)'
           - '- Reboot your system'
 
