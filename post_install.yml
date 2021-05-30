@@ -18,7 +18,7 @@
           - '- install Node.js, npm, nvm, weird this is deja vu'
           - '- install zsh plugins for python, django and others to .zshrc if desired (optional)'
           - '- install and configure Postgres and libpq-dev if needed for dev'
-          - '- Install Charles web proxy if you are going to be doing much web development (optional - difficulties running on Ubuntu lately)
+          - '- Install Charles web proxy if you are going to be doing much web development (optional - difficulties running on Ubuntu lately)'
           - '- add noatime option for your SSD mounts points in /etc/fstab (optional)'
           - '- Install Papirus theme https://github.com/PapirusDevelopmentTeam/papirus-icon-theme'
           - '- install android studio via snap "sudo snap install android-studio --classic"' for app development
