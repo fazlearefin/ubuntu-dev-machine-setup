@@ -21,7 +21,7 @@
           - '- Install Charles web proxy if you are going to be doing much web development (optional - difficulties running on Ubuntu lately)'
           - '- add noatime option for your SSD mounts points in /etc/fstab (optional)'
           - '- Install Papirus theme https://github.com/PapirusDevelopmentTeam/papirus-icon-theme'
-          - '- install android studio via snap "sudo snap install android-studio --classic"' for app development
+          - '- install android studio via snap "sudo snap install android-studio --classic" for app development'
           - '- for HiDPI display: enable WebRender in firefox; about:config in address bar, then manually set the gfx.webrender.enabled or gfx.webrender.all pref to true (optional)'
           - '- install / configure backup software for user data, apps, etc (optional)'
           - '- Reboot your system'
