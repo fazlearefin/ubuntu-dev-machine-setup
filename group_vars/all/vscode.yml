@@ -26,5 +26,7 @@ vscode_extensions:
   - ms-azuretools.vscode-docker
   - haskell.haskell
   - msjsdiag.debugger-for-chrome #debugger for chrome (React)
+  - sibiraj-s.vscode-scss-formatter
+
 
 ...

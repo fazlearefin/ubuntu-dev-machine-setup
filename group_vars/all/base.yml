@@ -26,13 +26,12 @@ base_system_tools:
   - gnome-tweak-tool
   - progress
   - pwgen
-  #- syncthing
 
 base_system_tools_laptop:
-#  - cpufrequtils
-#  - powertop
   - tlp
   - tlp-rdw
+  - htop
+  - neofetch
 #  - acpi-call-dkms  # for newer ThinkPads (X220/T420 and later) (superseded by bbswtich https://github.com/Bumblebee-Project/bbswitch)
 #  - tp-smapi-dkms  # for older ThinkPads
 
@@ -86,6 +85,7 @@ base_developer_tools:
   - nmap
   - nodejs
   - npm
+  - nvm
   - pandoc
   - parallel
   - pep8
