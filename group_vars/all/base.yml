@@ -85,7 +85,6 @@ base_developer_tools:
   - nmap
   - nodejs
   - npm
-  - nvm
   - pandoc
   - parallel
   - pep8
