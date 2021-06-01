@@ -12,10 +12,9 @@
         msg:
           - 'Manual steps left to do:'
           - '- review this list for any items that can be added to ansible rather than manually done'
-          - '- git clone the dotfiles repo (optional - where is it?)'
-          - '- Install sibiraj-s.vscode-scss-formatter extension for scss in VS Code'
-          - '- install Poetry for python dependency management (https://github.com/python-poetry/poetry), watch out for conflicts with virtualenv installed by apt! https://github.com/python-poetry/poetry/issues/2972#issuecomment-770145587'
-          - '- install Node.js, npm, nvm, if needed'
+          - '- git clone the dotfiles repo (optional)'
+          - '- install configure poetry/pipenv/virtualenv for python dependency management'
+          - '- install nvm and nodejs as shown https://www.ubuntupit.com/how-to-install-node-version-manager-tool-nvm-on-linux-system/'
           - '- install zsh plugins for python, django and others to .zshrc if desired (optional)'
           - '- install and configure Postgres and libpq-dev if needed for dev'
           - '- Install Charles web proxy if you are going to be doing much web development (optional - difficulties running on Ubuntu lately)'
