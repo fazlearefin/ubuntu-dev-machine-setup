@@ -27,6 +27,9 @@ vscode_extensions:
   - haskell.haskell
   - msjsdiag.debugger-for-chrome #debugger for chrome (React)
   - sibiraj-s.vscode-scss-formatter
-
+  - vscode-icons-team.vscode-icons
+  - esbenp.prettier-vscode
+  - redhat.vscode-yaml
+  - danielroedl.meld-diff
 
 ...
