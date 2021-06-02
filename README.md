@@ -7,6 +7,7 @@ The playbooks should run in Debian based system but was only tested with:
 - **Ubuntu Budgie 20.04**
 - **Ubuntu 20.10**
 - **Ubuntu Budgie 20.10**
+- **Ubuntu 21.04**
 
 For other versions of Ubuntu, change to the other branches of this git repo.
 
@@ -18,9 +19,9 @@ Screenshot above is using *bullet-train zsh theme*
 
 Screenshot above is using *pure zsh theme*
 
-![bullet-train-zsh-theme-tmux](.screenshot-bullet-train-tmux.png)
+![p10k-zsh-theme-tmux](.screenshot-p10k-tmux.png)
 
-Screenshot above is using *bullet-train zsh theme with tmux*
+Screenshot above is using *p10k zsh theme with tmux*
 
 
 ## Pre-requisites
@@ -30,7 +31,7 @@ On the system which you are going to setup using Ansible, perform these steps.
 You need to install `ansible` and `git` before running the playbooks. You can either install it using `pip` or `apt`.
 
 ```
-sudo apt install ansible git
+/usr/bin/sudo apt install ansible git
 ```
 
 And clone this repo
@@ -45,7 +46,7 @@ cd ubuntu-dev-machine-setup
 **Invoke the following as yourself, the primary user of the system. Do not run as `root`.**
 
 ```
-ansible-playbook main.yml -e "{ laptop_mode: True }" -e "{ virtual_machine_mode: False }" -e "local_username=$(id -un)" -K
+ansible-playbook main.yml -e "{ laptop_mode: True }" -e "local_username=$(id -un)" -K
 ```
 
 Enter the sudo password when asked for `BECOME password:`.
@@ -54,7 +55,7 @@ The `main.yml` playbook will take anything from 15 minutes to an hour to complet
 
 After all is done, give your laptop a new life by rebooting.
 
-### What is this `laptop_mode`?
+> ### What is this `laptop_mode`?
 
 #### Setting this to `True`
 
@@ -66,14 +67,6 @@ After all is done, give your laptop a new life by rebooting.
 - will not install some packages like `powertop` for battery economy
 - will install and configure ssh server
 
-### What is this `virtual_machine_mode`?
-
-This is to tell if you are configuring Ubuntu on a virtual machine.
-
-#### Setting this to `True`
-
-- will not install docker, virtualbox and vagrant
-
 ## What gets installed and cofigured?
 
 I am a Linux Systems Engineer and my daily job include working with various config management using Ansible. So if you are in a similar profession the installed system will suit your needs. It is also easy to extend using Ansible roles.
@@ -84,7 +77,8 @@ Summary of packages that get installed and configured:
 - Customization tools like gnome-tweak-tool, etc
 - Power management tools like [TLP](https://github.com/linrunner/TLP)
 - Download utils like aria2, wget, axel, etc
-- Developer tools like awscli, httpie, clusterssh, docker, vagrant, virtualbox, ghostwriter markdown editor, etc
+- Developer tools like awscli, httpie, clusterssh, docker, virtualbox, ghostwriter markdown editor, etc
+- Hashicorp tools like vagrant, packer and terraform
 - Google Chrome
 - Visual Studio Code and some popular extensions
 - Git Bash Prompt

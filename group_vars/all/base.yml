@@ -38,7 +38,7 @@ base_system_tools_laptop:
 base_download_tools:
   - aria2
   - axel
-  - qbittorrent
+  - transmission
   - speedtest-cli
   - wget
   - youtube-dl
@@ -50,6 +50,7 @@ base_developer_tools:
   - ansible-lint
   - awscli
   - bat
+  - bpython
   - black
   - cloc
   - clusterssh
@@ -121,7 +122,6 @@ base_developer_tools:
   - zeal
 
 base_virtualization_tools:
-  - vagrant
   - virtualbox
 #  - virtualbox-ext-pack
   - docker.io
