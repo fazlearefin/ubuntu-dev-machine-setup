@@ -26,7 +26,7 @@
         state: directory
         mode: '0775'
 
-    - name:
+    - name: add custom vim config
       copy:
         src: my_configs.vim
         dest: "~{{ local_username }}/.vim_runtime/my_configs.vim"
