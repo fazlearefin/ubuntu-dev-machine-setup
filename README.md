@@ -11,15 +11,15 @@ The playbooks should run in Debian based system but was only tested with:
 
 For other versions of Ubuntu, change to the other branches of this git repo.
 
-![bullet-train-zsh-theme](.screenshot-bullet-train.png)
+![bullet-train-zsh-theme](.images/screenshot-bullet-train.png)
 
 Screenshot above is using *bullet-train zsh theme*
 
-![pure-zsh-theme](.screenshot-pure.png)
+![pure-zsh-theme](.images/screenshot-pure.png)
 
 Screenshot above is using *pure zsh theme*
 
-![p10k-zsh-theme-tmux](.screenshot-p10k-tmux.png)
+![p10k-zsh-theme-tmux](.images/screenshot-p10k-tmux.png)
 
 Screenshot above is using *p10k zsh theme with tmux*
 
