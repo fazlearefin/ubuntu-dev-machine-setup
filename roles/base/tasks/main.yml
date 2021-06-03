@@ -34,7 +34,7 @@
         daemon_reload: yes
 
 - name: Set default text editor to vi
-  community.general.alternatives:
+  alternatives:
     name: editor
     path: /usr/bin/vim.basic
 
