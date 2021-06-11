@@ -69,35 +69,65 @@ After all is done, give your laptop a new life by rebooting.
 
 ## What gets installed and cofigured?
 
-I am a Linux Systems Engineer and my daily job include working with various config management using Ansible. So if you are in a similar profession the installed system will suit your needs. It is also easy to extend using Ansible roles.
+I am a DevSecOps Engineer (focusing on Linux) and my daily job include working with various config management using Ansible. So if you are in a similar profession the installed system will suit your needs. It is also easy to extend using Ansible roles.
 
-Summary of packages that get installed and configured:
+Summary of packages that get installed and configured based on roles:
 
-- Archiving tools like zip, rar, etc
-- Customization tools like gnome-tweak-tool, etc
-- Power management tools like [TLP](https://github.com/linrunner/TLP)
-- Download utils like aria2, wget, axel, etc
-- Developer tools like awscli, httpie, clusterssh, docker, virtualbox, ghostwriter markdown editor, etc
-- Hashicorp tools like vagrant, packer and terraform
-- Google Chrome
-- Visual Studio Code and some popular extensions
-- Git Bash Prompt
-- ssh server
-- zsh shell, antigen plugin manager, oh-my-zsh plugins
-- remmina to connect to Windows over RDP (and also transfer files between your Linux machine and remote Windows host)
-- Nerd Fonts
-- Reduce swappiness for better perfomance
-- Mount `/tmp` on tmpfs
-- Enable ufw firewall and configure for incoming ssh
-- Install [amix/vimrc](https://github.com/amix/vimrc) Vim Distribution
-  - Additional vim settings are enabled in `~/.vim_runtime/my_configs.vim` which are not part of the Vim Distribution. Edit this file if necessary.
-- Generate a `.zshrc` to enjoy zsh right away
-  - Enable `oh-my-zsh` and some bundled plugins
-  - Enable [bullet-train zsh theme](https://github.com/caiogondim/bullet-train.zsh)
-  - Function to stop ssh-agent from asking for encrypted ssh key password repeatedly when launching new terminal
-- Sample `.tmux.conf` file with powerline status bar and mouse support! (Open Tilix terminal and run `tmux` command, or enable custom command option in Tilix)
-- `tor` and `proxychains4` for anonymous browsing. Visit [my blog post](https://fazlearefin.blogspot.com/2020/07/tunneling-traffic-over-tor-network.html) to see how to use it
-- `clamav` antivirus package to manually scan files for malicious code using the `clamscan` utility. The clamav daemon for real-time scanning is not installed for performance reasons
+- **role: base**
+  - mount `/tmp` on tmpfs (reduce SSD read writes and increase SSD lifespan; no leftover files on system shutdown)
+  - set default system editor to vi instead of nano
+  - enable ufw firewall but open ssh port with rate limiting
+  - disable system crash reports
+  - tune system swappiness so that swapping is greatly reduced
+  - upgrade all packages
+  - install archiving tools like zip, rar, etc
+  - install libreoffice
+  - install power management tools like [TLP](https://github.com/linrunner/TLP)
+  - install system customization tools like gnome-tweak-tool
+  - install development related packages like android-tools, awscli, httpie, clusterssh, docker, filezilla, golang, pipenv, etc
+  - install golang directories
+  - install download tools like axel, transmission, wget, aria2
+  - install image, audio and video packages like vlc, totem, gimp, imagemagick, etc
+  - install virtualization tools like virtualbox, docker, docker-compose
+  - install and configure ssh server if not set to `laptop_mode`
+- **role: hashicorp**
+  - install vagrant, terraform, packer
+- **role: terminal_customizations**
+  - download and install some nerd fonts from ryanoasis/nerd-fonts; these are mono fonts ideal for use in terminal or programming editors
+  - copy and enable sample tilix config file with configured nerd font
+  - copy and enable sample tmux config file if one does not exist
+  - copy and enable sample `~/.tmux.conf` file with powerline status bar and mouse support!
+    - open Tilix terminal and run `tmux` command, or enable custom command option in Tilix
+    - edit `~/.tmux.conf` if necessary
+- **role: vim**
+  - install vim packages
+  - install amix/vimrc vim distribution
+  - create sample vim customization file in `~/.vim_runtime/my_configs.vim`
+    - additional vim settings are enabled in `~/.vim_runtime/my_configs.vim` which are not part of the Vim Distribution. Edit this file if necessary.
+- **role: zsh**
+  - install zsh package and set user shell to zsh
+  - install antigen zsh plugin manager
+  - copy and enable sample `~/.zshrc` file if one does not exist
+    - contains function to stop ssh-agent from asking for encrypted ssh key password repeatedly when launching new terminal
+  - install ohmyzsh/ohmyzsh and enable some bundled plugins
+  - enable bullet train zsh theme (others like p10k can be configured as well)
+- **role: googlechrome**
+  - add Google Chrome apt repo
+  - install Google Chrome
+- **role: vscode**
+  - add Visual Studio Code apt repo
+  - install Visual Studio Code
+  - install some popular Visual Studio Code extensions
+- **role: privacy**
+  - install tor
+  - configure tor to run at boot and prevent using certain countries as exit nodes
+    - edit `/etc/tor/torrc` if necessary
+  - install proxychains
+  - configure proxychains to use tor. Visit [my blog post](https://fazlearefin.blogspot.com/2020/07/tunneling-traffic-over-tor-network.html) to see how to use it
+    - edit `/etc/proxychains4.conf` if necessary
+  - install metadata anonymization toolkit
+- **role: security**
+  - install ClamAV (antivirus) and ClamAV GNOME interface. Manual scan from nautilus or from CLI using `clamscan`; real-time scanning not enabled for performance reasons
 
 ## Known Issues
 
