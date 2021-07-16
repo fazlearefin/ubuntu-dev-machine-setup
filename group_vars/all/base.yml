@@ -27,6 +27,7 @@ base_system_tools:
   - progress
   - pwgen
   - pavucontrol
+  - rename
   # - syncthing
 
 base_system_tools_laptop:
@@ -124,6 +125,7 @@ base_developer_tools:
   - google-chrome-stable
   - chromium-browser
   - vivaldi-stable
+  - brave-browser
 
 base_virtualization_tools:
   # - virtualbox
