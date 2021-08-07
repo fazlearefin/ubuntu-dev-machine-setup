@@ -16,6 +16,11 @@
     - name: install amix vimrc
       shell: "sh ~/.vim_runtime/install_awesome_vimrc.sh"
 
+    - name: Install indentLine plugin
+      git:
+        repo: "{{ vim_indentline_plugin_url }}"
+        dest: "~{{ local_username }}/.vim_runtime/my_plugins/indentLine"
+
   become: yes
   become_user: "{{ local_username }}"
 
@@ -36,4 +41,5 @@
 
   become: yes
   become_user: "{{ local_username }}"
+
 ...
