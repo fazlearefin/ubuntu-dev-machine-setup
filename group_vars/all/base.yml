@@ -84,6 +84,7 @@ base_developer_tools:
   - ncat
   - netcat
   - nmap
+  - nmon
   - nodejs
   - pandoc
   - parallel
