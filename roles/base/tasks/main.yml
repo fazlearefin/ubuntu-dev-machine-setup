@@ -33,7 +33,7 @@
         state: started
         daemon_reload: yes
 
-- name: Set default text editor to vi
+- name: Set default text editor to vim
   alternatives:
     name: editor
     path: /usr/bin/vim.basic

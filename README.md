@@ -73,7 +73,7 @@ Summary of packages that get installed and configured based on roles:
 
 - **role: base**
   - mount `/tmp` on tmpfs (reduce SSD read writes and increase SSD lifespan; no leftover files on system shutdown)
-  - set default system editor to vi instead of nano
+  - set default system editor to vim instead of nano
   - enable ufw firewall but open ssh port with rate limiting
   - disable system crash reports
   - tune system swappiness so that swapping is greatly reduced
@@ -83,7 +83,7 @@ Summary of packages that get installed and configured based on roles:
   - install power management tools like [TLP](https://github.com/linrunner/TLP)
   - install system customization tools like gnome-tweak-tool
   - install development related packages like android-tools, awscli, httpie, clusterssh, docker, filezilla, golang, pipenv, etc
-  - install golang directories
+  - setup golang directories
   - install download tools like axel, transmission, wget, aria2
   - install image, audio and video packages like vlc, totem, gimp, imagemagick, etc
   - install virtualization tools like virtualbox, docker, docker-compose
