@@ -80,6 +80,7 @@ base_developer_tools:
   - makeself
   - meld
   - miller
+  - moreutils
   - most
   - ncat
   - netcat
