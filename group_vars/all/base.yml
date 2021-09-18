@@ -142,8 +142,6 @@ base_media_tools:
 #  - ubuntu-restricted-extras
   - vlc
 
-base_git_bash_prompt_url: "https://github.com/magicmonty/bash-git-prompt.git"
-
 base_openssh_server:
   apt_package: openssh-server
   service: ssh

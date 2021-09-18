@@ -141,16 +141,6 @@
     state: present
     force_apt_get: yes
 
-- name: install bash git prompt
-  git:
-    repo: "{{ base_git_bash_prompt_url }}"
-    dest: "~{{ local_username }}/.bash-helpers/bash-git-prompt"
-    version: master
-    clone: yes
-    update: yes
-  become: yes
-  become_user: "{{ local_username }}"
-
 - name: install virtualization tools
   apt:
     name: "{{ base_virtualization_tools }}"
