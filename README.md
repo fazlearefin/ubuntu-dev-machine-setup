@@ -1,13 +1,11 @@
-# ubuntu-dev-machine-setup | Ubuntu 20.04 LTS
+# ubuntu-dev-machine-setup | Ubuntu 21.10
 
 This repo contains Ansible playbooks to configure your system as a development machine upon a clean install.
 
 The playbooks should run in Debian based system but was only tested with:
-- **Ubuntu 20.04**
-- **Ubuntu Budgie 20.04**
-- **Ubuntu 21.04**
+- **Ubuntu 21.10**
 
-For other versions of Ubuntu, change to the other branches of this git repo.
+For other versions of Ubuntu, change to the other branches of this git repo. Other versions include Ubuntu 18.04 LTS and 20.04 LTS.
 
 ![bullet-train-zsh-theme](.images/screenshot-bullet-train.png)
 
@@ -28,13 +26,13 @@ On the system which you are going to setup using Ansible, perform these steps.
 
 You need to install `ansible` and `git` before running the playbooks. You can either install it using `pip` or `apt`.
 
-```
+```sh
 /usr/bin/sudo apt install ansible git
 ```
 
 And clone this repo
 
-```
+```sh
 git clone https://github.com/fazlearefin/ubuntu-dev-machine-setup.git
 cd ubuntu-dev-machine-setup
 ```
@@ -43,8 +41,8 @@ cd ubuntu-dev-machine-setup
 
 **Invoke the following as yourself, the primary user of the system. Do not run as `root`.**
 
-```
-ansible-playbook main.yml -e "{ laptop_mode: True }" -e "local_username=$(id -un)" -K
+```sh
+ansible-playbook main.yml -vv -e "{ laptop_mode: True }" -e "local_username=$(id -un)" -K
 ```
 
 Enter the sudo password when asked for `BECOME password:`.
@@ -81,7 +79,6 @@ Summary of packages that get installed and configured based on roles:
   - install archiving tools like zip, rar, etc
   - install libreoffice
   - install power management tools like [TLP](https://github.com/linrunner/TLP)
-  - install system customization tools like gnome-tweak-tool
   - install development related packages like android-tools, awscli, httpie, clusterssh, docker, filezilla, golang, pipenv, etc
   - setup golang directories
   - install download tools like axel, transmission, wget, aria2
@@ -137,6 +134,8 @@ Summary of packages that get installed and configured based on roles:
 You are more than welcome to send any pull requests. However, the intention of this repo is to suit my development needs. So it might be better if you *fork* this repo instead for your own needs and personalization.
 
 ## Donations
+
+If you think my work helped you in some way saving you time and effort, I am happy to receive any amount of donation. However, the code in this repo is completely free; absolutely *no strings attached*.
 
 Bitcoin (BTC): `38uvDLV4GzcAB7qMUEM5chqivESqNPWPZW`
 

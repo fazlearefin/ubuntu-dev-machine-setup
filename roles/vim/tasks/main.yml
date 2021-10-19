@@ -6,6 +6,11 @@
     state: present
     force_apt_get: yes
 
+- name: Set default text editor to vim
+  alternatives:
+    name: editor
+    path: /usr/bin/vim.basic
+
 - block:
     - name: clone amix vimrc git repo
       git:
