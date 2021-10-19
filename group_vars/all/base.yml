@@ -22,7 +22,6 @@ base_system_tools:
   - fatrace
   - gnome-calculator
   - gnome-shell-extension-bluetooth-quick-connect
-  - gnome-shell-timer
   - progress
   - pwgen
   #- syncthing
