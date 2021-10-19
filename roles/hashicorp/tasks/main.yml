@@ -18,6 +18,13 @@
     filename: hashicorp
   when: ansible_distribution_release == "hirsute"
 
+- name: add hashicorp repo for ubuntu 21.10
+  apt_repository:
+    repo: "{{ hashicorp_repo_impish }}"
+    state: present
+    filename: hashicorp
+  when: ansible_distribution_release == "impish"
+
 - name: install hashicorp packages
   apt:
     name: "{{ hashicorp_packages }}"
