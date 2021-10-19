@@ -4,20 +4,6 @@
   apt_key:
     url: "{{ hashicorp_apt_key }}"
 
-- name: add hashicorp repo for ubuntu 20.04 lts
-  apt_repository:
-    repo: "{{ hashicorp_repo_focal }}"
-    state: present
-    filename: hashicorp
-  when: ansible_distribution_release == "focal"
-
-- name: add hashicorp repo for ubuntu 21.04
-  apt_repository:
-    repo: "{{ hashicorp_repo_hirsute }}"
-    state: present
-    filename: hashicorp
-  when: ansible_distribution_release == "hirsute"
-
 - name: add hashicorp repo for ubuntu 21.10
   apt_repository:
     repo: "{{ hashicorp_repo_impish }}"
