@@ -28,8 +28,9 @@ antigen bundle vagrant
 antigen bundle yarn
 
 # Syntax highlighting and autosuggestions
-antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-completions
+antigen bundle zsh-users/zsh-syntax-highlighting
 
 # pure theme
 # https://github.com/sindresorhus/pure
