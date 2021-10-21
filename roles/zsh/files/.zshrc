@@ -10,7 +10,7 @@ antigen bundle colored-man-pages
 antigen bundle colorize
 antigen bundle docker
 antigen bundle encode64
-antigen bundle gem
+#antigen bundle gem
 antigen bundle git
 antigen bundle git-extras
 antigen bundle httpie
@@ -22,7 +22,7 @@ antigen bundle pip
 antigen bundle pipenv
 antigen bundle pylint
 antigen bundle python
-antigen bundle ruby
+#antigen bundle ruby
 antigen bundle sudo
 antigen bundle vagrant
 antigen bundle yarn
