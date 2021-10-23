@@ -143,4 +143,12 @@ base_media_tools:
 base_openssh_server:
   apt_package: openssh-server
   service: ssh
+
+base_permanent_night_light:
+  night_light_enabled: False              # set this to True for permanently turning on night light
+  night_light_schedule_automatic: False
+  night_light_schedule_from: 0
+  night_light_schedule_to: 24
+  night_light_temperature: 4000
+
 ...

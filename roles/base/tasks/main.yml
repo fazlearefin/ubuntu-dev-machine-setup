@@ -168,4 +168,12 @@
         enabled: yes
   when: not laptop_mode
 
+- name: Enable permanent night light settings
+  dconf:
+    key: "{{ item.key  }}"
+    value: "{{ item.value }}"
+    state: present
+  loop: base_permanent_night_light
+  when: base_permanent_night_light.night_light_enabled
+
 ...
