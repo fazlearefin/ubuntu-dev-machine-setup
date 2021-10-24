@@ -169,11 +169,15 @@
   when: not laptop_mode
 
 - name: Enable permanent night light settings
-  dconf:
-    key: "{{ item.key  }}"
-    value: "{{ item.value }}"
-    state: present
-  loop: base_permanent_night_light
+  command: "gsettings set org.gnome.settings-daemon.plugins.color {{ item.key }} {{ item.value }}"
+  loop:
+    - { key: 'night-light-enabled', value: "{{ base_permanent_night_light.night_light_enabled | string | lower }}" }
+    - { key: 'night-light-schedule-automatic', value: "{{ base_permanent_night_light.night_light_schedule_automatic | string | lower }}" }
+    - { key: 'night-light-schedule-from', value: "{{ base_permanent_night_light.night_light_schedule_from }}" }
+    - { key: 'night-light-schedule-to', value: "{{ base_permanent_night_light.night_light_schedule_to }}" }
+    - { key: 'night-light-temperature', value: "{{ base_permanent_night_light.night_light_temperature }}" }
+
   when: base_permanent_night_light.night_light_enabled
+  become_user: "{{ local_username }}"
 
 ...
