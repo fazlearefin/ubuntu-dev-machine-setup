@@ -149,6 +149,6 @@ base_permanent_night_light:
   night_light_schedule_automatic: False
   night_light_schedule_from: 0
   night_light_schedule_to: 24
-  night_light_temperature: 4000
+  night_light_temperature: 4200
 
 ...
