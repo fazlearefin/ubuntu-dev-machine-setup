@@ -180,4 +180,32 @@
   when: base_permanent_night_light.night_light_enabled
   become_user: "{{ local_username }}"
 
+# make fstrim run daily rather than the default weekly schedule for SSD longevity
+- block:
+    - name: enable fstrim.timer
+      systemd:
+        name: fstrim.timer
+        state: started
+        enabled: yes
+
+    - name: create systemd fstrim.timer override dir
+      file:
+        path: /etc/systemd/system/fstrim.timer.d
+        state: directory
+        owner: root
+        group: root
+        mode: 0755
+
+    - name: create override.conf file for fstrim.timer
+      copy:
+        src: etc/systemd/system/fstrim.timer.d/override.conf
+        dest: /etc/systemd/system/fstrim.timer.d/override.conf
+        owner: root
+        group: root
+        mode: 0644
+
+    - name: force systemd to reread configs
+      systemd:
+        daemon_reload: yes
+
 ...
