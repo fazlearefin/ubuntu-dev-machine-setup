@@ -15,7 +15,7 @@
           - '- add noatime option for your SSD mounts points in /etc/fstab (optional)'
           - '- remove snapd: sudo apt purge snapd; sudo apt-mark hold snapd (optional)'
           - '- enable WebRender in firefox; about:config in address bar, then manually set the gfx.webrender.enabled or gfx.webrender.all pref to true (optional)'
-          - '- cache in RAM only in firefox: about:config, browser.cache.disk.enable -> false, browser.cache.memory.enable -> enable, browser.cache.memory.capacity -> 1048576, to check about:cache (optional)'
+          - '- cache in RAM only in firefox: about:config, browser.cache.disk.enable -> false, browser.cache.memory.enable -> enable, browser.cache.memory.capacity -> 1048576, browser.cache.memory.max_entry_size -> 51200, check about:cache (optional)'
           - '- Reboot your system'
 
 ...
