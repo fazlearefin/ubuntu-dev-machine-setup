@@ -47,10 +47,12 @@
     line: enabled=0
     state: present
 
+# It may be desirable to set this to zero, so that application memory is retained as long as possible at the expense
+# of the page cache. When there is still a memory shortage, the kernel can still use swapping.
 - name: tune system swappiness
   sysctl:
     name: vm.swappiness
-    value: '1'
+    value: '0'
     state: present
 
 - name: perform a dist upgrade
