@@ -4,6 +4,7 @@ This repo contains Ansible playbooks to configure your system as a development m
 
 The playbooks should run in Debian based system but was only tested with:
 - **Ubuntu 21.10**
+- **Pop!_OS 21.10**
 
 For other versions of Ubuntu, change to the other branches of this git repo. Other versions include Ubuntu 18.04 LTS and 20.04 LTS.
 
