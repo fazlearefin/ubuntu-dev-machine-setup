@@ -55,6 +55,12 @@
     value: '0'
     state: present
 
+- name: reduce space used by journald
+  lineinfile:
+    path: /etc/systemd/journald.conf
+    regexp: '^#SystemMaxUse=$'
+    line: SystemMaxUse=256M
+
 - name: perform a dist upgrade
   apt:
     update_cache: yes
