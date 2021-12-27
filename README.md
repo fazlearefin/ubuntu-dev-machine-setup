@@ -72,6 +72,7 @@ Summary of packages that get installed and configured based on roles:
 
 - **role: base**
   - mount `/tmp` on tmpfs (reduce SSD read writes and increase SSD lifespan; no leftover files on system shutdown)
+  - **remove snapd and all snap packages; if you want snap packages pack, remove the file `/etc/apt/preferences.d/nosnap.pref`**
   - set default system editor to vim instead of nano
   - enable ufw firewall but open ssh port with rate limiting
   - disable system crash reports

@@ -33,6 +33,29 @@
         state: started
         daemon_reload: yes
 
+# remove Satan's bastard child snap (and snap packages)
+- block:
+    - name: remove snapd (1/3)
+      apt:
+        name: snapd
+        state: absent
+        autoremove: yes
+        purge: yes
+
+    - name: restrict snapd package from being installed (2/3)
+      copy:
+        dest: /etc/apt/preferences.d/nosnap.pref
+        src: etc/apt/preferences.d/nosnap.pref
+        owner: root
+        group: root
+        mode: '0644'
+
+    - name: install firefox deb package which was a snap package (3/3)
+      apt:
+        name: firefox
+        update_cache: yes
+        force_apt_get: yes
+
 - name: enable ufw firewall but allow ssh
   ufw:
     rule: limit
