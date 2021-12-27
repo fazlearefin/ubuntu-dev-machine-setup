@@ -124,7 +124,7 @@ Summary of packages that get installed and configured based on roles:
     - edit `/etc/proxychains4.conf` if necessary
   - install metadata anonymization toolkit
 - **role: security**
-  - install ClamAV (antivirus) and ClamAV GNOME interface. Manual scan from nautilus or from CLI using `clamscan`; real-time scanning not enabled for performance reasons
+  - install ClamAV (antivirus) and ClamAV GNOME interface. Manual scan from nautilus or from CLI using `clamscan`; clamd not installed for its huge memory footprint
 
 ## Known Issues
 
