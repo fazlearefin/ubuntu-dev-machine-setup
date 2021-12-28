@@ -113,6 +113,7 @@ base_developer_tools:
   - socat
   - sshfs
   - sshpass
+  - sshuttle
   - tilix
   - tldr
   - tmux
