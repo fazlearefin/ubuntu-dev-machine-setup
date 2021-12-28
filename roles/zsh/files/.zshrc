@@ -132,3 +132,7 @@ export VAGRANT_DEFAULT_PROVIDER='virtualbox'
 [ -f ~/.shell_aliases  ] && source ~/.shell_aliases
 [ -f ~/.shell_functions  ] && source ~/.shell_functions
 [ -f ~/.shell_variables ] && source ~/.shell_variables
+
+# enable fzf fuzzy finder completions in the terminal
+[ -f /usr/share/doc/fzf/examples/key-bindings.zsh ] && source /usr/share/doc/fzf/examples/key-bindings.zsh    #fzf
+[ -f /usr/share/doc/fzf/examples/completion.zsh ] && source /usr/share/doc/fzf/examples/completion.zsh        #fzf

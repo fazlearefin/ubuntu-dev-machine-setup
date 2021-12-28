@@ -88,6 +88,7 @@ Summary of packages that get installed and configured based on roles:
   - install virtualization tools like virtualbox, docker, docker-compose
   - install and configure ssh server if not set to `laptop_mode`
   - option to turn on night light settings for eye comfort (set `base_permanent_night_light.night_light_enabled` to `True`)
+  - enable `fzf` fuzzy finder in zsh terminal; check out this [YouTube video](https://www.youtube.com/watch?v=1a5NiMhqAR0) to see how to use it
 - **role: hashicorp**
   - install vagrant, terraform, packer
 - **role: terminal_customizations**
@@ -132,6 +133,7 @@ Summary of packages that get installed and configured based on roles:
 - If the ansible playbook halts after completing a few tasks, simply run the playbook again. Since most of the tasks are idempotent, running the playbook multiple times won't break anything.
 - If your terminal shows any weird characters because of installing one of the zsh themes, simply change the font to a suitable Nerd Font from the terminal's settings.
 - If you are unable to install snapd and snap packages, remove the file `/etc/apt/preferences.d/nosnap.pref` (this is not a known issue but a feature)
+- If you do not like the fuzzy finder completions in your terminal, remove or comment out the `#fzf` lines in your `~/.zshrc` (this is not a known issue but a feature)
 
 ## Pull Requests and Forks
 
