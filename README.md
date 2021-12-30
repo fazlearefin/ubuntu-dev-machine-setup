@@ -1,5 +1,7 @@
 # ubuntu-dev-machine-setup | Ubuntu 21.10
 
+## Description
+
 This repo contains Ansible playbooks to configure your system as a development machine upon a clean install.
 
 The playbooks should run in Debian based system but was only tested with:
@@ -20,49 +22,7 @@ Screenshot above is using *pure zsh theme*
 
 Screenshot above is using *p10k zsh theme with tmux*
 
-
-## Pre-requisites
-
-On the system which you are going to setup using Ansible, perform these steps.
-
-You need to install `ansible` and `git` before running the playbooks. You can either install it using `pip` or `apt`.
-
-```sh
-/usr/bin/sudo apt install ansible git
-```
-
-And clone this repo
-
-```sh
-git clone https://github.com/fazlearefin/ubuntu-dev-machine-setup.git
-cd ubuntu-dev-machine-setup
-```
-
-## Running the playbooks to configure your system
-
-**Invoke the following as yourself, the primary user of the system. Do not run as `root`.**
-
-```sh
-ansible-playbook main.yml -vv -e "{ laptop_mode: True }" -e "local_username=$(id -un)" -K
-```
-
-Enter the sudo password when asked for `BECOME password:`.
-
-The `main.yml` playbook will take anything from 15 minutes to an hour to complete.
-
-After all is done, give your laptop a new life by rebooting.
-
-> ### What is this `laptop_mode`?
-
-#### Setting this to `True`
-
-- will install some packages like [TLP](https://github.com/linrunner/TLP) for battery economy
-- will not install and configure ssh server
-
-#### Setting this to `False`
-
-- will not install some packages like `powertop` for battery economy
-- will install and configure ssh server
+---
 
 ## What gets installed and cofigured?
 
@@ -72,7 +32,8 @@ Summary of packages that get installed and configured based on roles:
 
 - **role: base**
   - mount `/tmp` on tmpfs (reduce SSD read writes and increase SSD lifespan; no leftover files on system shutdown)
-  - **remove snapd and all snap packages; if you want snap packages pack, remove the file `/etc/apt/preferences.d/nosnap.pref`**
+  - remove snapd and all snap packages (set `remove_snapd` to `False` when running the `ansible-playbook` command above)
+    - remove the file `/etc/apt/preferences.d/nosnap.pref` if you plan to use snap at a later time after running the ansible playbooks in this repo
   - set default system editor to vim instead of nano
   - enable ufw firewall but open ssh port with rate limiting
   - disable system crash reports
@@ -128,6 +89,53 @@ Summary of packages that get installed and configured based on roles:
 - **role: security**
   - install ClamAV (antivirus) and ClamAV GNOME interface. Manual scan from nautilus or from CLI using `clamscan`; clamd not installed for its huge memory footprint
 
+---
+
+## Step 0 | Pre-requisites for running the ansible playbooks
+
+On the system which you are going to setup using Ansible, perform these steps.
+
+You need to install `ansible` and `git` before running the playbooks. You can either install it using `pip` or `apt`.
+
+```sh
+/usr/bin/sudo apt install ansible git
+```
+
+And clone this repo
+
+```sh
+git clone https://github.com/fazlearefin/ubuntu-dev-machine-setup.git
+cd ubuntu-dev-machine-setup
+```
+
+## Step 1 | Running the playbooks to configure your system
+
+**Invoke the following as yourself, the primary user of the system. Do not run as `root`.**
+
+```sh
+ansible-playbook main.yml -vv -e "{ laptop_mode: True }" -e "{ remove_snapd: True }" -e "local_username=$(id -un)" -K
+```
+
+Enter the sudo password when asked for `BECOME password:`.
+
+The `main.yml` playbook will take anything from 15 minutes to an hour to complete.
+
+After all is done, give your laptop a new life by rebooting.
+
+> ### What is this `laptop_mode`?
+
+#### Setting this to `True`
+
+- will install some packages like [TLP](https://github.com/linrunner/TLP) for battery economy
+- will not install and configure ssh server
+
+#### Setting this to `False`
+
+- will not install some packages like `powertop` for battery economy
+- will install and configure ssh server
+
+---
+
 ## Known Issues
 
 - If the ansible playbook halts after completing a few tasks, simply run the playbook again. Since most of the tasks are idempotent, running the playbook multiple times won't break anything.
@@ -135,9 +143,13 @@ Summary of packages that get installed and configured based on roles:
 - If you are unable to install snapd and snap packages, remove the file `/etc/apt/preferences.d/nosnap.pref` (this is not a known issue but a feature)
 - If you do not like the fuzzy finder completions in your terminal, remove or comment out the `#fzf` lines in your `~/.zshrc` (this is not a known issue but a feature)
 
+---
+
 ## Pull Requests and Forks
 
 You are more than welcome to send any pull requests. However, the intention of this repo is to suit my development needs. So it might be better if you *fork* this repo instead for your own needs and personalization.
+
+---
 
 ## Donations
 
