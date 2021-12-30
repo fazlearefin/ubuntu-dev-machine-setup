@@ -55,6 +55,7 @@
         name: firefox
         update_cache: yes
         force_apt_get: yes
+  when: remove_snapd
 
 - name: enable ufw firewall but allow ssh
   ufw:
