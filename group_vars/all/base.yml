@@ -104,6 +104,7 @@ base_developer_tools:
   - python3-pep8
   - python3-pip
   - ranger
+  - rclone
   - recode
   - remmina
   - rename
