@@ -83,7 +83,7 @@ Summary of packages that get installed and configured based on roles:
   - configure tor to run at boot and prevent using certain countries as exit nodes
     - edit `/etc/tor/torrc` if necessary
   - install proxychains
-  - configure proxychains to use tor. Visit [my blog post](https://fazlearefin.blogspot.com/2020/07/tunneling-traffic-over-tor-network.html) to see how to use it
+  - configure proxychains to use tor. View [my Medium story](https://fazlearefin.medium.com/tunneling-traffic-over-tor-network-using-proxychains-34c77ec32c0f) to see how to use it
     - edit `/etc/proxychains4.conf` if necessary
   - install metadata anonymization toolkit
 - **role: security**
