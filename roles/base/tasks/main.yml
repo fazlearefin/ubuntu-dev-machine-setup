@@ -135,6 +135,14 @@
     name: nc
     path: /usr/bin/ncat
 
+- name: create .ssh dir
+  file:
+    path: "~{{ local_username }}/.ssh"
+    state: directory
+    mode: '0700'
+  become: yes
+  become_user: "{{ local_username }}"
+
 - block:
     - name: Create directories for golang
       file:
