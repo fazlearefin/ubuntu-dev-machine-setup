@@ -145,10 +145,6 @@ base_media_tools:
 #  - ubuntu-restricted-extras
   - vlc
 
-base_openssh_server:
-  apt_package: openssh-server
-  service: ssh
-
 base_permanent_night_light:
   night_light_enabled: False              # set this to True for permanently turning on night light
   night_light_schedule_automatic: False

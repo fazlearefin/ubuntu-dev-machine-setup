@@ -127,12 +127,10 @@ After all is done, give your laptop a new life by rebooting.
 #### Setting this to `True`
 
 - will install some packages like [TLP](https://github.com/linrunner/TLP) for battery economy
-- will not install and configure ssh server
 
 #### Setting this to `False`
 
-- will not install some packages like `powertop` for battery economy
-- will install and configure ssh server
+- will NOT install some packages like [TLP](https://github.com/linrunner/TLP) for battery economy
 
 ---
 

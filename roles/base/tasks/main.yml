@@ -195,19 +195,6 @@
 #- name: install virtualbox extensions pack
 #  shell: echo 'y' | vboxmanage extpack install --replace /usr/share/virtualbox-ext-pack/Oracle*
 
-- block:
-    - name: install openssh-server package (1/2)
-      apt:
-        name: "{{ base_openssh_server.apt_package }}"
-        state: present
-        force_apt_get: yes
-    - name: enable and start ssh (2/2)
-      service:
-        name: "{{ base_openssh_server.service }}"
-        state: started
-        enabled: yes
-  when: not laptop_mode
-
 - name: Enable permanent night light settings
   command: "gsettings set org.gnome.settings-daemon.plugins.color {{ item.key }} {{ item.value }}"
   loop:
