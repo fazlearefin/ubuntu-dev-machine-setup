@@ -57,11 +57,8 @@
         force_apt_get: yes
   when: remove_snapd
 
-- name: enable ufw firewall but allow ssh
+- name: enable ufw firewall
   ufw:
-    rule: limit
-    port: ssh
-    proto: tcp
     state: enabled
 
 - name: disable system crash reports

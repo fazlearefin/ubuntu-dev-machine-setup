@@ -35,7 +35,7 @@ Summary of packages that get installed and configured based on roles:
   - remove snapd and all snap packages (set `remove_snapd` to `False` when running the `ansible-playbook` command above)
     - remove the file `/etc/apt/preferences.d/nosnap.pref` if you plan to use snap at a later time after running the ansible playbooks in this repo
   - set default system editor to vim instead of nano
-  - enable ufw firewall but open ssh port with rate limiting, also install graphical frontend gufw
+  - enable ufw firewall and install ufw graphical frontend gufw
   - disable system crash reports
   - tune system swappiness so that swapping is greatly reduced
   - upgrade all packages
