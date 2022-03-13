@@ -12,7 +12,6 @@ vscode_extensions:
   - vincaslt.highlight-matching-tag
   - oderwat.indent-rainbow
   - yzhang.markdown-all-in-one
-  - PKief.material-icon-theme
   - ms-python.python
   - ms-python.vscode-pylance
   - humao.rest-client
@@ -26,5 +25,7 @@ vscode_extensions:
   - esbenp.prettier-vscode
   - redhat.vscode-yaml
   - danielroedl.meld-diff
+  - davidanson.vscode-markdownlint
+  - hashicorp.terraform
 
 ...
