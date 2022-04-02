@@ -1,6 +1,6 @@
 ---
 
-hashicorp_repo_impish: "deb [arch=amd64] https://apt.releases.hashicorp.com impish main"  # ubuntu 21.10
+hashicorp_repo_jammy: "deb [arch=amd64] https://apt.releases.hashicorp.com jammy main"  # ubuntu 22.04
 hashicorp_apt_key: "https://apt.releases.hashicorp.com/gpg"
 
 hashicorp_packages:

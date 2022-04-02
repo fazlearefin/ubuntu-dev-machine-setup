@@ -1,17 +1,17 @@
 ---
 
 - name: add googlechrome apt key
-  apt_key:
+  ansible.builtin.apt_key:
     url: "{{ googlechrome_apt_key }}"
 
 - name: add google chrome repo
-  apt_repository:
+  ansible.builtin.apt_repository:
     repo: "{{ googlechrome_repo }}"
     state: present
     filename: google-chrome
 
 - name: install latest google chrome
-  apt:
+  ansible.builtin.apt:
     name: google-chrome-stable
     force_apt_get: yes
 

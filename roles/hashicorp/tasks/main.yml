@@ -1,18 +1,18 @@
 ---
 
 - name: add hashicorp apt key
-  apt_key:
+  ansible.builtin.apt_key:
     url: "{{ hashicorp_apt_key }}"
 
-- name: add hashicorp repo for ubuntu 21.10
-  apt_repository:
-    repo: "{{ hashicorp_repo_impish }}"
+- name: add hashicorp repo for ubuntu 22.04
+  ansible.builtin.apt_repository:
+    repo: "{{ hashicorp_repo_jammy }}"
     state: present
     filename: hashicorp
-  when: ansible_distribution_release == "impish"
+  when: ansible_distribution_release == "jammy"
 
 - name: install hashicorp packages
-  apt:
+  ansible.builtin.apt:
     name: "{{ hashicorp_packages }}"
     force_apt_get: yes
 

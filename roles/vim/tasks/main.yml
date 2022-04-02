@@ -1,28 +1,28 @@
 ---
 
 - name: install vim apt packages
-  apt:
+  ansible.builtin.apt:
     name: "{{ vim_apt_packages }}"
     state: present
     force_apt_get: yes
 
 - name: Set default text editor to vim
-  alternatives:
+  community.general.alternatives:
     name: editor
     path: /usr/bin/vim.basic
 
 - block:
     - name: clone amix vimrc git repo
-      git:
+      ansible.builtin.git:
         repo: "{{ vim_amix_vimrc_url }}"
         dest: "~{{ local_username }}/.vim_runtime"
         depth: 1
 
     - name: install amix vimrc
-      shell: "sh ~/.vim_runtime/install_awesome_vimrc.sh"
+      ansible.builtin.shell: "sh ~/.vim_runtime/install_awesome_vimrc.sh"
 
     - name: Install indentLine plugin
-      git:
+      ansible.builtin.git:
         repo: "{{ vim_indentline_plugin_url }}"
         dest: "~{{ local_username }}/.vim_runtime/my_plugins/indentLine"
 
@@ -31,13 +31,13 @@
 
 - block:
     - name: create vim undo directory
-      file:
+      ansible.builtin.file:
         path: "~{{ local_username }}/.vim/undodir"
         state: directory
         mode: '0775'
 
     - name: add custom vim config
-      copy:
+      ansible.builtin.copy:
         src: my_configs.vim
         dest: "~{{ local_username }}/.vim_runtime/my_configs.vim"
         mode: '0644'

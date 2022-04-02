@@ -1,22 +1,22 @@
 ---
 
 - name: add vscode apt key
-  apt_key:
+  ansible.builtin.apt_key:
     url: "{{ vscode_apt_key }}"
 
 - name: add vscode repo
-  apt_repository:
+  ansible.builtin.apt_repository:
     repo: "{{ vscode_repo }}"
     state: present
     filename: vscode
 
 - name: install latest visual studio code
-  apt:
+  ansible.builtin.apt:
     name: code
     force_apt_get: yes
 
 - name: install some popular vscode extensions
-  command: code --install-extension {{ item }}
+  ansible.builtin.command: code --install-extension {{ item }}
   with_items: "{{ vscode_extensions }}"
   become: yes
   become_user: "{{ local_username }}"
