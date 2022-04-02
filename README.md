@@ -1,12 +1,12 @@
-# ubuntu-dev-machine-setup | Ubuntu 21.10
+# ubuntu-dev-machine-setup | Ubuntu 22.04
 
 ## Description
 
 This repo contains Ansible playbooks to configure your system as a development machine upon a clean install.
 
 The playbooks should run in Debian based system but was only tested with:
-- **Ubuntu 21.10**
-- **Pop!_OS 21.10**
+- **Ubuntu 22.04**
+- **Pop!_OS 22.04**
 
 For other versions of Ubuntu, change to the other branches of this git repo. Other versions include Ubuntu 18.04 LTS and 20.04 LTS.
 
@@ -154,7 +154,3 @@ You are more than welcome to send any pull requests. However, the intention of t
 If you think my work helped you in some way saving you time and effort, I am happy to receive any amount of donation. However, the code in this repo is completely free; absolutely *no strings attached*.
 
 Bitcoin (BTC): `38uvDLV4GzcAB7qMUEM5chqivESqNPWPZW`
-
-Ethereum (ETH): `0xb87A10e8e3fa4Ea71b478f8f0c8798977dBe28Ed`
-
-Litecoin (LTC):`MRAwH2WHUprCn5RcpKWKMkfaUJicTpsbWr` or `3Jxny96KXhzmya9iiSWyY7RB9c8AXRGN3n`
