@@ -97,13 +97,14 @@ On the system which you are going to setup using Ansible, perform these steps.
 
 You need to install `ansible` and `git` before running the playbooks. You can either install it using `pip` or `apt`.
 
-```sh
-/usr/bin/sudo apt install ansible git
+```bash
+/usr/bin/sudo apt update
+/usr/bin/sudo apt install ansible git -y
 ```
 
 And clone this repo
 
-```sh
+```bash
 git clone https://github.com/fazlearefin/ubuntu-dev-machine-setup.git
 cd ubuntu-dev-machine-setup
 ```
@@ -112,7 +113,7 @@ cd ubuntu-dev-machine-setup
 
 **Invoke the following as yourself, the primary user of the system. Do not run as `root`.**
 
-```sh
+```bash
 ansible-playbook main.yml -vv -e "{ laptop_mode: True }" -e "{ remove_snapd: True }" -e "local_username=$(id -un)" -K
 ```
 
