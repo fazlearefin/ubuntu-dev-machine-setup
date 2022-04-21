@@ -3,7 +3,7 @@
 - hosts: localhost
   tasks:
     - name: remove redundant packages
-      apt:
+      ansible.builtin.apt:
           autoremove: yes
           force_apt_get: yes
 

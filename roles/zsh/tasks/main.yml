@@ -1,18 +1,18 @@
 ---
 
 - name: install zsh and other related packages
-  apt:
+  ansible.builtin.apt:
     name: "{{ zsh_packages }}"
     state: present
     force_apt_get: yes
 
 - name: change user's shell to zsh
-  user:
+  ansible.builtin.user:
     name: "{{ local_username }}"
     shell: /bin/zsh
 
 - name: install antigen
-  git:
+  ansible.builtin.git:
     dest: "~{{ local_username }}/.antigen"
     repo: "{{ zsh_antigen_url }}"
     version: "{{ zsh_antigen_git_version }}"
@@ -21,18 +21,18 @@
 
 - block:
     - name: check if .zshrc exists in user's home dir
-      stat:
+      ansible.builtin.stat:
         path: "~{{ local_username }}/.zshrc"
       register: dotzshrc
 
     - name: backup .zshrc if it exists
-      copy:
+      ansible.builtin.copy:
         src: "~{{ local_username }}/.zshrc"
         dest: "~{{ local_username }}/.zshrc.orig"
       when: dotzshrc.stat.exists
 
     - name: copy the sample .zshrc file
-      copy:
+      ansible.builtin.copy:
         src: .zshrc
         dest: "~{{ local_username }}/.zshrc"
         force: yes

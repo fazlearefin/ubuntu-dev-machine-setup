@@ -2,7 +2,7 @@
 
 - block:
     - name: create local fonts directory
-      file:
+      ansible.builtin.file:
         path: "~{{ local_username }}/.local/share/fonts"
         state: directory
   become: yes
@@ -10,7 +10,7 @@
 
 - block:
     - name: download nerd fonts to local fonts folder
-      get_url:
+      ansible.builtin.get_url:
         url: "{{ item  }}"
         dest: "~{{ local_username }}/.local/share/fonts/"
       with_items: "{{ terminal_customizations_nerd_fonts }}"
@@ -18,7 +18,7 @@
   become_user: "{{ local_username }}"
 
 - name: refresh fonts cache
-  shell: "fc-cache -fv"
+  ansible.builtin.shell: "fc-cache -fv"
   become: yes
   become_user: "{{ local_username }}"
 
@@ -26,13 +26,13 @@
 # also, set font to SourceCodePro+Powerline+Awesome Regular for tmux powerline
 - block:
     - name: copy tilix config template
-      copy:
+      ansible.builtin.copy:
         src: tilix.dconf
         dest: /tmp/tilix.dconf
         force: yes
 
     - name: import modified tilix config
-      shell: dconf load /com/gexperts/Tilix/ < /tmp/tilix.dconf
+      ansible.builtin.shell: dconf load /com/gexperts/Tilix/ < /tmp/tilix.dconf
       ignore_errors: yes
   become: yes
   become_user: "{{ local_username  }}"
@@ -40,18 +40,18 @@
 # sample .tmux.conf file ready to use
 - block:
     - name: check if .tmux.conf exists in user's home dir
-      stat:
+      ansible.builtin.stat:
         path: "~{{ local_username }}/.tmux.conf"
       register: dottmuxdotconf
 
     - name: backup .tmux.conf if it exists
-      copy:
+      ansible.builtin.copy:
         src: "~{{ local_username }}/.tmux.conf"
         dest: "~{{ local_username }}/.tmux.conf.orig"
       when: dottmuxdotconf.stat.exists
 
     - name: copy the sample .tmux.conf file
-      copy:
+      ansible.builtin.copy:
         src: .tmux.conf
         dest: "~{{ local_username }}/.tmux.conf"
         force: yes

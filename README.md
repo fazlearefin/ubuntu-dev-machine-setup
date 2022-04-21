@@ -1,12 +1,12 @@
-# ubuntu-dev-machine-setup | Ubuntu 21.10
+# ubuntu-dev-machine-setup | Ubuntu 22.04
 
 ## Description
 
 This repo contains Ansible playbooks to configure your system as a development machine upon a clean install.
 
 The playbooks should run in Debian based system but was only tested with:
-- **Ubuntu 21.10**
-- **Pop!_OS 21.10**
+- **Ubuntu 22.04**
+- **Pop!_OS 22.04**
 
 For other versions of Ubuntu, change to the other branches of this git repo. Other versions include Ubuntu 18.04 LTS and 20.04 LTS.
 
@@ -32,8 +32,6 @@ Summary of packages that get installed and configured based on roles:
 
 - **role: base**
   - mount `/tmp` on tmpfs (reduce SSD read writes and increase SSD lifespan; no leftover files on system shutdown)
-  - remove snapd and all snap packages (set `remove_snapd` to `False` when running the `ansible-playbook` command above)
-    - remove the file `/etc/apt/preferences.d/nosnap.pref` if you plan to use snap at a later time after running the ansible playbooks in this repo
   - set default system editor to vim instead of nano
   - enable ufw firewall and install ufw graphical frontend gufw
   - disable system crash reports
@@ -114,7 +112,7 @@ cd ubuntu-dev-machine-setup
 **Invoke the following as yourself, the primary user of the system. Do not run as `root`.**
 
 ```bash
-ansible-playbook main.yml -vv -e "{ laptop_mode: True }" -e "{ remove_snapd: True }" -e "local_username=$(id -un)" -K
+ansible-playbook main.yml -vv -e "{ laptop_mode: True }" -e "local_username=$(id -un)" -K
 ```
 
 Enter the sudo password when asked for `BECOME password:`.
@@ -139,7 +137,6 @@ After all is done, give your laptop a new life by rebooting.
 
 - If the ansible playbook halts after completing a few tasks, simply run the playbook again. Since most of the tasks are idempotent, running the playbook multiple times won't break anything.
 - If your terminal shows any weird characters because of installing one of the zsh themes, simply change the font to a suitable Nerd Font from the terminal's settings.
-- If you are unable to install snapd and snap packages, remove the file `/etc/apt/preferences.d/nosnap.pref` (this is not a known issue but a feature)
 - If you do not like the fuzzy finder completions in your terminal, remove or comment out the `#fzf` lines in your `~/.zshrc` (this is not a known issue but a feature)
 
 ---
@@ -155,7 +152,3 @@ You are more than welcome to send any pull requests. However, the intention of t
 If you think my work helped you in some way saving you time and effort, I am happy to receive any amount of donation. However, the code in this repo is completely free; absolutely *no strings attached*.
 
 Bitcoin (BTC): `38uvDLV4GzcAB7qMUEM5chqivESqNPWPZW`
-
-Ethereum (ETH): `0xb87A10e8e3fa4Ea71b478f8f0c8798977dBe28Ed`
-
-Litecoin (LTC):`MRAwH2WHUprCn5RcpKWKMkfaUJicTpsbWr` or `3Jxny96KXhzmya9iiSWyY7RB9c8AXRGN3n`
