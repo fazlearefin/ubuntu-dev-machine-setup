@@ -32,8 +32,6 @@ Summary of packages that get installed and configured based on roles:
 
 - **role: base**
   - mount `/tmp` on tmpfs (reduce SSD read writes and increase SSD lifespan; no leftover files on system shutdown)
-  - remove snapd and all snap packages (set `remove_snapd` to `False` when running the `ansible-playbook` command above)
-    - remove the file `/etc/apt/preferences.d/nosnap.pref` if you plan to use snap at a later time after running the ansible playbooks in this repo
   - set default system editor to vim instead of nano
   - enable ufw firewall and install ufw graphical frontend gufw
   - disable system crash reports
@@ -114,7 +112,7 @@ cd ubuntu-dev-machine-setup
 **Invoke the following as yourself, the primary user of the system. Do not run as `root`.**
 
 ```bash
-ansible-playbook main.yml -vv -e "{ laptop_mode: True }" -e "{ remove_snapd: True }" -e "local_username=$(id -un)" -K
+ansible-playbook main.yml -vv -e "{ laptop_mode: True }" -e "local_username=$(id -un)" -K
 ```
 
 Enter the sudo password when asked for `BECOME password:`.
@@ -139,7 +137,6 @@ After all is done, give your laptop a new life by rebooting.
 
 - If the ansible playbook halts after completing a few tasks, simply run the playbook again. Since most of the tasks are idempotent, running the playbook multiple times won't break anything.
 - If your terminal shows any weird characters because of installing one of the zsh themes, simply change the font to a suitable Nerd Font from the terminal's settings.
-- If you are unable to install snapd and snap packages, remove the file `/etc/apt/preferences.d/nosnap.pref` (this is not a known issue but a feature)
 - If you do not like the fuzzy finder completions in your terminal, remove or comment out the `#fzf` lines in your `~/.zshrc` (this is not a known issue but a feature)
 
 ---
