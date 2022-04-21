@@ -22,7 +22,6 @@ base_system_tools:
   - fatrace
   - fdupes
   - gnome-calculator
-  - gnome-shell-extension-bluetooth-quick-connect
   - gufw
   - progress
   - pwgen
