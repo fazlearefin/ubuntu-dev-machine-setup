@@ -1,7 +1,8 @@
 ---
 
 vscode_repo: "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
-vscode_apt_key: "https://packages.microsoft.com/keys/microsoft.asc"
+vscode_apt_key_url: "https://packages.microsoft.com/keys/microsoft.asc"
+vscode_apt_key_keyring: "/etc/apt/trusted.gpg.d/microsoft.gpg"
 
 vscode_extensions:
   - aaron-bond.better-comments

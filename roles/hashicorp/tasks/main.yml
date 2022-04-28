@@ -3,6 +3,7 @@
 - name: add hashicorp apt key
   ansible.builtin.apt_key:
     url: "{{ hashicorp_apt_key }}"
+    keyring: ""
 
 - name: add hashicorp repo for ubuntu 22.04
   ansible.builtin.apt_repository:
