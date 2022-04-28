@@ -2,8 +2,8 @@
 
 - name: add googlechrome apt key
   ansible.builtin.apt_key:
-    url: "{{ googlechrome_apt_key }}"
-    keyring: ""
+    url: "{{ googlechrome_apt_key_url }}"
+    keyring: "{{ googlechrome_apt_key_keyring }}"
 
 - name: add google chrome repo
   ansible.builtin.apt_repository:
