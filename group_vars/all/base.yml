@@ -44,6 +44,7 @@ base_download_tools:
   - youtube-dl
 
 base_developer_tools:
+  - 2to3
   - android-tools-adb
   - android-tools-fastboot
   - ansible
