@@ -95,6 +95,11 @@
     state: present
     force_apt_get: yes
 
+- name: install developer tools pip3 packages
+  ansible.builtin.pip:
+    name: "{{ base_developer_tools_pip3 }}"
+    executable: pip3
+
 # Fix for bat syntax highlighting tool; Ubuntu packages it as batcat instead of just bat
 - name: create symlink for bat
   ansible.builtin.file:
