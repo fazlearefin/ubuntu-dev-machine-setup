@@ -1,0 +1,3 @@
+Package: *
+Pin: origin apt.releases.hashicorp.com
+Pin-Priority: 900

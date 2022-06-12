@@ -12,6 +12,14 @@
     filename: hashicorp
   when: ansible_distribution_release == "jammy"
 
+- name: prioritize packages from hashicorp apt repo
+  ansible.builtin.copy:
+    src: etc/apt/preferences.d/hashicorp.pref
+    dest: /etc/apt/preferences.d/hashicorp.pref
+    owner: root
+    group: root
+    mode: 0644
+
 - name: install hashicorp packages
   ansible.builtin.apt:
     name: "{{ hashicorp_packages }}"
