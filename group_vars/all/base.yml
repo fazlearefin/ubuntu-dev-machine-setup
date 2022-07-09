@@ -118,6 +118,7 @@ base_developer_tools:
   - sshfs
   - sshpass
   - sshuttle
+  - tig
   - tilix
   - tmux
   - tmuxp
