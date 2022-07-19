@@ -151,4 +151,4 @@ You are more than welcome to send any pull requests. However, the intention of t
 
 If you think my work helped you in some way saving you time and effort, I am happy to receive any amount of donation. However, the code in this repo is completely free; absolutely *no strings attached*.
 
-Bitcoin (BTC): `38uvDLV4GzcAB7qMUEM5chqivESqNPWPZW`
+Bitcoin (BTC): `bc1qzlhpm94vtk2ht67etdutzcy2g5an5v6g36tp0m`
