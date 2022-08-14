@@ -61,6 +61,7 @@ base_developer_tools:
   - default-jre-headless
   - dos2unix
   - entr
+  - exa
   - expect
   - filezilla
   - fonts-powerline
