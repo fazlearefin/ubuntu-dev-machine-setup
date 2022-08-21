@@ -92,6 +92,7 @@ base_developer_tools:
   - nodejs
   - pandoc
   - parallel
+  - pcre2-utils  # provides pcre2grep and pcre2test (perl-compatible regex)
   - pep8
   - pipenv
   - powerline
