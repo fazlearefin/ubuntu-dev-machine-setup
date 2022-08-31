@@ -94,7 +94,6 @@ base_developer_tools:
   - parallel
   - pcre2-utils  # provides pcre2grep and pcre2test (perl-compatible regex)
   - pep8
-  - pipenv
   - powerline
   - pry
   - pssh
@@ -106,6 +105,7 @@ base_developer_tools:
   - python3-jmespath
   - python3-pep8
   - python3-pip
+  - python3-poetry
   - ranger
   - rclone
   - recode
