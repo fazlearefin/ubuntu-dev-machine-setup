@@ -100,7 +100,7 @@ You need to install `ansible` and `git` before running the playbooks. You can ei
 /usr/bin/sudo apt install ansible git -y
 ```
 
-And clone this repo
+And clone this repo (do not clone in `/tmp` as this dir is cleaned and mounted in tmpfs)
 
 ```bash
 git clone https://github.com/fazlearefin/ubuntu-dev-machine-setup.git
