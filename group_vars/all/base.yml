@@ -101,6 +101,7 @@ base_developer_tools:
   #- puppet-lint
   - pv
   - pylint
+  - python3-cachecontrol
   - python3-demjson  # provides jsonlint-py3 for json lint
   - python3-jmespath
   - python3-pep8
