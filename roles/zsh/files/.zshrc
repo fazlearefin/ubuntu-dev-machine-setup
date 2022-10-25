@@ -1,6 +1,6 @@
 export TERM="xterm-256color"
 
-source ~/.antigen/antigen.zsh
+source /usr/share/zsh-antigen/antigen.zsh
 
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
