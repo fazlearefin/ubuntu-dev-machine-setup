@@ -136,7 +136,7 @@ base_developer_tools_pip3:
 
 base_virtualization_tools:
   - virtualbox
-#  - virtualbox-ext-pack
+  - virtualbox-ext-pack
   - docker.io
   - docker-compose
 
