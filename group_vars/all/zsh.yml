@@ -3,8 +3,6 @@
 zsh_packages:
   - zsh
   - zsh-doc
-
-zsh_antigen_url: "https://github.com/zsh-users/antigen.git"
-zsh_antigen_git_version: v2.2.3
+  - zsh-antigen
 
 ...
