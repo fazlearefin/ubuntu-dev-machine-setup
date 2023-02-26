@@ -1,0 +1,21 @@
+---
+# The OS of the Kompose redistributable
+kompose_os: 'linux'
+
+# The CPU architecture of the Kompose redistributable
+kompose_architecture: 'amd64'
+
+# File name of the Kompose redistributable file
+kompose_redis_filename: 'kompose-{{ kompose_os }}-{{ kompose_architecture }}.tar.gz'
+
+# File name of the Kompose download file
+kompose_download_filename: 'kompose-v{{ kompose_version }}-{{ kompose_os }}-{{ kompose_architecture }}.tar.gz'
+
+# Path of the Kompose staging dir
+kompose_staging_dir: '{{ kompose_download_dir }}/kompose-v{{ kompose_version }}-{{ kompose_os }}-{{ kompose_architecture }}'
+
+# File name of the Kompose executable in the redistributable
+kompose_redis_executable_filename: 'kompose-{{ kompose_os }}-{{ kompose_architecture }}'
+
+# Dir where Kompose should be installed
+kompose_install_dir: '/usr/local/bin'

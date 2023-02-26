@@ -1,0 +1,6 @@
+---
+roles:
+  - name: darkwizard242.awsvault
+    src: https://github.com/darkwizard242/ansible-role-awsvault
+    version: 2.0.3
+

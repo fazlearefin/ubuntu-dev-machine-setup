@@ -1,0 +1,14 @@
+---
+# defaults file for awscli
+awscli_debian_pre_reqs:
+  - python3
+  - python3-pip
+awscli_debian_pre_reqs_desired_state: present
+awscli_el_pre_reqs:
+  - python3
+  - python3-pip
+awscli_el_pre_reqs_desired_state: present
+pip_executable: pip3
+awscli_app_debian_package: awscli
+awscli_app_el_package: awscli
+awscli_desired_state: present

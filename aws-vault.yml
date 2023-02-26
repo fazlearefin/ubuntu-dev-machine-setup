@@ -1,0 +1,9 @@
+---
+
+- hosts: localhost
+  roles:
+    - darkwizard242.awsvault
+  vars:
+    awsvault_version: 6.6.2
+
+...

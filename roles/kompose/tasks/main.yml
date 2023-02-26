@@ -1,0 +1,56 @@
+---
+- name: Create download directory
+  ansible.builtin.file:
+    state: directory
+    mode: 'u=rwx,go=rx'
+    dest: '{{ kompose_download_dir }}'
+
+- name: Download Kompose
+  ansible.builtin.get_url:
+    url: '{{ kompose_mirror }}/{{ kompose_redis_filename }}'
+    dest: '{{ kompose_download_dir }}/{{ kompose_download_filename }}'
+    checksum: 'sha256:{{ kompose_redis_sha256sum }}'
+    force: no
+    use_proxy: yes
+    validate_certs: yes
+    mode: 'u=rw,go=r'
+
+- name: Create the Kompose staging dir
+  ansible.builtin.file:
+    state: directory
+    mode: 'u=rwx,go=rx'
+    dest: '{{ kompose_staging_dir }}'
+
+- name: Install unarchive module dependencies (apt, yum, dnf, zypper)
+  become: yes
+  ansible.builtin.package:
+    name:
+      - tar
+      - unzip
+    state: present
+  when: ansible_pkg_mgr in ('apt', 'yum', 'dnf', 'zypper')
+
+- name: Extract Kompose
+  ansible.builtin.unarchive:
+    src: '{{ kompose_download_dir }}/{{ kompose_download_filename }}'
+    remote_src: yes
+    dest: '{{ kompose_staging_dir }}'
+    mode: 'o-w'
+    creates: '{{ kompose_staging_dir }}/{{ kompose_redis_executable_filename }}'
+
+- name: Create the Kompose installation dir
+  become: yes
+  ansible.builtin.file:
+    state: directory
+    dest: '{{ kompose_install_dir }}'
+    mode: 'u=rwx,go=rx'
+
+- name: Install Kompose
+  become: yes
+  ansible.builtin.copy:
+    src: '{{ kompose_staging_dir }}/{{ kompose_redis_executable_filename }}'
+    remote_src: yes
+    dest: '{{ kompose_install_dir }}/kompose'
+    owner: root
+    group: root
+    mode: 'u=rwx,go=rx'

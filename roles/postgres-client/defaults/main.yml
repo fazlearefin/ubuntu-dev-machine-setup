@@ -1,0 +1,8 @@
+---
+# defaults file for ome.postgresql-client
+
+# The PostgreSQL major version, required
+postgresql_version: "14"
+
+# Full package version of postgres
+postgresql_package_version: ""

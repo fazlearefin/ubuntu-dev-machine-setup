@@ -8,5 +8,10 @@
 - import_playbook: vscode.yml
 - import_playbook: privacy.yml
 - import_playbook: security.yml
+- import_playbook: kompose.yml
+- import_playbook: postgres-client.yml
+- import_playbook: minikube.yml
+- import_playbook: awscli.yml
+- import_playbook: aws-vault.yml
 - import_playbook: post_install.yml
 ...

@@ -1,0 +1,30 @@
+---
+# vars file for ome.postgresql_client
+
+# DEPRECATED
+# This variable includes information used by the postgresql (server) role
+postgresql_distribution_redhat:
+  "9.6":
+    repo: pgdg96
+    basename: postgresql96
+    setup: postgresql96-setup
+  "10":
+    repo: pgdg10
+    basename: postgresql10
+    setup: postgresql-10-setup
+  "11":
+    repo: pgdg11
+    basename: postgresql11
+    setup: postgresql-11-setup
+  "12":
+    repo: pgdg12
+    basename: postgresql12
+    setup: postgresql-12-setup
+  "13":
+    repo: pgdg13
+    basename: postgresql13
+    setup: postgresql-13-setup
+  "14":
+    repo: pgdg14
+    basename: postgresql14
+    setup: postgresql-14-setup

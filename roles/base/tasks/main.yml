@@ -6,7 +6,6 @@
       ansible.builtin.shell: "/bin/rm -rf *"
       args:
         chdir: /tmp
-        warn: no
 
     - name: copy systemd file (2/5)
       ansible.builtin.copy:

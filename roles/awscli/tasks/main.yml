@@ -1,0 +1,6 @@
+---
+# tasks file for awscli
+
+- name: Import install_debian.yml if OS family is Debian
+  ansible.builtin.import_tasks: install_debian.yml
+  when: ansible_os_family == "Debian"
