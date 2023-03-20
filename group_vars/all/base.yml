@@ -67,6 +67,7 @@ base_developer_tools:
   - fonts-powerline
   - fzf
   - g++
+  - gawk
   - gedit-plugins
   - geoip-bin
   - ghostwriter
