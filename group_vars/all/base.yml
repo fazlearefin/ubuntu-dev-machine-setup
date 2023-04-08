@@ -86,6 +86,7 @@ base_developer_tools:
   - miller
   - moreutils
   - most
+  - mssh
   - ncat
   - netcat
   - nmap
