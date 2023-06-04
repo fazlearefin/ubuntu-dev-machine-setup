@@ -219,4 +219,9 @@
       ansible.builtin.systemd:
         daemon_reload: yes
 
+- name: make poetry create virtualenv dirs inside the project dir itself
+  ansible.builtin.command: "poetry config virtualenvs.in-project true"
+  become: yes
+  become_user: "{{ local_username }}"
+
 ...
