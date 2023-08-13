@@ -45,6 +45,10 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 # https://github.com/caiogondim/bullet-train.zsh
 antigen theme caiogondim/bullet-train.zsh bullet-train
 
+# spaceship theme
+# https://github.com/spaceship-prompt/spaceship-prompt
+#antigen theme spaceship-prompt/spaceship-prompt
+
 # Tell antigen that you're done.
 antigen apply
 
