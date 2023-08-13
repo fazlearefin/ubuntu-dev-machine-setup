@@ -99,6 +99,7 @@ base_developer_tools:
   - powerline
   - pry
   - pssh
+  - ptpython
   #- puppet
   #- puppet-lint
   - pv
