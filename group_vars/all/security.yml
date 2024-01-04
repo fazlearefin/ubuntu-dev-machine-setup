@@ -4,5 +4,6 @@ security_packages:
   - clamav
   - clamtk-gnome    # right click clamav scan access from nautilus
 #  - clamav-daemon  # for real time scanning; not installed in case it impacts performance
+  - firejail
 
 ...
