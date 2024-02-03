@@ -37,8 +37,15 @@
   become: yes
   become_user: "{{ local_username  }}"
 
-# sample .tmux.conf file ready to use
+# setup tmux configs and plugins
 - block:
+    - name: git clone tmux plugin repo
+      ansible.builtin.git:
+        repo: "{{ terminal_customizations_tmux_plugin_repo }}"
+        dest: "~{{ local_username }}/.tmux/plugins/tpm"
+        clone: true
+        version: master
+
     - name: check if .tmux.conf exists in user's home dir
       ansible.builtin.stat:
         path: "~{{ local_username }}/.tmux.conf"
@@ -55,6 +62,11 @@
         src: .tmux.conf
         dest: "~{{ local_username }}/.tmux.conf"
         force: yes
+
+    - name: install all required tmux plugins
+      ansible.builtin.shell: "~{{local_username}}/.tmux/plugins/tpm/scripts/install_plugins.sh"
+      become: true
+      become_user: "{{ local_username }}"
   become: yes
   become_user: "{{ local_username }}"
 

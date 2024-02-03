@@ -15,4 +15,6 @@ terminal_customizations_nerd_fonts:
   - "https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/Noto/Mono/NotoMonoNerdFontMono-Regular.ttf"
   - "https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/JetBrainsMono/Ligatures/Regular/JetBrainsMonoNerdFontMono-Regular.ttf"
 
+terminal_customizations_tmux_plugin_repo: "https://github.com/tmux-plugins/tpm"
+
 ...
