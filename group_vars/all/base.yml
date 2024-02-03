@@ -130,7 +130,7 @@ base_developer_tools:
   - tmuxp
   - tree
   - uget
-  - xclip
+  - xsel
   - yamllint
   - zeal
 
