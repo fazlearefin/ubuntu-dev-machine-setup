@@ -54,7 +54,7 @@ Summary of packages that get installed and configured based on roles:
   - download and install some nerd fonts from ryanoasis/nerd-fonts; these are mono fonts ideal for use in terminal or programming editors
   - copy and enable sample tilix config file with configured nerd font
   - copy and enable sample tmux config file if one does not exist
-  - copy and enable sample `~/.tmux.conf` file with powerline status bar and mouse support!
+  - copy and enable sample `~/.tmux.conf` file with [tmux plugin manager](https://github.com/tmux-plugins/tpm) and several tmux plugins
     - open Tilix terminal and run `tmux` command, or enable custom command option in Tilix
     - edit `~/.tmux.conf` if necessary
 - **role: vim**
