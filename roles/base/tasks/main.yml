@@ -108,11 +108,6 @@
     state: link
     force: no
 
-- name: set nc to point to nmap's netcat implementation
-  community.general.alternatives:
-    name: nc
-    path: /usr/bin/ncat
-
 - name: create .ssh dir
   ansible.builtin.file:
     path: "~{{ local_username }}/.ssh"
