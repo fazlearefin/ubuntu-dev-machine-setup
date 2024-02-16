@@ -18,7 +18,6 @@ vscode_extensions:
   - humao.rest-client
   - Gruntfuggly.todo-tree
   - shardulm94.trailing-spaces
-  - Equinusocio.vsc-material-theme
   - vscodevim.vim
   - visualstudioexptteam.vscodeintellicode
   - ms-azuretools.vscode-docker
