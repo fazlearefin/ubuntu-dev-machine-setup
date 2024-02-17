@@ -41,6 +41,7 @@ Summary of packages that get installed and configured based on roles:
   - install libreoffice
   - install power management tools like [TLP](https://github.com/linrunner/TLP)
   - install development related packages like android-tools, awscli, httpie, clusterssh, docker, filezilla, golang, pipenv, etc
+  - install nala, an alternative package management tool to apt/apt-get
   - setup golang directories
   - install download tools like axel, transmission, wget, aria2
   - install image, audio and video packages like vlc, totem, gimp, imagemagick, etc
