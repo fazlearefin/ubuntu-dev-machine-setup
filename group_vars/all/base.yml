@@ -23,6 +23,7 @@ base_system_tools:
   - fdupes
   - gnome-calculator
   - gufw
+  - nala    # alternative package management tool to apt/apt-get
   - progress
   - pwgen
   #- syncthing
