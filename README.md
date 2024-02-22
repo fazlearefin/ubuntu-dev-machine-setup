@@ -99,6 +99,7 @@ You need to install `ansible` and `git` before running the playbooks. You can ei
 
 ```bash
 /usr/bin/sudo apt update
+/usr/bin/sudo apt full-upgrade -y
 /usr/bin/sudo apt install ansible git -y
 ```
 
