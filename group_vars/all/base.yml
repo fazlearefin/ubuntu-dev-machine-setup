@@ -17,6 +17,7 @@ base_archiving_tools:
 
 base_productivity_tools:
   - libreoffice
+  - foliate
 
 base_system_tools:
   - fatrace

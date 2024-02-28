@@ -39,6 +39,7 @@ Summary of packages that get installed and configured based on roles:
   - upgrade all packages
   - install archiving tools like zip, rar, etc
   - install libreoffice
+  - install foliate, an e-book reader
   - install power management tools like [TLP](https://github.com/linrunner/TLP)
   - install development related packages like android-tools, awscli, httpie, clusterssh, docker, filezilla, golang, pipenv, etc
   - install nala, an alternative package management tool to apt/apt-get
