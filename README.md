@@ -89,6 +89,7 @@ Summary of packages that get installed and configured based on roles:
 - **role: security**
   - install ClamAV (antivirus) and ClamAV GNOME interface. Manual scan from nautilus or from CLI using `clamscan`; clamd not installed for its huge memory footprint
   - install firejail for sanboxing applications
+  - enable additional apparmor profiles
 
 ---
 
