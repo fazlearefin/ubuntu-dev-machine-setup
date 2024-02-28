@@ -54,6 +54,7 @@ base_developer_tools:
   - apostrophe
   - awscli
   - bat
+  - bats
   - bpython
   - black
   - cloc
