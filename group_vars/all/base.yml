@@ -51,6 +51,7 @@ base_developer_tools:
   - android-tools-fastboot
   - ansible
   - ansible-lint
+  - apostrophe
   - awscli
   - bat
   - bpython
@@ -72,7 +73,6 @@ base_developer_tools:
   - gawk
   - gedit-plugins
   - geoip-bin
-  - ghostwriter
   - git
   - git-extras
   - gitg
