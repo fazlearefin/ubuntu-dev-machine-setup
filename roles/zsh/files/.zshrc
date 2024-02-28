@@ -126,6 +126,9 @@ fi
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
+# pipx executables
+export PATH=$PATH:$HOME/.local/bin
+
 # make sure pipenv creates virtualenv dir in current dir under .venv
 export PIPENV_VENV_IN_PROJECT=1
 

@@ -135,7 +135,7 @@ base_developer_tools:
   - yamllint
   - zeal
 
-base_developer_tools_pip3:
+base_developer_tools_pipx:
   - tldr
 
 base_virtualization_tools:
