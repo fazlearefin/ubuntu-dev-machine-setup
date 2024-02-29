@@ -6,7 +6,7 @@
       ansible.builtin.shell: "/bin/rm -rf *"
       args:
         chdir: /tmp
-        warn: no
+        warn: false
 
     - name: copy systemd file (2/5)
       ansible.builtin.copy:
@@ -29,9 +29,9 @@
     - name: start and enable tmp.mount on boot (5/5)
       ansible.builtin.systemd:
         name: tmp.mount
-        enabled: yes
+        enabled: true
         state: started
-        daemon_reload: yes
+        daemon_reload: true
 
 - name: enable ufw firewall
   community.general.ufw:
@@ -60,40 +60,40 @@
 
 - name: perform a dist upgrade
   ansible.builtin.apt:
-    update_cache: yes
+    update_cache: true
     upgrade: dist
-    force_apt_get: yes
+    force_apt_get: true
 
 - name: install archiving tools
   ansible.builtin.apt:
     name: "{{ base_archiving_tools }}"
     state: present
-    force_apt_get: yes
+    force_apt_get: true
 
 - name: install productivity tools
   ansible.builtin.apt:
     name: "{{ base_productivity_tools }}"
     state: present
-    force_apt_get: yes
+    force_apt_get: true
 
 - name: install system tools
   ansible.builtin.apt:
     name: "{{ base_system_tools }}"
     state: present
-    force_apt_get: yes
+    force_apt_get: true
 
 - name: install system tools for laptop
   ansible.builtin.apt:
     name: "{{ base_system_tools_laptop }}"
     state: present
-    force_apt_get: yes
+    force_apt_get: true
   when: laptop_mode
 
 - name: install developer tools
   ansible.builtin.apt:
     name: "{{ base_developer_tools }}"
     state: present
-    force_apt_get: yes
+    force_apt_get: true
 
 - name: install developer tools pipx packages
   community.general.pipx:
@@ -105,14 +105,14 @@
     src: /usr/bin/batcat
     dest: /usr/bin/bat
     state: link
-    force: no
+    force: false
 
 - name: create .ssh dir
   ansible.builtin.file:
     path: "~{{ local_username }}/.ssh"
     state: directory
     mode: '0700'
-  become: yes
+  become: true
   become_user: "{{ local_username }}"
 
 - block:
@@ -129,24 +129,24 @@
       ansible.builtin.lineinfile:
         path: "~{{ local_username }}/.bashrc"
         line: "{{ item }}"
-        create: yes
+        create: true
       with_items:
         - export GOPATH=$HOME/go
         - export PATH=$PATH:$GOPATH/bin
-  become: yes
+  become: true
   become_user: "{{ local_username }}"
 
 - name: install download tools
   ansible.builtin.apt:
     name: "{{ base_download_tools }}"
     state: present
-    force_apt_get: yes
+    force_apt_get: true
 
 - name: install media packages
   ansible.builtin.apt:
     name: "{{ base_media_tools }}"
     state: present
-    force_apt_get: yes
+    force_apt_get: true
 
 - block:
     - name: accept licence for virtualbox ext pack
@@ -160,14 +160,14 @@
       ansible.builtin.apt:
         name: "{{ base_virtualization_tools }}"
         state: present
-        force_apt_get: yes
+        force_apt_get: true
 
     # add user to docker group to run docker commands without sudo
     # add user to vboxusers group so that user can attach usb devices to guest OS
     - name: add user to docker and vboxusers groups
       ansible.builtin.user:
         name: "{{ local_username }}"
-        append: yes
+        append: true
         groups:
           - docker
           - vboxusers
@@ -182,7 +182,7 @@
     - { key: 'night-light-temperature', value: "{{ base_permanent_night_light.night_light_temperature }}" }
 
   when: base_permanent_night_light.night_light_enabled
-  become: yes
+  become: true
   become_user: "{{ local_username }}"
 
 # make fstrim run daily rather than the default weekly schedule for SSD longevity
@@ -191,7 +191,7 @@
       ansible.builtin.systemd:
         name: fstrim.timer
         state: started
-        enabled: yes
+        enabled: true
 
     - name: create systemd fstrim.timer override dir
       ansible.builtin.file:
@@ -211,11 +211,11 @@
 
     - name: force systemd to reread configs
       ansible.builtin.systemd:
-        daemon_reload: yes
+        daemon_reload: true
 
 - name: make poetry create virtualenv dirs inside the project dir itself
   ansible.builtin.command: "poetry config virtualenvs.in-project true"
-  become: yes
+  become: true
   become_user: "{{ local_username }}"
 
 # obsidian markdown editor
@@ -223,7 +223,7 @@
     - name: Fetch latest Obsidian .deb file URL
       uri:
         url: "{{ base_obsidian_download_base_url }}"
-        return_content: yes
+        return_content: true
       register: obsidian_latest_release
 
     - name: Extract Obsidian .deb file URL

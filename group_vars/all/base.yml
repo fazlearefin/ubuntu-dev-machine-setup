@@ -27,7 +27,7 @@ base_system_tools:
   - nala    # alternative package management tool to apt/apt-get
   - progress
   - pwgen
-  #- syncthing
+#  - syncthing
 
 base_system_tools_laptop:
 #  - cpufrequtils
@@ -157,8 +157,8 @@ base_media_tools:
   - vlc
 
 base_permanent_night_light:
-  night_light_enabled: False              # set this to True for permanently turning on night light
-  night_light_schedule_automatic: False
+  night_light_enabled: false              # set this to true for permanently turning on night light
+  night_light_schedule_automatic: false
   night_light_schedule_from: 0
   night_light_schedule_to: 24
   night_light_temperature: 4200

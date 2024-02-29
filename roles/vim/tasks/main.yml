@@ -4,7 +4,7 @@
   ansible.builtin.apt:
     name: "{{ vim_apt_packages }}"
     state: present
-    force_apt_get: yes
+    force_apt_get: true
 
 - name: Set default text editor to vim
   community.general.alternatives:
@@ -26,7 +26,7 @@
         repo: "{{ vim_indentline_plugin_url }}"
         dest: "~{{ local_username }}/.vim_runtime/my_plugins/indentLine"
 
-  become: yes
+  become: true
   become_user: "{{ local_username }}"
 
 - block:
@@ -41,10 +41,10 @@
         src: my_configs.vim
         dest: "~{{ local_username }}/.vim_runtime/my_configs.vim"
         mode: '0644'
-        force: yes
-        backup: yes
+        force: true
+        backup: true
 
-  become: yes
+  become: true
   become_user: "{{ local_username }}"
 
 ...

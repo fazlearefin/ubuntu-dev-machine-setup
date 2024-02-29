@@ -4,7 +4,7 @@
   ansible.builtin.apt:
     name: "{{ zsh_packages }}"
     state: present
-    force_apt_get: yes
+    force_apt_get: true
 
 - name: change user's shell to zsh
   ansible.builtin.user:
@@ -27,8 +27,8 @@
       ansible.builtin.copy:
         src: .zshrc
         dest: "~{{ local_username }}/.zshrc"
-        force: yes
-  become: yes
+        force: true
+  become: true
   become_user: "{{ local_username }}"
 
 ...

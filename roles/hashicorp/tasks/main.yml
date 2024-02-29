@@ -23,6 +23,6 @@
 - name: install hashicorp packages
   ansible.builtin.apt:
     name: "{{ hashicorp_packages }}"
-    force_apt_get: yes
+    force_apt_get: true
 
 ...
