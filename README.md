@@ -5,6 +5,7 @@
 This repo contains Ansible playbooks to configure your system as a development machine upon a clean install.
 
 The playbooks should run in Debian based system but was only tested with:
+
 - **Ubuntu 22.04**
 - **Pop!_OS 22.04**
 
@@ -40,7 +41,7 @@ Summary of packages that get installed and configured based on roles:
   - install archiving tools like zip, rar, etc
   - install libreoffice
   - install foliate, an e-book reader
-  - install apostrophe markdown editor
+  - install apostrophe and Obsidian markdown editors
   - install power management tools like [TLP](https://github.com/linrunner/TLP)
   - install development related packages like android-tools, awscli, httpie, clusterssh, docker, filezilla, golang, pipenv, etc
   - install nala, an alternative package management tool to apt/apt-get
