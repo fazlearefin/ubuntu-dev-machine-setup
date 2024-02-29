@@ -1,4 +1,4 @@
-# ubuntu-dev-machine-setup | Ubuntu 22.04
+# ubuntu-dev-machine-setup | Ubuntu 24.04
 
 ## Description
 
@@ -6,10 +6,10 @@ This repo contains Ansible playbooks to configure your system as a development m
 
 The playbooks should run in Debian based system but was only tested with:
 
-- **Ubuntu 22.04**
-- **Pop!_OS 22.04**
+- **Ubuntu 24.04**
+- **Pop!_OS 24.04**
 
-For other versions of Ubuntu, change to the other branches of this git repo. Other versions include Ubuntu 18.04 LTS and 20.04 LTS.
+For other versions of Ubuntu, change to the other branches of this git repo. Other versions include Ubuntu 18.04 LTS, 20.04 LTS, 22.04 LTS.
 
 ![bullet-train-zsh-theme](.images/screenshot-bullet-train.png)
 
