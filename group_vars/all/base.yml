@@ -138,6 +138,7 @@ base_developer_tools:
 
 base_developer_tools_pipx:
   - tldr
+  - ruff
 
 base_virtualization_tools:
   - virtualbox
