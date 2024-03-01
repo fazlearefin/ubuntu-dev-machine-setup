@@ -6,7 +6,6 @@
       ansible.builtin.shell: "/bin/rm -rf *"
       args:
         chdir: /tmp
-        warn: false
 
     - name: copy systemd file (2/5)
       ansible.builtin.copy:
@@ -97,7 +96,8 @@
 
 - name: install developer tools pipx packages
   community.general.pipx:
-    name: "{{ base_developer_tools_pipx }}"
+    name: "{{ item }}"
+  with_items: "{{ base_developer_tools_pipx  }}"
 
 # Fix for bat syntax highlighting tool; Ubuntu packages it as batcat instead of just bat
 - name: create symlink for bat

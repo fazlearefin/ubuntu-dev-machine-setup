@@ -43,7 +43,7 @@ base_download_tools:
   - transmission
   - speedtest-cli
   - wget
-  - youtube-dl
+  - yt-dlp
 
 base_developer_tools:
   - 2to3
@@ -57,6 +57,7 @@ base_developer_tools:
   - bats
   - bpython
   - black
+  - cargo
   - cloc
   - clusterssh
   - colordiff
@@ -65,7 +66,6 @@ base_developer_tools:
   - default-jre-headless
   - dos2unix
   - entr
-  - exa
   - expect
   - filezilla
   - fonts-powerline
@@ -97,8 +97,7 @@ base_developer_tools:
   - pandoc
   - parallel
   - pcre2-utils  # provides pcre2grep and pcre2test (perl-compatible regex)
-  - pep8
-  - powerline
+  - pipx
   - pry
   - pssh
   - ptpython
