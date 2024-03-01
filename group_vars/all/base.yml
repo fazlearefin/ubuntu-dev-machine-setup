@@ -60,7 +60,6 @@ base_developer_tools:
   - cargo
   - cloc
   - clusterssh
-  - colordiff
   - csvkit
   - curl
   - default-jre-headless
