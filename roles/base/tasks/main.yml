@@ -223,17 +223,17 @@
 # obsidian markdown editor
 - block:
     - name: Fetch latest Obsidian .deb file URL
-      uri:
+      ansible.builtin.uri:
         url: "{{ base_obsidian_download_base_url }}"
         return_content: true
       register: obsidian_latest_release
 
     - name: Extract Obsidian .deb file URL
-      set_fact:
+      ansible.builtin.set_fact:
         obsidian_deb_url:  "{{ obsidian_latest_release.json.assets | selectattr('name', 'match', '.*\\.deb$') | map(attribute='browser_download_url') | first }}"
 
     - name: Download and install Obsidian
-      apt:
+      ansible.builtin.apt:
         deb: "{{ obsidian_deb_url }}"
         state: present
 
