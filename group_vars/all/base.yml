@@ -53,8 +53,9 @@ base_developer_tools:
   - ansible-lint
   - apostrophe
   - awscli
-  - bat
-  - bats
+  - bat  # A cat(1) clone with wings
+  - bats  # Bash Automated Testing System
+  - blackbox-terminal  # A beautiful GTK 4 terminal
   - bpython
   - black
   - btop  # Modern and colorful command line resource monitor that shows usage and stats
@@ -127,7 +128,7 @@ base_developer_tools:
   - sshpass
   - sshuttle
   - tig
-  - tilix
+  - tilix  # A tiling terminal emulator for Linux using GTK+ 3
   - tmux
   - tmuxp
   - tree
