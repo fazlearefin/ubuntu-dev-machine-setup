@@ -5,7 +5,7 @@
       ansible.builtin.file:
         path: "~{{ local_username }}/.local/share/fonts"
         state: directory
-  become: yes
+  become: true
   become_user: "{{ local_username }}"
 
 - block:
@@ -14,12 +14,12 @@
         url: "{{ item  }}"
         dest: "~{{ local_username }}/.local/share/fonts/"
       with_items: "{{ terminal_customizations_nerd_fonts }}"
-  become: yes
+  become: true
   become_user: "{{ local_username }}"
 
 - name: refresh fonts cache
   ansible.builtin.shell: "fc-cache -fv"
-  become: yes
+  become: true
   become_user: "{{ local_username }}"
 
 # fix for https://github.com/gnunn1/tilix/wiki/VTE-Configuration-Issue using option 2
@@ -29,12 +29,12 @@
       ansible.builtin.copy:
         src: tilix.dconf
         dest: /tmp/tilix.dconf
-        force: yes
+        force: true
 
     - name: import modified tilix config
       ansible.builtin.shell: dconf load /com/gexperts/Tilix/ < /tmp/tilix.dconf
-      ignore_errors: yes
-  become: yes
+      ignore_errors: true
+  become: true
   become_user: "{{ local_username  }}"
 
 # setup tmux configs and plugins
@@ -61,13 +61,13 @@
       ansible.builtin.copy:
         src: .tmux.conf
         dest: "~{{ local_username }}/.tmux.conf"
-        force: yes
+        force: true
 
     - name: install all required tmux plugins
       ansible.builtin.shell: "~{{local_username}}/.tmux/plugins/tpm/scripts/install_plugins.sh"
       become: true
       become_user: "{{ local_username }}"
-  become: yes
+  become: true
   become_user: "{{ local_username }}"
 
 ...

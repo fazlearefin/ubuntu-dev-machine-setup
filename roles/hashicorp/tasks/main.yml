@@ -7,10 +7,10 @@
 
 - name: add hashicorp repo for ubuntu 22.04
   ansible.builtin.apt_repository:
-    repo: "{{ hashicorp_repo_jammy }}"
+    repo: "{{ hashicorp_repo_noble }}"
     state: present
     filename: hashicorp
-  when: ansible_distribution_release == "jammy"
+  when: ansible_distribution_release == "noble"
 
 - name: prioritize packages from hashicorp apt repo
   ansible.builtin.copy:
@@ -23,6 +23,6 @@
 - name: install hashicorp packages
   ansible.builtin.apt:
     name: "{{ hashicorp_packages }}"
-    force_apt_get: yes
+    force_apt_get: true
 
 ...
