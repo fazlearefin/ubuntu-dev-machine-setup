@@ -28,6 +28,7 @@ base_system_tools:
   - progress
   - pwgen
 #  - syncthing
+  - qemu-utils
 
 base_system_tools_laptop:
 #  - cpufrequtils
@@ -137,6 +138,7 @@ base_developer_tools:
   - yamllint
   - zeal
 
+# uses pipx to install python pip packages in a virtualized environment
 base_developer_tools_pipx:
   - tldr
   - ruff
