@@ -31,5 +31,6 @@ vscode_extensions:
   - rangav.vscode-thunder-client  # lightweight rest client for testing APIs
   - redhat.ansible  # ansible extension
   - timonwong.shellcheck  # shellcheck linter for sh/bash/dash/ksh scripts
+#  - rust-lang.rust-analyzer  # rust linter
 
 ...
