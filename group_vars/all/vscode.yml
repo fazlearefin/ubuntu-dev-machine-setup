@@ -27,5 +27,6 @@ vscode_extensions:
   - danielroedl.meld-diff
   - davidanson.vscode-markdownlint
   - hashicorp.terraform
+  - gera2ld.markmap-vscode  # create mindmap from markdown file
 
 ...
