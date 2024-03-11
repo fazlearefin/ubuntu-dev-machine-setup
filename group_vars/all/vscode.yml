@@ -30,5 +30,6 @@ vscode_extensions:
   - gera2ld.markmap-vscode  # create mindmap from markdown file
   - rangav.vscode-thunder-client  # lightweight rest client for testing APIs
   - redhat.ansible  # ansible extension
+  - timonwong.shellcheck  # shellcheck linter for sh/bash/dash/ksh scripts
 
 ...
