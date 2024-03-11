@@ -29,5 +29,6 @@ vscode_extensions:
   - hashicorp.terraform
   - gera2ld.markmap-vscode  # create mindmap from markdown file
   - rangav.vscode-thunder-client  # lightweight rest client for testing APIs
+  - redhat.ansible  # ansible extension
 
 ...
