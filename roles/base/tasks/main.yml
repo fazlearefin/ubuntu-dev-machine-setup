@@ -220,6 +220,12 @@
   become: true
   become_user: "{{ local_username }}"
 
+- name: build and install golang binaries
+  ansible.builtin.command: "go install {{ item }}"
+  with_items: "{{ golang_tools }}"
+  become: true
+  become_user: "{{ local_username }}"
+
 # obsidian markdown editor
 - block:
     - name: Fetch latest Obsidian .deb file URL
