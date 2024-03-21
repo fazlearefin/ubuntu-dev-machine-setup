@@ -28,6 +28,7 @@ vscode_extensions:
   - davidanson.vscode-markdownlint
   - hashicorp.terraform
   - gera2ld.markmap-vscode  # create mindmap from markdown file
+  - terrastruct.d2  # diagram scripting language that turns text to diagrams
   - rangav.vscode-thunder-client  # lightweight rest client for testing APIs
   - redhat.ansible  # ansible extension
   - timonwong.shellcheck  # shellcheck linter for sh/bash/dash/ksh scripts
