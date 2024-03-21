@@ -159,6 +159,9 @@ base_media_tools:
 #  - ubuntu-restricted-extras
   - vlc
 
+golang_tools:
+  - github.com/charmbracelet/glow@latest  # Render markdown on the CLI
+
 base_permanent_night_light:
   night_light_enabled: false              # set this to true for permanently turning on night light
   night_light_schedule_automatic: false
