@@ -4,5 +4,6 @@ privacy_packages:
   - mat2
   - proxychains4
   - tor
+  - torsocks
 
 ...
