@@ -28,6 +28,14 @@
         src: .zshrc
         dest: "~{{ local_username }}/.zshrc"
         force: true
+
+    - name: copy sample .shell_aliases and .shell_functions files
+      ansible.builtin.copy:
+        src: "{{ item }}"
+        dest: "~{{ local_username }}/{{ item }}"
+      with_items:
+        - .shell_aliases
+        - .shell_functions
   become: true
   become_user: "{{ local_username }}"
 
