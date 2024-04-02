@@ -72,6 +72,7 @@ Summary of packages that get installed and configured based on roles:
   - install antigen zsh plugin manager
   - copy and enable sample `~/.zshrc` file if one does not exist
     - contains function to stop ssh-agent from asking for encrypted ssh key password repeatedly when launching new terminal
+    - adds additional shell aliases and functions in `~/.shell_aliases` and `~/.shell_functions`
   - install ohmyzsh/ohmyzsh and enable some bundled plugins
   - enable bullet train zsh theme (others like p10k can be configured as well)
 - **role: googlechrome**
