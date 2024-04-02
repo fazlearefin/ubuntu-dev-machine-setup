@@ -36,3 +36,29 @@ function update_docker_images {
     # cleanup images containing no tags; usually the ones which get updated
     if nonetags=$(docker images | grep "<none>"); then awk '{ print $3 }' <<< "$nonetags" | xargs -L1 docker rmi -f; fi
 }
+
+### BEGIN night light control ###
+function night_light_enable {
+    gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled true
+    gsettings set org.gnome.settings-daemon.plugins.color night-light-temperature 4700
+}
+
+function night_light_disable {
+    gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled false
+}
+
+function night_light_low {
+    gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled true
+    gsettings set org.gnome.settings-daemon.plugins.color night-light-temperature 4700
+}
+
+function night_light_medium {
+    gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled true
+    gsettings set org.gnome.settings-daemon.plugins.color night-light-temperature 4200
+}
+
+function night_light_high {
+    gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled true
+    gsettings set org.gnome.settings-daemon.plugins.color night-light-temperature 3700
+}
+### END night light control ###
