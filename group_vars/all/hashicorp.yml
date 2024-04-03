@@ -1,6 +1,6 @@
 ---
 
-hashicorp_repo_noble: "deb [signed-by=/etc/apt/trusted.gpg.d/hashicorp.gpg] https://apt.releases.hashicorp.com noble main"  # ubuntu 24.04
+hashicorp_repo_noble: "deb [arch=amd64 signed-by=/etc/apt/trusted.gpg.d/hashicorp.gpg] https://apt.releases.hashicorp.com noble main"  # ubuntu 24.04
 hashicorp_apt_key_url: "https://apt.releases.hashicorp.com/gpg"
 hashicorp_apt_key_keyring: "/etc/apt/trusted.gpg.d/hashicorp.gpg"
 
