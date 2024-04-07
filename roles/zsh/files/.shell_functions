@@ -1,6 +1,6 @@
 # a locked-down firefox instance running inside a sandbox
 function safefox {
-    /usr/bin/firejail --name=safe-firefox --apparmor --seccomp --private --private-dev --private-tmp --protocol=inet firefox --new-instance --no-remote --safe-mode --private-window "$1"
+    /usr/bin/firejail --name=safe-firefox --apparmor --seccomp --private --private-dev --private-tmp --protocol=inet firefox --new-instance --no-remote --safe-mode --private-window $1
 }
 
 # update existing vagrant boxes
