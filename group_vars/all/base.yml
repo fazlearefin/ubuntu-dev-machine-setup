@@ -93,6 +93,7 @@ base_developer_tools:
   - moreutils
   - most
   - mssh
+  - mtr-tiny
   - ncat
   - nmap
   - nmon
@@ -128,6 +129,7 @@ base_developer_tools:
   - sshfs
   - sshpass
   - sshuttle
+  - tcptraceroute  # traceroute implementation using TCP packets
   - tig
   - tilix  # A tiling terminal emulator for Linux using GTK+ 3
   - tmux
@@ -142,6 +144,7 @@ base_developer_tools:
 base_developer_tools_pipx:
   - tldr
   - ruff
+  - mitmproxy
 
 base_virtualization_tools:
   - virtualbox
