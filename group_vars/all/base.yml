@@ -29,6 +29,7 @@ base_system_tools:
   - pwgen
 #  - syncthing
   - qemu-utils
+  - trash-cli  # command line tools to interact with files/directories in rubbish bin
 
 base_system_tools_laptop:
 #  - cpufrequtils
