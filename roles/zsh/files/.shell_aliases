@@ -6,5 +6,3 @@ alias my_public_ipv6='dig @resolver1.opendns.com AAAA myip.opendns.com +short -6
 
 # pipe text output to clipboard (can be pasted using Ctrl v)
 alias clipboard='xsel -ib'
-
-alias upgrade_system_packages='/usr/bin/sudo nala clean; /usr/bin/sudo nala upgrade -y && /usr/bin/sudo nala autopurge -y && /usr/bin/sudo nala clean'
