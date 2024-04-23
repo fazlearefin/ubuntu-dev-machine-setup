@@ -1,3 +1,5 @@
+#!/bin/bash
+
 function upgrade_system_packages {
     /usr/bin/sudo nala clean
     /usr/bin/sudo nala upgrade -y \
