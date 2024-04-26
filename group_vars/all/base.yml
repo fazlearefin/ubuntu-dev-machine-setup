@@ -54,7 +54,6 @@ base_developer_tools:
   - ansible
   - ansible-lint
   - apostrophe
-  - awscli
   - bat  # A cat(1) clone with wings
   - bats  # Bash Automated Testing System
   - bpython
