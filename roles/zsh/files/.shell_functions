@@ -14,29 +14,30 @@ function safefox {
 
 # update existing vagrant boxes
 function update_vagrant_boxes {
-    OLDIFS=$IFS
-    export IFS=$'\n'
     # Find all boxes which have updates
-    AVAILABLE_UPDATES=$(vagrant box outdated --global | grep outdated | tr -d "*'" | cut -d ' ' -f 2 2>/dev/null)
-    if [[ ${#AVAILABLE_UPDATES[@]} -ne 0 ]]; then
-        while read box; do
-            echo "Found an update for ${box}"
-            # Find all current versions
-            boxinfo=$(vagrant box list | grep "${box}")
-            while read boxtype; do
-                provider=$(echo "${boxtype}" | awk -F\( '{print $2}' | awk -F\, '{print $1}')
-                # Add latest version
-                vagrant box add --clean "${box}" --provider "${provider}"
-            done <<< "${boxinfo}"
-        done <<< "${AVAILABLE_UPDATES}"
-        echo "All boxes are now up to date! Pruning..."
+    AVAILABLE_UPDATES=$(vagrant box outdated --global | awk '/outdated/{print $2}' 2>/dev/null | tr -d \')
+
+    if [ -n "$AVAILABLE_UPDATES" ]; then
+        echo 'Updating Vagrant boxes...'
+
+        # Loop through each box with an available update
+        for box in $AVAILABLE_UPDATES; do
+            echo "Found an update for $box"
+
+            # Add latest version for each provider
+            vagrant box add --clean "$box" --provider "$(vagrant box list | grep $box | awk -F '[()]' '{split($2,a,","); print a[1]}')"
+        done
+
+        echo 'All boxes are now up to date! Pruning...'
+
         # Remove all old versions
         vagrant box prune -f
     else
-        echo "All boxes are already up to date!"
+        echo 'All boxes are already up to date!'
     fi
+
+    # Display the global box outdated status
     vagrant box outdated --global
-    export IFS=$OLDIFS
 }
 
 # update existing docker images
