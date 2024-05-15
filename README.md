@@ -4,10 +4,9 @@
 
 This repo contains Ansible playbooks to configure your system as a development machine upon a clean install.
 
-The playbooks should run in Debian based system but was only tested with:
+The playbooks should run in Debian based system with minor modifications but was only tested with:
 
 - **Ubuntu 24.04**
-- **Pop!_OS 24.04**
 
 For other versions of Ubuntu, change to the other branches of this git repo. Other versions include Ubuntu 18.04 LTS, 20.04 LTS, 22.04 LTS.
 
