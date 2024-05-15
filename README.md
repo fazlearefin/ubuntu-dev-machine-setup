@@ -1,14 +1,14 @@
-# ubuntu-dev-machine-setup | Ubuntu 22.04
+# ubuntu-dev-machine-setup | Ubuntu 24.04
 
 ## Description
 
 This repo contains Ansible playbooks to configure your system as a development machine upon a clean install.
 
-The playbooks should run in Debian based system but was only tested with:
-- **Ubuntu 22.04**
-- **Pop!_OS 22.04**
+The playbooks should run in Debian based system with minor modifications but was only tested with:
 
-For other versions of Ubuntu, change to the other branches of this git repo. Other versions include Ubuntu 18.04 LTS and 20.04 LTS.
+- **Ubuntu 24.04**
+
+For other versions of Ubuntu, change to the other branches of this git repo. Other versions include Ubuntu 18.04 LTS, 20.04 LTS, 22.04 LTS.
 
 ![bullet-train-zsh-theme](.images/screenshot-bullet-train.png)
 
@@ -39,9 +39,12 @@ Summary of packages that get installed and configured based on roles:
   - upgrade all packages
   - install archiving tools like zip, rar, etc
   - install libreoffice
+  - install foliate, an e-book reader
+  - install glow, apostrophe and Obsidian markdown editors
   - install power management tools like [TLP](https://github.com/linrunner/TLP)
   - install development related packages like android-tools, awscli, httpie, clusterssh, docker, filezilla, golang, pipenv, etc
   - install nala, an alternative package management tool to apt/apt-get
+  - install code fomatters and linters like black, ruff, ansible-lint, etc
   - setup golang directories
   - install download tools like axel, transmission, wget, aria2
   - install image, audio and video packages like vlc, totem, gimp, imagemagick, etc
@@ -68,6 +71,7 @@ Summary of packages that get installed and configured based on roles:
   - install antigen zsh plugin manager
   - copy and enable sample `~/.zshrc` file if one does not exist
     - contains function to stop ssh-agent from asking for encrypted ssh key password repeatedly when launching new terminal
+    - adds additional shell aliases and functions in `~/.shell_aliases` and `~/.shell_functions`
   - install ohmyzsh/ohmyzsh and enable some bundled plugins
   - enable bullet train zsh theme (others like p10k can be configured as well)
 - **role: googlechrome**
@@ -88,6 +92,7 @@ Summary of packages that get installed and configured based on roles:
 - **role: security**
   - install ClamAV (antivirus) and ClamAV GNOME interface. Manual scan from nautilus or from CLI using `clamscan`; clamd not installed for its huge memory footprint
   - install firejail for sanboxing applications
+  - enable additional apparmor profiles
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 
 laptop_mode: True              # True => this device is a laptop computer
-local_username: fazle          # This is the primary username used when logging in to the desktop
+local_username: user           # This is the primary username used when logging in to the desktop
 
 ...

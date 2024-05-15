@@ -17,6 +17,7 @@ base_archiving_tools:
 
 base_productivity_tools:
   - libreoffice
+  - foliate
 
 base_system_tools:
   - fatrace
@@ -26,7 +27,9 @@ base_system_tools:
   - nala    # alternative package management tool to apt/apt-get
   - progress
   - pwgen
-  #- syncthing
+#  - syncthing
+  - qemu-utils
+  - trash-cli  # command line tools to interact with files/directories in rubbish bin
 
 base_system_tools_laptop:
 #  - cpufrequtils
@@ -42,7 +45,7 @@ base_download_tools:
   - transmission
   - speedtest-cli
   - wget
-  - youtube-dl
+  - yt-dlp
 
 base_developer_tools:
   - 2to3
@@ -50,19 +53,21 @@ base_developer_tools:
   - android-tools-fastboot
   - ansible
   - ansible-lint
-  - awscli
-  - bat
+  - apostrophe
+  - bat  # A cat(1) clone with wings
+  - bats  # Bash Automated Testing System
   - bpython
   - black
+  - btop  # Modern and colorful command line resource monitor that shows usage and stats
+  - cargo
   - cloc
   - clusterssh
-  - colordiff
   - csvkit
   - curl
   - default-jre-headless
   - dos2unix
+  - duf  # Disk Usage/Free Utility
   - entr
-  - exa
   - expect
   - filezilla
   - fonts-powerline
@@ -71,8 +76,8 @@ base_developer_tools:
   - gawk
   - gedit-plugins
   - geoip-bin
-  - ghostwriter
   - git
+  - git-delta  # A syntax-highlighting pager for git, diff, and grep output
   - git-extras
   - gitg
   - golang-go
@@ -88,6 +93,7 @@ base_developer_tools:
   - moreutils
   - most
   - mssh
+  - mtr-tiny
   - ncat
   - nmap
   - nmon
@@ -95,8 +101,7 @@ base_developer_tools:
   - pandoc
   - parallel
   - pcre2-utils  # provides pcre2grep and pcre2test (perl-compatible regex)
-  - pep8
-  - powerline
+  - pipx
   - pry
   - pssh
   - ptpython
@@ -124,8 +129,9 @@ base_developer_tools:
   - sshfs
   - sshpass
   - sshuttle
+  - tcptraceroute  # traceroute implementation using TCP packets
   - tig
-  - tilix
+  - tilix  # A tiling terminal emulator for Linux using GTK+ 3
   - tmux
   - tmuxp
   - tree
@@ -134,8 +140,11 @@ base_developer_tools:
   - yamllint
   - zeal
 
-base_developer_tools_pip3:
+# uses pipx to install python pip packages in a virtualized environment
+base_developer_tools_pipx:
   - tldr
+  - ruff
+  - mitmproxy
 
 base_virtualization_tools:
   - virtualbox
@@ -154,11 +163,17 @@ base_media_tools:
 #  - ubuntu-restricted-extras
   - vlc
 
+golang_tools:
+  - github.com/charmbracelet/glow@latest  # Render markdown on the CLI
+  - oss.terrastruct.com/d2@latest  # d2 diagram as code tool
+
 base_permanent_night_light:
-  night_light_enabled: False              # set this to True for permanently turning on night light
-  night_light_schedule_automatic: False
+  night_light_enabled: false              # set this to true for permanently turning on night light
+  night_light_schedule_automatic: false
   night_light_schedule_from: 0
   night_light_schedule_to: 24
   night_light_temperature: 4200
+
+base_obsidian_download_base_url: "https://api.github.com/repos/obsidianmd/obsidian-releases/releases/latest"
 
 ...

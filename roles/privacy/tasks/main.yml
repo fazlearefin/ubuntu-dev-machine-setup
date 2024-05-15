@@ -4,7 +4,7 @@
   ansible.builtin.apt:
     name: "{{ privacy_packages }}"
     state: present
-    force_apt_get: yes
+    force_apt_get: true
 
 # this is needed for checking if certain packages are installed
 - name: gather package facts
@@ -19,13 +19,13 @@
         owner: root
         group: root
         mode: '0644'
-        backup: yes
+        backup: true
 
     - name: ensure tor service runs on system startup
       ansible.builtin.systemd:
         name: tor
         state: started
-        enabled: yes
+        enabled: true
   when: '"tor" in ansible_facts.packages'
 
 - block:
@@ -36,7 +36,7 @@
         owner: root
         group: root
         mode: '0644'
-        backup: yes
+        backup: true
   when: '"proxychains4" in ansible_facts.packages'
 
 ...
