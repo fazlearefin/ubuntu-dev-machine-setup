@@ -1,5 +1,11 @@
 # ubuntu-dev-machine-setup | Ubuntu 24.04
 
+**THIS REPO IS NO LONGER MAINTAINED. HOWEVER, FEEL FREE TO FORK IT AND MAKE ANY CHANGES.**
+
+**I want to thank everyone behind Ubuntu for all these wonderful years. But now is the time to show the 🖕 for all the snap crap.**
+
+**I have fully replaced Ubuntu with Debian. Check out the [ansible playbooks for Debian](https://github.com/fazlearefin/debian-dev-machine-setup)**
+
 ## Description
 
 This repo contains Ansible playbooks to configure your system as a development machine upon a clean install.
