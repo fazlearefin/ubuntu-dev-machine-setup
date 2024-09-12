@@ -26,7 +26,7 @@ Screenshot above is using *p10k zsh theme with tmux*
 
 ## What gets installed and cofigured?
 
-I am a DevSecOps Engineer (focusing on Linux) and my daily job include working with various config management using Ansible. So if you are in a similar profession the installed system will suit your needs. It is also easy to extend using Ansible roles.
+I am a DevSecOps Engineer and my daily job include working with AWS, docker, ansible, terraform, etc. So if you are in a similar profession the installed system will suit your needs. It is also easy to extend using Ansible roles.
 
 Summary of packages that get installed and configured based on roles:
 
