@@ -126,6 +126,9 @@ fi
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
+# cargo/rust
+export PATH=$PATH:$HOME/.cargo/bin
+
 # pipx executables
 export PATH=$PATH:$HOME/.local/bin
 
