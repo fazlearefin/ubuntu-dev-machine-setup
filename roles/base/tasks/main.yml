@@ -36,12 +36,20 @@
   community.general.ufw:
     state: enabled
 
-- name: disable system crash reports
-  ansible.builtin.lineinfile:
-    dest: /etc/default/apport
-    regexp: "^enabled=(0|1)"
-    line: enabled=0
-    state: present
+
+- block:
+    - name: Check if /etc/default/apport exists
+      ansible.builtin.stat:
+        path: /etc/default/apport
+      register: apport_file
+
+    - name: Disable system crash reports
+      ansible.builtin.lineinfile:
+        dest: /etc/default/apport
+        regexp: "^enabled=(0|1)"
+        line: enabled=0
+        state: present
+      when: apport_file.stat.exists
 
 # It may be desirable to set this to zero, so that application memory is retained as long as possible at the expense
 # of the page cache. When there is still a memory shortage, the kernel can still use swapping.
