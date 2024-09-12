@@ -170,6 +170,7 @@ base_media_tools:
 golang_tools:
   - github.com/charmbracelet/glow@latest  # Render markdown on the CLI
   - oss.terrastruct.com/d2@latest  # d2 diagram as code tool
+  - github.com/jesseduffield/lazygit@latest  # simple terminal UI for git commands
 
 base_permanent_night_light:
   night_light_enabled: false              # set this to true for permanently turning on night light
