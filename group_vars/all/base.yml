@@ -132,6 +132,7 @@ base_developer_tools:
   - sshfs
   - sshpass
   - sshuttle
+  - stow  # symlink manager
   - tcptraceroute  # traceroute implementation using TCP packets
   - tig
   - tilix  # A tiling terminal emulator for Linux using GTK+ 3
