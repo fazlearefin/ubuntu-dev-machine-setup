@@ -34,8 +34,8 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 
 # pure theme
 # https://github.com/sindresorhus/pure
-#antigen bundle mafredri/zsh-async@main
-#antigen bundle sindresorhus/pure@main
+antigen bundle mafredri/zsh-async@main
+antigen bundle sindresorhus/pure@main
 
 # powerlevel10k theme
 # https://github.com/romkatv/powerlevel10k
@@ -43,7 +43,7 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 
 # bullet train theme
 # https://github.com/caiogondim/bullet-train.zsh
-antigen theme caiogondim/bullet-train.zsh bullet-train
+#antigen theme caiogondim/bullet-train.zsh bullet-train
 
 # spaceship theme
 # https://github.com/spaceship-prompt/spaceship-prompt
