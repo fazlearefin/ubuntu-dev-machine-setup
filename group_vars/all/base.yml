@@ -78,7 +78,6 @@ base_developer_tools:
   - fzf
   - g++
   - gawk
-  - gedit-plugins
   - geoip-bin
   - git
   - git-delta  # A syntax-highlighting pager for git, diff, and grep output
