@@ -1,4 +1,4 @@
-# ubuntu-dev-machine-setup | Ubuntu 24.04
+# ubuntu-dev-machine-setup | Ubuntu 24.04 | Linux Mint 22
 
 ## Description
 
