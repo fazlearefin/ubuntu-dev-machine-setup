@@ -5,12 +5,14 @@
     url: "{{ hashicorp_apt_key_url }}"
     keyring: "{{ hashicorp_apt_key_keyring }}"
 
-- name: add hashicorp repo for ubuntu 22.04
+- name: add hashicorp repo for ubuntu noble/24.04
   ansible.builtin.apt_repository:
     repo: "{{ hashicorp_repo_noble }}"
     state: present
     filename: hashicorp
-  when: ansible_distribution_release == "noble"
+  when:
+    - ansible_distribution_release == "noble"
+    - ansible_distribution_release == "wilma"  # wilma is linux mint 22
 
 - name: prioritize packages from hashicorp apt repo
   ansible.builtin.copy:
