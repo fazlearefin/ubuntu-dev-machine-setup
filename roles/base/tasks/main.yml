@@ -163,6 +163,7 @@
         name: "{{ base_virtualization_tools }}"
         state: present
         force_apt_get: true
+        update_cache: true
 
     # add user to docker group to run docker commands without sudo
     # add user to vboxusers group so that user can attach usb devices to guest OS
