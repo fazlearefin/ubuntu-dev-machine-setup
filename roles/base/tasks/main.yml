@@ -240,7 +240,6 @@
     name: "{{ item }}"
     locked: true
     state: latest
-    path: "~{{ local_username }}/.cargo"
   with_items: "{{ rust_cargo_tools }}"
   become: true
   become_user: "{{ local_username }}"
