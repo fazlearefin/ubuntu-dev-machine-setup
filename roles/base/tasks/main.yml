@@ -23,7 +23,7 @@
         dest: /etc/systemd/system/tmp.mount.d/options.conf
         content: |
           [Mount]
-          Options=mode=1777,strictatime,nosuid,nodev,size=512M
+          Options=mode=1777,strictatime,nosuid,nodev,size=1024M
 
     - name: start and enable tmp.mount on boot (5/5)
       ansible.builtin.systemd:
