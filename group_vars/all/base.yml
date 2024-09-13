@@ -146,7 +146,6 @@ base_developer_tools:
 
 # uses pipx to install python pip packages in a virtualized environment
 base_developer_tools_pipx:
-  - tldr
   - ruff
   - mitmproxy
 
