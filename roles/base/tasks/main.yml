@@ -23,7 +23,7 @@
         dest: /etc/systemd/system/tmp.mount.d/options.conf
         content: |
           [Mount]
-          Options=mode=1777,strictatime,nosuid,nodev,size=512M
+          Options=mode=1777,strictatime,nosuid,nodev,size=1024M
 
     - name: start and enable tmp.mount on boot (5/5)
       ansible.builtin.systemd:
@@ -232,6 +232,15 @@
 - name: build and install golang binaries
   ansible.builtin.command: "go install {{ item }}"
   with_items: "{{ golang_tools }}"
+  become: true
+  become_user: "{{ local_username }}"
+
+- name: build and install rust binaries using cargo
+  community.general.cargo:
+    name: "{{ item }}"
+    locked: true
+    state: latest
+  with_items: "{{ rust_cargo_tools }}"
   become: true
   become_user: "{{ local_username }}"
 
