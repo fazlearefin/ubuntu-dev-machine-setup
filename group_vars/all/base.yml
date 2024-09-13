@@ -50,6 +50,7 @@ base_download_tools:
 
 base_developer_tools:
   - 2to3
+  - alacritty  # OpenGL terminal emulator
   - android-tools-adb
   - android-tools-fastboot
   - ansible
