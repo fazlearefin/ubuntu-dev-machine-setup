@@ -37,6 +37,29 @@
   become: true
   become_user: "{{ local_username  }}"
 
+- block:
+    - name: Create alacritty config directory
+      ansible.builtin.file:
+        path: "~{{ local_username }}/.config/alacritty"
+        state: directory
+        mode: '0755'
+        owner: "{{ local_username }}"
+        group: "{{ local_username }}"
+
+    - name: Clone alacritty themes git repo
+      ansible.builtin.git:
+        repo: "{{ terminal_customizations_alacritty_themes_repo }}"
+        dest: "~{{ local_username }}/.config/alacritty/themes"
+        clone: true
+
+    - name: Copy sample alacritty config file
+      ansible.builtin.copy:
+        src: alacritty.toml
+        dest: "~{{ local_username }}/.config/alacritty/alacritty.toml"
+        mode: '0644'
+  become: true
+  become_user: "{{ local_username }}"
+
 # setup tmux configs and plugins
 - block:
     - name: git clone tmux plugin repo
