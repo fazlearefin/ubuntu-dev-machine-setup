@@ -235,6 +235,15 @@
   become: true
   become_user: "{{ local_username }}"
 
+- name: build and install rust binaries using cargo
+  community.general.cargo:
+    name: "{{ item }}"
+    locked: true
+    state: latest
+  with_items: "{{ rust_cargo_tools }}"
+  become: true
+  become_user: "{{ local_username }}"
+
 # obsidian markdown editor
 - block:
     - name: Fetch latest Obsidian .deb file URL
