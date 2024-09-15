@@ -1,0 +1,10 @@
+---
+
+neovim_apt_packages:
+  - neovim
+  - luarocks
+  - fd-find
+
+neovim_lazyvim_starter_url: https://github.com/LazyVim/starter.git
+
+...

@@ -68,6 +68,9 @@ Summary of packages that get installed and configured based on roles:
   - install amix/vimrc vim distribution
   - create sample vim customization file in `~/.vim_runtime/my_configs.vim`
     - additional vim settings are enabled in `~/.vim_runtime/my_configs.vim` which are not part of the Vim Distribution. Edit this file if necessary.
+- **role: neovim**
+  - install neovim packages
+  - install xxx/xxx neovim distribution
 - **role: zsh**
   - install zsh package and set user shell to zsh
   - install antigen zsh plugin manager
