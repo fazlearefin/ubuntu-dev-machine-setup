@@ -3,6 +3,7 @@
 - import_playbook: hashicorp.yml
 - import_playbook: terminal_customizations.yml
 - import_playbook: vim.yml
+- import_playbook: neovim.yml
 - import_playbook: zsh.yml
 - import_playbook: googlechrome.yml
 - import_playbook: vscode.yml

@@ -1,0 +1,11 @@
+---
+
+neovim_apt_packages:
+  - neovim
+  - luarocks
+  - fd-find
+  - tree-sitter-cli
+
+neovim_lazyvim_starter_url: https://github.com/LazyVim/starter.git
+
+...
