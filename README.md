@@ -53,6 +53,7 @@ Summary of packages that get installed and configured based on roles:
   - install and configure ssh server if not set to `laptop_mode`
   - option to turn on night light settings for eye comfort (set `base_permanent_night_light.night_light_enabled` to `True`)
   - enable `fzf` fuzzy finder in zsh terminal; check out this [YouTube video](https://www.youtube.com/watch?v=1a5NiMhqAR0) to see how to use it
+  - install terminal emulators Tilix and Alacritty
   - install [lazygit](https://github.com/jesseduffield/lazygit)
 - **role: zsh**
   - install zsh package and set user shell to zsh
