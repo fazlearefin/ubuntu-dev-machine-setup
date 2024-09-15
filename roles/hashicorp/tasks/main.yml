@@ -10,9 +10,7 @@
     repo: "{{ hashicorp_repo_noble }}"
     state: present
     filename: hashicorp
-  when:
-    - ansible_distribution_release == "noble"
-    - ansible_distribution_release == "wilma"  # wilma is linux mint 22
+  when: ansible_distribution_release in ["noble", "wilma"]    # wilma is linux mint 22
 
 - name: prioritize packages from hashicorp apt repo
   ansible.builtin.copy:
