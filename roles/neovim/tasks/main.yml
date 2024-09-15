@@ -12,5 +12,7 @@
       ansible.builtin.git:
         repo: "{{ neovim_lazyvim_starter_url }}"
         dest: "~{{ local_username }}/.config/nvim"
+  become: true
+  become_user: "{{ local_username }}"
 
 ...
