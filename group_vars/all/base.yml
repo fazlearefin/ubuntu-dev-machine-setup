@@ -171,6 +171,7 @@ golang_tools:
   - github.com/charmbracelet/glow@latest  # Render markdown on the CLI
   - oss.terrastruct.com/d2@latest  # d2 diagram as code tool
   - github.com/jesseduffield/lazygit@latest  # simple terminal UI for git commands
+  - github.com/wagoodman/dive@latest  # tool for exploring each layer in a docker image
 
 rust_cargo_tools:
   - tlrc  # tldr client
