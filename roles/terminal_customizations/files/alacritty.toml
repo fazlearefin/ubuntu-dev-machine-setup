@@ -1,20 +1,35 @@
-import = [
-    "~/.config/alacritty/themes/themes/coolnight.toml"
-]
+import = ["~/.config/alacritty/themes/themes/coolnight.toml"]
 
 [env]
 TERM = "xterm-256color"
 
 [window]
-padding.x = 10
-padding.y = 10
 decorations = "Buttonless"
 opacity = 0.9
 blur = true
 
+[window.padding]
+x = 10
+y = 10
+
 [font]
-normal.family = "MesloLGS Nerd Font Mono"
 size = 10
+
+[font.normal]
+family = "MesloLGS Nerd Font Mono"
+style = "Regular"
+
+[font.bold]
+family = "MesloLGS Nerd Font Mono"
+style = "Bold"
+
+[font.italic]
+family = "MesloLGS Nerd Font Mono"
+style = "Italic"
+
+[font.bold_italic]
+family = "MesloLGS Nerd Font Mono"
+style = "Bold Italic"
 
 # uncomment below to start tmux on initial alacritty launch
 #[shell]
