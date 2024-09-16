@@ -42,6 +42,7 @@ Summary of packages that get installed and configured based on roles:
   - install libreoffice
   - install foliate, an e-book reader
   - install glow, apostrophe and Obsidian markdown editors
+  - install dive, a tool for exploring each layer in a docker image
   - install power management tools like [TLP](https://github.com/linrunner/TLP)
   - install development related packages like android-tools, awscli, httpie, clusterssh, docker, filezilla, golang, pipenv, etc
   - install nala, an alternative package management tool to apt/apt-get
