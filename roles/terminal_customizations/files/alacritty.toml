@@ -1,10 +1,12 @@
+# Config reference: https://alacritty.org/config-alacritty.html
+
 import = ["~/.config/alacritty/themes/themes/tokyo-night.toml"]
 
 [env]
 TERM = "xterm-256color"
 
 [window]
-decorations = "Buttonless"
+decorations = "Full"
 opacity = 0.9
 blur = true
 
