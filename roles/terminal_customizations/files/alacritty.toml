@@ -31,8 +31,50 @@ style = "Italic"
 family = "CaskaydiaCove Nerd Font Mono"
 style = "Bold Italic"
 
+[font.offset]
+x = 0
+y = 1
+
 # TIP: to check if fonts are installed correctly, type the following in the terminal:
 #    echo -e "\e[0m Regular \e[1m Bold \e[0;3m Italic \e[0;1;3m BoldItalic \e[0m"
+
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "V"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "Copy"
+key = "C"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "PasteSelection"
+key = "Insert"
+mods = "Shift"
+
+[[keyboard.bindings]]
+action = "ResetFontSize"
+key = "Key0"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "IncreaseFontSize"
+key = "Equals"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "IncreaseFontSize"
+key = "Plus"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "DecreaseFontSize"
+key = "Minus"
+mods = "Control"
 
 # uncomment below to start tmux on initial alacritty launch
 #[shell]
