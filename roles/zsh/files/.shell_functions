@@ -1,4 +1,4 @@
-#!/bin/bash
+# .shell_functions - Custom shell functions for convenience and system management
 
 function upgrade_system_packages {
     /usr/bin/sudo nala clean
