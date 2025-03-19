@@ -1,2 +1,14 @@
 *.retry
 .vscode/
+.history/
+.idea/
+*.sublime-workspace
+*.sublime-project
+*.swp
+*.swo
+*.tmp
+*.log
+*.DS_Store
+*.env
+*.local
+*.zip

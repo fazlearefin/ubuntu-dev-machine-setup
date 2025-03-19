@@ -90,7 +90,7 @@ Summary of packages that get installed and configured based on roles:
   - configure tor to run at boot and prevent using certain countries as exit nodes
     - edit `/etc/tor/torrc` if necessary
   - install proxychains
-  - configure proxychains to use tor. View [my Medium story](https://fazlearefin.medium.com/tunneling-traffic-over-tor-network-using-proxychains-34c77ec32c0f) to see how to use it
+  - configure proxychains to use tor. View [my Medium story](https://luiscamaral.medium.com/tunneling-traffic-over-tor-network-using-proxychains-34c77ec32c0f) to see how to use it
     - edit `/etc/proxychains4.conf` if necessary
   - install metadata anonymization toolkit
 - **role: security**
@@ -120,7 +120,7 @@ You need to install `ansible` and `git` before running the playbooks. You can ei
 And clone this repo (do not clone in `/tmp` as this dir is cleaned and mounted in tmpfs)
 
 ```bash
-git clone https://github.com/fazlearefin/ubuntu-dev-machine-setup.git
+git clone https://github.com/luiscamaral/ubuntu-dev-machine-setup.git
 cd ubuntu-dev-machine-setup
 ```
 
