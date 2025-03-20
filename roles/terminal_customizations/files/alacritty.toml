@@ -1,6 +1,6 @@
 # Config reference: https://alacritty.org/config-alacritty.html
 
-import = ["~/.config/alacritty/themes/themes/tokyo-night.toml"]
+import = ["~/.config/alacritty/themes/themes/tokyo_night.toml"]
 
 [env]
 TERM = "xterm-256color"
