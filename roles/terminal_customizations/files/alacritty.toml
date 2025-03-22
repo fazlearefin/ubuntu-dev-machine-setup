@@ -7,7 +7,7 @@ import = ["~/.config/alacritty/themes/themes/tokyo_night.toml"]
 TERM = "xterm-256color"
 
 [window]
-decorations = "Buttonless"
+decorations = "Full"
 opacity = 0.95
 blur = true
 
