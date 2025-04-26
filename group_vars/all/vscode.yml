@@ -34,6 +34,7 @@ vscode_extensions:
   - timonwong.shellcheck  # shellcheck linter for sh/bash/dash/ksh scripts
   - Catppuccin.catppuccin-vsc  # Catppuccin theme
   - Catppuccin.catppuccin-vsc-icons  # Catppuccin icons
+  - bierner.markdown-mermaid  # markdown preview mermaid support
 #  - rust-lang.rust-analyzer  # rust linter
 
 ...
