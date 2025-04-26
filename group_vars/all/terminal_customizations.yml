@@ -1,14 +1,14 @@
 ---
 
-terminal_customizations_nerd_fonts_version: v3.3.0  # TODO: bump up version number as newer versions are made avaialbe from source git repo https://github.com/ryanoasis/nerd-fonts/releases/
+terminal_customizations_nerd_fonts_version: v3.4.0  # TODO: bump up version number as newer versions are made avaialbe from source git repo https://github.com/ryanoasis/nerd-fonts/releases/
 terminal_customizations_nerd_fonts_base_url: "https://github.com/ryanoasis/nerd-fonts/raw/{{ terminal_customizations_nerd_fonts_version }}/patched-fonts"
 
 # nerd fonts from https://github.com/ryanoasis/nerd-fonts
 terminal_customizations_nerd_fonts:
-  - "{{ terminal_customizations_nerd_fonts_base_url }}/CascadiaCode/Bold/CaskaydiaCoveNerdFontMono-BoldItalic.ttf"    # don't remove; alacritty config uses this
-  - "{{ terminal_customizations_nerd_fonts_base_url }}/CascadiaCode/Bold/CaskaydiaCoveNerdFontMono-Bold.ttf"          # don't remove; alacritty config uses this
-  - "{{ terminal_customizations_nerd_fonts_base_url }}/CascadiaCode/Regular/CaskaydiaCoveNerdFontMono-Italic.ttf"     # don't remove; alacritty config uses this
-  - "{{ terminal_customizations_nerd_fonts_base_url }}/CascadiaCode/Regular/CaskaydiaCoveNerdFontMono-Regular.ttf"    # don't remove; alacritty config uses this
+  - "{{ terminal_customizations_nerd_fonts_base_url }}/CascadiaCode/CaskaydiaCoveNerdFontMono-BoldItalic.ttf"    # don't remove; alacritty config uses this
+  - "{{ terminal_customizations_nerd_fonts_base_url }}/CascadiaCode/CaskaydiaCoveNerdFontMono-Bold.ttf"          # don't remove; alacritty config uses this
+  - "{{ terminal_customizations_nerd_fonts_base_url }}/CascadiaCode/CaskaydiaCoveNerdFontMono-Italic.ttf"     # don't remove; alacritty config uses this
+  - "{{ terminal_customizations_nerd_fonts_base_url }}/CascadiaCode/CaskaydiaCoveNerdFontMono-Regular.ttf"    # don't remove; alacritty config uses this
   - "{{ terminal_customizations_nerd_fonts_base_url }}/FiraCode/Bold/FiraCodeNerdFontMono-Bold.ttf"
   - "{{ terminal_customizations_nerd_fonts_base_url }}/FiraCode/Regular/FiraCodeNerdFontMono-Regular.ttf"             # don't remove; tilix profile uses this
   - "{{ terminal_customizations_nerd_fonts_base_url }}/JetBrainsMono/Ligatures/BoldItalic/JetBrainsMonoNerdFontMono-BoldItalic.ttf"
