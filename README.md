@@ -2,14 +2,14 @@
 
 ## Description
 
-This repo contains Ansible playbooks to configure your system as a development machine upon a clean install.
+This repository contains Ansible playbooks to configure your system as a development machine after a clean installation.
 
-The playbooks should run in Debian based system with minor modifications but was only tested with:
+The playbooks should run in a Debian-based system with minor modifications, but were only tested with:
 
 - **Ubuntu 24.04 LTS (Noble Numbat)**
 - **Linux Mint 22 (Wilma)**
 
-For other versions of Ubuntu, change to the other branches of this git repo. Other versions include Ubuntu 18.04 LTS, 20.04 LTS, 22.04 LTS.
+For other versions of Ubuntu, change to the other branches of this git repo. Other versions include Ubuntu 18.04 LTS, 20.04 LTS, and 22.04 LTS.
 
 ![bullet-train-zsh-theme](.images/screenshot-bullet-train.png)
 
@@ -25,9 +25,9 @@ Screenshot above is using *p10k zsh theme with tmux*
 
 ---
 
-## What gets installed and cofigured?
+## What gets installed and configured?
 
-I am a DevSecOps Engineer and my daily job include working with AWS, docker, ansible, terraform, etc. So if you are in a similar profession the installed system will suit your needs. It is also easy to extend using Ansible roles.
+I am a DevSecOps Engineer, and my daily job involves working with AWS, Docker, Ansible, Terraform, and other tools. So if you are in a similar profession, the installed system will suit your needs. It is also easy to extend using Ansible roles.
 
 Summary of packages that get installed and configured based on roles:
 
@@ -106,9 +106,9 @@ Summary of packages that get installed and configured based on roles:
 
 ---
 
-## Step 0 | Pre-requisites for running the ansible playbooks
+## Step 0 | Pre-requisites for running the Ansible playbooks
 
-On the system which you are going to setup using Ansible, perform these steps.
+On the system which you are going to set up using Ansible, perform these steps.
 
 You need to install `ansible` and `git` before running the playbooks. You can either install it using `pip` or `apt`.
 
@@ -153,8 +153,8 @@ After all is done, give your laptop a new life by rebooting.
 
 ## Known Issues
 
-- If the ansible playbook halts after completing a few tasks, simply run the playbook again. Since most of the tasks are idempotent, running the playbook multiple times won't break anything.
-- If your terminal shows any weird characters because of installing one of the zsh themes, simply change the font to a suitable Nerd Font from the terminal's settings.
+- If the Ansible playbook halts after completing a few tasks, rerun the playbook. Since most of the tasks are idempotent, running the playbook multiple times won't break anything.
+- If your terminal shows any weird characters because of installing one of the zsh themes, change the font to a suitable Nerd Font from the terminal's settings.
 - If you do not like the fuzzy finder completions in your terminal, remove or comment out the `#fzf` lines in your `~/.zshrc` (this is not a known issue but a feature)
 - When launching the terminal, having some [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh) plugins like **docker** enabled results in the error: `tee: <snip> No such file or directory`. You can easily fix this by creating the missing directory manually: `mkdir -p ~/.antigen/bundles/robbyrussell/oh-my-zsh/cache/completions`.
 
@@ -168,6 +168,6 @@ You are more than welcome to send any pull requests. However, the intention of t
 
 ## Donations
 
-If you think my work helped you in some way saving you time and effort, I am happy to receive any amount of donation. However, the code in this repo is completely free; absolutely *no strings attached*.
+If my work has helped you in any way, saving you time and effort, I would be happy to receive a donation of any amount. However, the code in this repo is completely free; absolutely *no strings attached*.
 
 Bitcoin (BTC): `bc1qzlhpm94vtk2ht67etdutzcy2g5an5v6g36tp0m`
