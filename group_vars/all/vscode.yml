@@ -35,4 +35,9 @@ vscode_extensions:
   - Catppuccin.catppuccin-vsc          # Catppuccin theme
   - Catppuccin.catppuccin-vsc-icons    # Catppuccin icons
   - bierner.markdown-mermaid            # Mermaid diagrams in markdown preview
-#  - rust-lang.rust-analyzer            # Rust linter
+  - rust-lang.rust-analyzer            # Rust linter
+  - vadimcn.vscode-lldb                # Native debugger powered by LLDB. Debug C++, Rust and other compiled languages
+  - usernamehw.errorlens               # Improve highlighting of errors, warnings and other language diagnostics
+  - tamasfe.even-better-toml           # TOML support
+
+...
