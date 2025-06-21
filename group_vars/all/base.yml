@@ -1,181 +1,181 @@
 ---
 
 base_archiving_tools:
-  - arj
-  - cabextract
-  - file-roller
-  - mpack
-  - p7zip-full
-  - p7zip-rar
-  - rar
-  - sharutils
-  - unace
-  - unrar
-  - unzip
-  - uudeview
-  - zip
+  - arj            # ARJ archiver
+  - cabextract     # Extracts Microsoft cabinet files
+  - file-roller    # GNOME archive manager
+  - mpack          # MIME mail packer/unpacker
+  - p7zip-full     # 7z archive support
+  - p7zip-rar      # 7z archive with RAR support
+  - rar            # RAR archive tool
+  - sharutils      # Shell archiving utilities
+  - unace          # Extracts ACE archives
+  - unrar          # Extracts RAR archives
+  - unzip          # Extracts ZIP archives
+  - uudeview       # UUencoded file decoder
+  - zip            # ZIP archive tool
 
 base_productivity_tools:
-  - libreoffice
-  - foliate
-  - qalc
+  - libreoffice    # Office suite
+  - foliate        # Ebook reader
+  - qalc           # Calculator (Qalculate)
 
 base_system_tools:
-  - fatrace
-  - fdupes
-  - gnome-calculator
-  - gufw
-  - nala    # alternative package management tool to apt/apt-get
-  - progress
-  - pwgen
-#  - syncthing
-  - qemu-utils
-  - trash-cli  # command line tools to interact with files/directories in rubbish bin
+  - fatrace        # File access tracing
+  - fdupes         # Duplicate file finder
+  - gnome-calculator # GNOME calculator
+  - gufw           # GUI for Uncomplicated Firewall
+  - nala           # Alternative package management tool to apt/apt-get
+  - progress       # Shows progress for coreutils
+  - pwgen          # Password generator
+#  - syncthing     # File synchronization tool
+  - qemu-utils     # QEMU utilities
+  - trash-cli      # Command line trash management
 
 base_system_tools_laptop:
-#  - cpufrequtils
-#  - powertop
-  - tlp
-  - tlp-rdw
-  - acpi-call-dkms  # for newer ThinkPads (X220/T420 and later)
-#  - tp-smapi-dkms  # for older ThinkPads
+#  - cpufrequtils   # CPU frequency utilities
+#  - powertop       # Power consumption monitor
+  - tlp            # Advanced power management
+  - tlp-rdw        # TLP radio device wizard
+  - acpi-call-dkms # Kernel module for ThinkPads
+#  - tp-smapi-dkms  # Kernel module for older ThinkPads
 
 base_download_tools:
-  - aria2
-  - axel
-  - transmission
-  - speedtest-cli
-  - wget
-  - yt-dlp
+  - aria2          # Download utility
+  - axel           # Download accelerator
+  - transmission   # BitTorrent client
+  - speedtest-cli  # Internet speed test
+  - wget           # Network downloader
+  - yt-dlp         # YouTube video downloader
 
 base_developer_tools:
-  - 2to3
+  - 2to3              # Python 2 to 3 code translation tool
   - alacritty  # OpenGL terminal emulator
-  - android-tools-adb
-  - android-tools-fastboot
-  - ansible
-  - ansible-lint
-  - apostrophe
+  - android-tools-adb # Android Debug Bridge command-line tool
+  - android-tools-fastboot # Android bootloader flashing tool
+  - ansible           # IT automation tool
+  - ansible-lint      # Linter for Ansible playbooks
+  - apostrophe        # Markdown editor for GNOME
   - bat  # A cat(1) clone with wings
   - bats  # Bash Automated Testing System
-  - bats-assert
-  - bats-file
-  - bats-support
-  - bpython
-  - black
+  - bats-assert       # Assertion library for Bats
+  - bats-file         # File testing helpers for Bats
+  - bats-support      # Common helpers for Bats
+  - bpython           # Fancy interface to the Python interpreter
+  - black             # Python code formatter
   - btop  # Modern and colorful command line resource monitor that shows usage and stats
-  - cargo
-  - cloc
-  - clusterssh
-  - csvkit
-  - curl
-  - default-jre-headless
-  - dos2unix
-  - duf  # Disk Usage/Free Utility
-  - entr
-  - expect
-  - filezilla
-  - fonts-powerline
-  - fzf
-  - g++
-  - gawk
-  - geoip-bin
-  - git
-  - git-delta  # A syntax-highlighting pager for git, diff, and grep output
-  - git-extras
-  - gitg
-  - golang-go
-  - htop
-  - httpie
-  - inotify-tools
-  - ipython3
-  - jq
-  - kwalify
-  - makeself
-  - meld
-  - miller
-  - moreutils
-  - most
-  - mssh
-  - mtr-tiny
-  - ncat
-  - nmap
-  - nmon
-  - nodejs
-  - pandoc
-  - parallel
-  - pcre2-utils  # provides pcre2grep and pcre2test (perl-compatible regex)
-  - pipx
-  - pry
-  - pssh
-  - ptpython
-  #- puppet
-  #- puppet-lint
-  - pv
-  - pylint
-  - python3-cachecontrol
-  - python3-demjson  # provides jsonlint-py3 for json lint
-  - python3-jmespath
-  - python3-pep8
-  - python3-pip
-  - python3-poetry
-  - ranger
-  - rclone
-  - recode
-  - remmina
-  - rename
-  - ripgrep  # launch using rg from the cli
-  - ruby
-  - ruby-dev
-  - shellcheck
-  - siege
-  - socat
-  - sshfs
-  - sshpass
-  - sshuttle
-  - stow  # symlink manager
-  - tcptraceroute  # traceroute implementation using TCP packets
-  - tig
-  - tilix  # A tiling terminal emulator for Linux using GTK+ 3
-  - tmux
-  - tmuxp
-  - tree
-  - uget
-  - xsel
-  - yamllint
-  - zeal
+  - cargo             # Rust package manager
+  - cloc              # Count lines of code
+  - clusterssh        # Cluster SSH tool
+  - csvkit           # Suite of utilities for converting to and working with CSV
+  - curl             # Command line tool for transferring data with URLs
+  - default-jre-headless # Java runtime environment (headless)
+  - dos2unix         # Convert text files from DOS to Unix format
+  - duf              # Disk Usage/Free Utility
+  - entr             # Run arbitrary commands when files change
+  - expect           # Automates interactive applications
+  - filezilla        # FTP client
+  - fonts-powerline  # Powerline fonts for statuslines and prompts
+  - fzf              # Command-line fuzzy finder
+  - g++              # GNU C++ compiler
+  - gawk             # GNU awk text processing
+  - geoip-bin        # Tools for IP geolocation
+  - git              # Distributed version control system
+  - git-delta        # A syntax-highlighting pager for git, diff, and grep output
+  - git-extras       # Git utilities and extensions
+  - gitg             # Git repository viewer
+  - golang-go        # Go programming language
+  - htop             # Interactive process viewer
+  - httpie           # User-friendly HTTP client
+  - inotify-tools    # File system event monitoring tools
+  - ipython3         # Interactive Python shell
+  - jq               # Command-line JSON processor
+  - kwalify          # YAML/JSON schema validator
+  - makeself         # Self-extractable archive creator
+  - meld             # Visual diff and merge tool
+  - miller           # CSV/TSV/JSON data processing tool
+  - moreutils        # Additional Unix utilities
+  - most             # Paging program
+  - mssh             # Manage multiple SSH sessions
+  - mtr-tiny         # Network diagnostic tool
+  - ncat             # Netcat networking utility
+  - nmap             # Network scanner
+  - nmon             # Performance monitor
+  - nodejs           # JavaScript runtime
+  - pandoc           # Universal document converter
+  - parallel         # Build and execute shell command lines from standard input
+  - pcre2-utils      # Provides pcre2grep and pcre2test (perl-compatible regex)
+  - pipx             # Install and run Python applications in isolated environments
+  - pry              # Interactive Ruby shell
+  - pssh             # Parallel SSH tool
+  - ptpython         # Advanced Python REPL
+#  - puppet           # Configuration management tool
+#  - puppet-lint      # Linter for Puppet manifests
+  - pv               # Pipe viewer
+  - pylint           # Python code static checker
+  - python3-cachecontrol # HTTP cache for requests
+  - python3-demjson  # Provides jsonlint-py3 for json lint
+  - python3-jmespath # JSON query language for Python
+  - python3-pep8     # Python style guide checker
+  - python3-pip      # Python package installer
+  - python3-poetry   # Python dependency management and packaging
+  - ranger           # Console file manager with VI key bindings
+  - rclone           # Command line program to manage files on cloud storage
+  - recode           # Character set conversion tool
+  - remmina          # Remote desktop client
+  - rename           # Perl-based file renaming utility
+  - ripgrep          # Launch using rg from the cli
+  - ruby             # Ruby programming language
+  - ruby-dev         # Header files for compiling Ruby extensions
+  - shellcheck       # Shell script static analysis tool
+  - siege            # HTTP load testing and benchmarking tool
+  - socat            # Multipurpose relay for bidirectional data transfer
+  - sshfs            # Mount remote directories over SSH
+  - sshpass          # Non-interactive SSH password provider
+  - sshuttle         # Transparent proxy server over SSH
+  - stow             # Symlink manager
+  - tcptraceroute    # Traceroute implementation using TCP packets
+  - tig              # Text-mode interface for git
+  - tilix            # A tiling terminal emulator for Linux using GTK+ 3
+  - tmux             # Terminal multiplexer
+  - tmuxp            # Tmux session manager
+  - tree             # Directory listing in tree format
+  - uget             # Download manager
+  - xsel             # Command-line X selection tool
+  - yamllint         # YAML linter
+  - zeal             # Offline documentation browser
 
 # uses pipx to install python pip packages in a virtualized environment
 base_developer_tools_pipx:
-  - ruff
-  - mitmproxy
+  - ruff             # Python linter
+  - mitmproxy        # Interactive HTTPS proxy
 
 base_virtualization_tools:
-  - virtualbox
-  - virtualbox-ext-pack
-  - docker.io
-  - docker-compose
+  - virtualbox           # x86 virtualization
+  - virtualbox-ext-pack  # Extension pack for VirtualBox
+  - docker.io            # Docker engine
+  - docker-compose       # Define and run multi-container applications
 
 base_media_tools:
-  - ffmpeg
-  - gimp
-  - imagemagick
-  - libimage-exiftool-perl
-  - mediainfo
-  - soundconverter
-  - totem
-#  - ubuntu-restricted-extras
-  - vlc
+  - ffmpeg               # Audio/video converter
+  - gimp                 # GNU Image Manipulation Program
+  - imagemagick          # Image conversion and editing
+  - libimage-exiftool-perl # Read/write meta information in files
+  - mediainfo             # Display technical/media info
+  - soundconverter        # Audio file converter
+  - totem                 # GNOME video player
+#  - ubuntu-restricted-extras # Commonly used media codecs
+  - vlc                   # Media player
 
 golang_tools:
-  - github.com/charmbracelet/glow@latest  # Render markdown on the CLI
-  - oss.terrastruct.com/d2@latest  # d2 diagram as code tool
-  - github.com/jesseduffield/lazygit@latest  # simple terminal UI for git commands
-  - github.com/wagoodman/dive@latest  # tool for exploring each layer in a docker image
+  - github.com/charmbracelet/glow@latest        # Render markdown on the CLI
+  - oss.terrastruct.com/d2@latest               # d2 diagram as code tool
+  - github.com/jesseduffield/lazygit@latest     # Simple terminal UI for git commands
+  - github.com/wagoodman/dive@latest            # Tool for exploring each layer in a docker image
 
 rust_cargo_tools:
   - tlrc  # tldr client
-  - xh  # drop-in replacement for httpie/http
+  - xh    # Drop-in replacement for httpie/http
 
 base_permanent_night_light:
   night_light_enabled: false              # set this to true for permanently turning on night light

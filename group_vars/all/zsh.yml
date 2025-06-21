@@ -1,8 +1,8 @@
 ---
 
 zsh_packages:
-  - zsh
-  - zsh-doc
-  - zsh-antigen
+  - zsh           # Z shell, a powerful interactive shell
+  - zsh-doc       # Documentation for Z shell
+  - zsh-antigen   # Plugin manager for Zsh
 
 ...

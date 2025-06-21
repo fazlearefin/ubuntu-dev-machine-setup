@@ -1,11 +1,11 @@
 ---
 
 security_packages:
-  - clamav
-  - clamtk-gnome    # right click clamav scan access from nautilus
-#  - clamav-daemon  # for real time scanning; not installed in case it impacts performance
-  - firejail
-  - apparmor-profiles
-  - apparmor-utils
+  - clamav            # Antivirus engine
+  - clamtk-gnome      # Right click clamav scan access from nautilus
+#  - clamav-daemon    # For real time scanning; not installed in case it impacts performance
+  - firejail          # Sandbox for running applications
+  - apparmor-profiles # AppArmor security profiles
+  - apparmor-utils    # AppArmor utilities
 
 ...

@@ -5,8 +5,8 @@ hashicorp_apt_key_url: "https://apt.releases.hashicorp.com/gpg"
 hashicorp_apt_key_keyring: "/etc/apt/trusted.gpg.d/hashicorp.gpg"
 
 hashicorp_packages:
-  - vagrant
-  - terraform
-  - packer
+  - vagrant     # HashiCorp Vagrant, development environments
+  - terraform   # HashiCorp Terraform, infrastructure as code
+  - packer      # HashiCorp Packer, machine image builder
 
 ...

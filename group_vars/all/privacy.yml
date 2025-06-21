@@ -1,9 +1,9 @@
 ---
 
 privacy_packages:
-  - mat2
-  - proxychains4
-  - tor
-  - torsocks
+  - mat2         # Metadata removal tool
+  - proxychains4 # Forces any TCP connection through proxy
+  - tor          # Anonymity network
+  - torsocks     # Use SOCKS proxy for applications
 
 ...
