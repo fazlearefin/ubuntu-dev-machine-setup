@@ -5,36 +5,34 @@ vscode_apt_key_url: "https://packages.microsoft.com/keys/microsoft.asc"
 vscode_apt_key_keyring: "/etc/apt/trusted.gpg.d/microsoft.gpg"
 
 vscode_extensions:
-  - aaron-bond.better-comments
-  - formulahendry.code-runner
-  - donjayamanne.githistory
-  - eamodio.gitlens
-  - golang.Go
-  - vincaslt.highlight-matching-tag
-  - oderwat.indent-rainbow
-  - yzhang.markdown-all-in-one
-  - ms-python.python
-  - ms-python.vscode-pylance
-  - humao.rest-client
-  - Gruntfuggly.todo-tree
-  - shardulm94.trailing-spaces
-  - vscodevim.vim
-  - visualstudioexptteam.vscodeintellicode
-  - ms-azuretools.vscode-docker
-  - vscode-icons-team.vscode-icons
-  - esbenp.prettier-vscode
-  - redhat.vscode-yaml
-  - danielroedl.meld-diff
-  - davidanson.vscode-markdownlint
-  - hashicorp.terraform
-  - gera2ld.markmap-vscode  # create mindmap from markdown file
-  - terrastruct.d2  # diagram scripting language that turns text to diagrams
-  - rangav.vscode-thunder-client  # lightweight rest client for testing APIs
-  - redhat.ansible  # ansible extension
-  - timonwong.shellcheck  # shellcheck linter for sh/bash/dash/ksh scripts
-  - Catppuccin.catppuccin-vsc  # Catppuccin theme
-  - Catppuccin.catppuccin-vsc-icons  # Catppuccin icons
-  - bierner.markdown-mermaid  # markdown preview mermaid support
-#  - rust-lang.rust-analyzer  # rust linter
-
-...
+  - aaron-bond.better-comments         # Improve code commenting
+  - formulahendry.code-runner         # Run code snippets or files
+  - donjayamanne.githistory           # View git log/history
+  - eamodio.gitlens                   # Git supercharged
+  - golang.Go                         # Go language support
+  - vincaslt.highlight-matching-tag   # Highlight matching HTML/XML tags
+  - oderwat.indent-rainbow            # Colorize indentation levels
+  - yzhang.markdown-all-in-one        # Markdown tools and preview
+  - ms-python.python                  # Python language support
+  - ms-python.vscode-pylance          # Fast Python language server
+  - humao.rest-client                 # Send HTTP requests and view responses
+  - Gruntfuggly.todo-tree             # Manage and view TODO comments
+  - shardulm94.trailing-spaces        # Highlight trailing whitespace
+  - vscodevim.vim                     # Vim keybindings
+  - visualstudioexptteam.vscodeintellicode # AI-assisted code completions
+  - ms-azuretools.vscode-docker        # Docker support
+  - vscode-icons-team.vscode-icons     # File icons
+  - esbenp.prettier-vscode             # Code formatter
+  - redhat.vscode-yaml                 # YAML language support
+  - danielroedl.meld-diff              # Meld diff integration
+  - davidanson.vscode-markdownlint      # Markdown linter
+  - hashicorp.terraform                # Terraform language support
+  - gera2ld.markmap-vscode             # Create mindmap from markdown file
+  - terrastruct.d2                     # Diagram scripting language
+  - rangav.vscode-thunder-client       # Lightweight REST client
+  - redhat.ansible                     # Ansible extension
+  - timonwong.shellcheck               # Shell script linter
+  - Catppuccin.catppuccin-vsc          # Catppuccin theme
+  - Catppuccin.catppuccin-vsc-icons    # Catppuccin icons
+  - bierner.markdown-mermaid            # Mermaid diagrams in markdown preview
+#  - rust-lang.rust-analyzer            # Rust linter
