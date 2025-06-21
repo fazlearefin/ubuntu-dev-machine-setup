@@ -1,6 +1,7 @@
 ---
 
-- hosts: localhost
+- name: Privacy Setup
+  hosts: localhost
   roles:
     - privacy
 

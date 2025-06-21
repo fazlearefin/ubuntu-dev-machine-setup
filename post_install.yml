@@ -1,13 +1,13 @@
 ---
-
-- hosts: localhost
+- name: Post Install Tasks
+  hosts: localhost
   tasks:
-    - name: remove redundant packages
+    - name: Remove redundant packages
       ansible.builtin.apt:
-          autoremove: true
-          force_apt_get: true
+        autoremove: true
+        force_apt_get: true
 
-    - name: display post install message
+    - name: Display post install message
       ansible.builtin.debug:
         msg:
           - 'Manual steps left to do:'
@@ -16,5 +16,4 @@
           - '- enable WebRender in firefox; about:config in address bar, then manually set the gfx.webrender.enabled or gfx.webrender.all pref to true (optional)'
           - '- cache in RAM only in firefox: about:config, browser.cache.disk.enable -> false, browser.cache.memory.enable -> true, browser.cache.memory.capacity -> 1048576, browser.cache.memory.max_entry_size -> 51200, verify using about:cache in address bar (optional)'
           - '- Reboot your system'
-
 ...

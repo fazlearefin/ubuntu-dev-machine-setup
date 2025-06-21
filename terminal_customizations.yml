@@ -1,7 +1,6 @@
 ---
-
-- hosts: localhost
+- name: Terminal Customizations Setup
+  hosts: localhost
   roles:
     - terminal_customizations
-
 ...

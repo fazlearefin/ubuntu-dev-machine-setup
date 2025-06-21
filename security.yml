@@ -1,8 +1,6 @@
-
 ---
-
-- hosts: localhost
+- name: Security Setup
+  hosts: localhost
   roles:
     - security
-
 ...

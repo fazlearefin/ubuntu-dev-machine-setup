@@ -1,6 +1,6 @@
 ---
-
-- hosts: localhost
+- name: VSCode Setup
+  hosts: localhost
   roles:
     - vscode
 
