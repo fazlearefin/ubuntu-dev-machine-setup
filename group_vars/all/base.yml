@@ -21,6 +21,7 @@ base_productivity_tools:
   - qalc           # Calculator (Qalculate)
 
 base_system_tools:
+  - flatpak        # Application virtualization framework
   - fatrace        # File access tracing
   - fdupes         # Duplicate file finder
   - gnome-calculator # GNOME calculator
