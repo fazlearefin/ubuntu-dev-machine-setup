@@ -244,6 +244,18 @@
   become: true
   become_user: "{{ local_username }}"
 
+- name: Ensure Flathub Flatpak remote is configured (system-wide)
+  become: true
+  block:
+    - name: Check if Flathub remote exists (system-wide)
+      ansible.builtin.command: flatpak remotes
+      register: flatpak_remotes
+
+    - name: Add Flathub Flatpak remote (system-wide)
+      ansible.builtin.command: >
+        flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+      when: "'flathub' not in flatpak_remotes.stdout"
+
 # obsidian markdown editor
 - block:
     - name: Fetch latest Obsidian .deb file URL
