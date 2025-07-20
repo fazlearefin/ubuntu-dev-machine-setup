@@ -185,6 +185,9 @@ base_permanent_night_light:
   night_light_schedule_to: 24
   night_light_temperature: 4200
 
-base_obsidian_download_base_url: "https://api.github.com/repos/obsidianmd/obsidian-releases/releases/latest"
+base_flatpakrepo_url: https://dl.flathub.org/repo/flathub.flatpakrepo
+
+base_flatpak_flathub_apps:
+  - md.obsidian.Obsidian  # personal knowledge base and note-taking software application that operates on Markdown files
 
 ...

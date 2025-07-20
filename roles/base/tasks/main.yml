@@ -244,33 +244,16 @@
   become: true
   become_user: "{{ local_username }}"
 
-- name: Ensure Flathub Flatpak remote is configured (system-wide)
-  become: true
-  block:
-    - name: Check if Flathub remote exists (system-wide)
-      ansible.builtin.command: flatpak remotes
-      register: flatpak_remotes
-
-    - name: Add Flathub Flatpak remote (system-wide)
-      ansible.builtin.command: >
-        flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-      when: "'flathub' not in flatpak_remotes.stdout"
-
-# obsidian markdown editor
 - block:
-    - name: Fetch latest Obsidian .deb file URL
-      ansible.builtin.uri:
-        url: "{{ base_obsidian_download_base_url }}"
-        return_content: true
-      register: obsidian_latest_release
+    - name: Add the flathub flatpak repository remote to the user installation
+      community.general.flatpak_remote:
+        name: flathub
+        state: present
+        flatpakrepo_url: "{{ base_flatpakrepo_url }}"
 
-    - name: Extract Obsidian .deb file URL
-      ansible.builtin.set_fact:
-        obsidian_deb_url:  "{{ obsidian_latest_release.json.assets | selectattr('name', 'match', '.*\\.deb$') | map(attribute='browser_download_url') | first }}"
-
-    - name: Download and install Obsidian
-      ansible.builtin.apt:
-        deb: "{{ obsidian_deb_url }}"
+    - name: Install flatpak apps from flathub
+      community.general.flatpak:
+        name: "{{ base_flatpak_flathub_apps }}"
         state: present
 
 ...
