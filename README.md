@@ -7,7 +7,7 @@ This repository contains Ansible playbooks to configure your system as a develop
 The playbooks should run in a Debian-based system with minor modifications, but were only tested with:
 
 - **Ubuntu 24.04 LTS (Noble Numbat)**
-- **Linux Mint 22 (Wilma)/22.1 (Xia)**
+- **Linux Mint 22 (Wilma)/22.2 (Zara)**
 
 For other versions of Ubuntu, change to the other branches of this git repo. Other versions include Ubuntu 18.04 LTS, 20.04 LTS, and 22.04 LTS.
 
