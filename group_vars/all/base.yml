@@ -26,6 +26,7 @@ base_system_tools:
   - fdupes         # Duplicate file finder
   - gnome-calculator # GNOME calculator
   - gufw           # GUI for Uncomplicated Firewall
+  - lsd            # the next gen `ls` command
   - nala           # Alternative package management tool to apt/apt-get
   - progress       # Shows progress for coreutils
   - pwgen          # Password generator
