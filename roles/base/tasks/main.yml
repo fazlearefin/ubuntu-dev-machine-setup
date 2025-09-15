@@ -11,7 +11,7 @@
       ansible.builtin.copy:
         src: /usr/share/systemd/tmp.mount
         dest: /lib/systemd/system/tmp.mount
-        remote_src: True
+        remote_src: true
 
     - name: create dir /etc/systemd/system/tmp.mount.d (3/5)
       ansible.builtin.file:
@@ -210,7 +210,7 @@
         state: directory
         owner: root
         group: root
-        mode: 0755
+        mode: '0755'
 
     - name: create override.conf file for fstrim.timer
       ansible.builtin.copy:
@@ -218,7 +218,7 @@
         dest: /etc/systemd/system/fstrim.timer.d/override.conf
         owner: root
         group: root
-        mode: 0644
+        mode: '0644'
 
     - name: force systemd to reread configs
       ansible.builtin.systemd:
@@ -255,5 +255,14 @@
       community.general.flatpak:
         name: "{{ base_flatpak_flathub_apps }}"
         state: present
+
+- name: Make vim the default editor instead of nano
+  ansible.builtin.copy:
+    dest: /etc/profile.d/vim.sh
+    content: |
+      # Set vim as the default editor
+      export EDITOR=/usr/bin/vim
+      export VISUAL=/usr/bin/vim
+    mode: '0644'
 
 ...
