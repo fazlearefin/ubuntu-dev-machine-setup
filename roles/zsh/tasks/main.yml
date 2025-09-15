@@ -1,41 +1,45 @@
 ---
 
-- name: install zsh and other related packages
+- name: Install zsh and other related packages
   ansible.builtin.apt:
     name: "{{ zsh_packages }}"
     state: present
     force_apt_get: true
 
-- name: change user's shell to zsh
+- name: Change user's shell to zsh
   ansible.builtin.user:
     name: "{{ local_username }}"
     shell: /bin/zsh
 
 - block:
-    - name: check if .zshrc exists in user's home dir
+    - name: Check if .zshrc exists in user's home dir
       ansible.builtin.stat:
         path: "~{{ local_username }}/.zshrc"
       register: dotzshrc
 
-    - name: backup .zshrc if it exists
+    - name: Backup .zshrc if it exists
       ansible.builtin.copy:
         src: "~{{ local_username }}/.zshrc"
         dest: "~{{ local_username }}/.zshrc.orig"
+        mode: '0644'
       when: dotzshrc.stat.exists
 
-    - name: copy the sample .zshrc file
+    - name: Copy the sample .zshrc file
       ansible.builtin.copy:
         src: .zshrc
         dest: "~{{ local_username }}/.zshrc"
+        mode: '0644'
         force: true
 
-    - name: copy sample .shell_aliases and .shell_functions files
+    - name: Copy the sample .shell_*.sh files
       ansible.builtin.copy:
         src: "{{ item }}"
         dest: "~{{ local_username }}/{{ item }}"
+        mode: '0644'
       with_items:
-        - .shell_aliases
-        - .shell_functions
+        - .shell_aliases.sh
+        - .shell_functions.sh
+        - .shell_variables.sh
   become: true
   become_user: "{{ local_username }}"
 
