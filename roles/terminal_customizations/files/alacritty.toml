@@ -1,6 +1,5 @@
 # Config reference: https://alacritty.org/config-alacritty.html
 
-[general]
 import = ["~/.config/alacritty/themes/themes/tokyo-night.toml"]
 
 [env]
@@ -79,6 +78,6 @@ action = "DecreaseFontSize"
 key = "Minus"
 mods = "Control"
 
-[terminal.shell]
+[shell]
 program = "/usr/bin/zsh"
 args = ["-c", "if ! tmux ls 2>/dev/null | grep -q -E '^main.*attached'; then tmux attach -t main || tmux new -s main; else /usr/bin/zsh; fi"]
