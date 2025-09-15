@@ -29,25 +29,25 @@ base_system_tools:
   - nala           # Alternative package management tool to apt/apt-get
   - progress       # Shows progress for coreutils
   - pwgen          # Password generator
-#  - syncthing     # File synchronization tool
+  # - syncthing     # File synchronization tool
   - qemu-utils     # QEMU utilities
-  - trash-cli      # Command line trash management
+  # - trash-cli      # Command line trash management
 
 base_system_tools_laptop:
-#  - cpufrequtils   # CPU frequency utilities
-#  - powertop       # Power consumption monitor
+  # - cpufrequtils   # CPU frequency utilities
+  # - powertop       # Power consumption monitor
   - tlp            # Advanced power management
   - tlp-rdw        # TLP radio device wizard
   - acpi-call-dkms # Kernel module for ThinkPads
-#  - tp-smapi-dkms  # Kernel module for older ThinkPads
+  # - tp-smapi-dkms  # Kernel module for older ThinkPads
 
 base_download_tools:
   - aria2          # Download utility
   - axel           # Download accelerator
   - transmission   # BitTorrent client
-  - speedtest-cli  # Internet speed test
+  # - speedtest-cli  # Internet speed test
   - wget           # Network downloader
-  - yt-dlp         # YouTube video downloader
+  # - yt-dlp         # YouTube video downloader
 
 base_developer_tools:
   - 2to3              # Python 2 to 3 code translation tool
@@ -102,16 +102,16 @@ base_developer_tools:
   - ncat             # Netcat networking utility
   - nmap             # Network scanner
   - nmon             # Performance monitor
-  - nodejs           # JavaScript runtime
+  # - nodejs           # JavaScript runtime
   - pandoc           # Universal document converter
   - parallel         # Build and execute shell command lines from standard input
   - pcre2-utils      # Provides pcre2grep and pcre2test (perl-compatible regex)
   - pipx             # Install and run Python applications in isolated environments
-  - pry              # Interactive Ruby shell
+  # - pry              # Interactive Ruby shell
   - pssh             # Parallel SSH tool
   - ptpython         # Advanced Python REPL
-#  - puppet           # Configuration management tool
-#  - puppet-lint      # Linter for Puppet manifests
+  # - puppet           # Configuration management tool
+  # - puppet-lint      # Linter for Puppet manifests
   - pv               # Pipe viewer
   - pylint           # Python code static checker
   - python3-cachecontrol # HTTP cache for requests
@@ -120,7 +120,7 @@ base_developer_tools:
   - python3-pep8     # Python style guide checker
   - python3-pip      # Python package installer
   - python3-poetry   # Python dependency management and packaging
-  - ranger           # Console file manager with VI key bindings
+  # - ranger           # Console file manager with VI key bindings
   - rclone           # Command line program to manage files on cloud storage
   - recode           # Character set conversion tool
   - remmina          # Remote desktop client
@@ -134,7 +134,7 @@ base_developer_tools:
   - sshfs            # Mount remote directories over SSH
   - sshpass          # Non-interactive SSH password provider
   - sshuttle         # Transparent proxy server over SSH
-  - stow             # Symlink manager
+  # - stow             # Symlink manager
   - tcptraceroute    # Traceroute implementation using TCP packets
   - tig              # Text-mode interface for git
   - tilix            # A tiling terminal emulator for Linux using GTK+ 3
@@ -144,7 +144,7 @@ base_developer_tools:
   - uget             # Download manager
   - xsel             # Command-line X selection tool
   - yamllint         # YAML linter
-  - zeal             # Offline documentation browser
+  # - zeal             # Offline documentation browser
 
 # uses pipx to install python pip packages in a virtualized environment
 base_developer_tools_pipx:
@@ -165,14 +165,14 @@ base_media_tools:
   - mediainfo             # Display technical/media info
   - soundconverter        # Audio file converter
   - totem                 # GNOME video player
-#  - ubuntu-restricted-extras # Commonly used media codecs
+  # - ubuntu-restricted-extras # Commonly used media codecs
   - vlc                   # Media player
 
 golang_tools:
   - github.com/charmbracelet/glow@latest        # Render markdown on the CLI
-  - oss.terrastruct.com/d2@latest               # d2 diagram as code tool
+  # - oss.terrastruct.com/d2@latest               # d2 diagram as code tool
   - github.com/jesseduffield/lazygit@latest     # Simple terminal UI for git commands
-  - github.com/wagoodman/dive@latest            # Tool for exploring each layer in a docker image
+  # - github.com/wagoodman/dive@latest            # Tool for exploring each layer in a docker image
 
 rust_cargo_tools:
   - tlrc  # tldr client
