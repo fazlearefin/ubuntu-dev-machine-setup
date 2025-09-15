@@ -32,6 +32,7 @@ base_system_tools:
   - pwgen          # Password generator
   # - syncthing     # File synchronization tool
   - qemu-utils     # QEMU utilities
+  - qrencode
   # - trash-cli      # Command line trash management
 
 base_system_tools_laptop:
