@@ -5,28 +5,40 @@ terminal_customizations_nerd_fonts_base_url: "https://github.com/ryanoasis/nerd-
 
 # nerd fonts from https://github.com/ryanoasis/nerd-fonts
 terminal_customizations_nerd_fonts:
+  # CascadiaCode
   - "{{ terminal_customizations_nerd_fonts_base_url }}/CascadiaCode/CaskaydiaCoveNerdFontMono-BoldItalic.ttf"    # don't remove; alacritty config uses this
   - "{{ terminal_customizations_nerd_fonts_base_url }}/CascadiaCode/CaskaydiaCoveNerdFontMono-Bold.ttf"          # don't remove; alacritty config uses this
   - "{{ terminal_customizations_nerd_fonts_base_url }}/CascadiaCode/CaskaydiaCoveNerdFontMono-Italic.ttf"     # don't remove; alacritty config uses this
   - "{{ terminal_customizations_nerd_fonts_base_url }}/CascadiaCode/CaskaydiaCoveNerdFontMono-Regular.ttf"    # don't remove; alacritty config uses this
+
+  # FiraCode
   - "{{ terminal_customizations_nerd_fonts_base_url }}/FiraCode/Bold/FiraCodeNerdFontMono-Bold.ttf"
   - "{{ terminal_customizations_nerd_fonts_base_url }}/FiraCode/Regular/FiraCodeNerdFontMono-Regular.ttf"             # don't remove; tilix profile uses this
+
+  # JetBrainsMono (Ligatures)
   - "{{ terminal_customizations_nerd_fonts_base_url }}/JetBrainsMono/Ligatures/BoldItalic/JetBrainsMonoNerdFontMono-BoldItalic.ttf"
   - "{{ terminal_customizations_nerd_fonts_base_url }}/JetBrainsMono/Ligatures/Bold/JetBrainsMonoNerdFontMono-Bold.ttf"
   - "{{ terminal_customizations_nerd_fonts_base_url }}/JetBrainsMono/Ligatures/Italic/JetBrainsMonoNerdFontMono-Italic.ttf"
   - "{{ terminal_customizations_nerd_fonts_base_url }}/JetBrainsMono/Ligatures/Regular/JetBrainsMonoNerdFontMono-Regular.ttf"
+  # JetBrainsMono (No Ligatures)
   - "{{ terminal_customizations_nerd_fonts_base_url }}/JetBrainsMono/NoLigatures/BoldItalic/JetBrainsMonoNLNerdFontMono-BoldItalic.ttf"
   - "{{ terminal_customizations_nerd_fonts_base_url }}/JetBrainsMono/NoLigatures/Bold/JetBrainsMonoNLNerdFontMono-Bold.ttf"
   - "{{ terminal_customizations_nerd_fonts_base_url }}/JetBrainsMono/NoLigatures/Italic/JetBrainsMonoNLNerdFontMono-Italic.ttf"
   - "{{ terminal_customizations_nerd_fonts_base_url }}/JetBrainsMono/NoLigatures/Regular/JetBrainsMonoNLNerdFontMono-Regular.ttf"
+
+  # SourceCodePro
   - "{{ terminal_customizations_nerd_fonts_base_url }}/SourceCodePro/SauceCodeProNerdFontMono-BoldItalic.ttf"
   - "{{ terminal_customizations_nerd_fonts_base_url }}/SourceCodePro/SauceCodeProNerdFontMono-Bold.ttf"
   - "{{ terminal_customizations_nerd_fonts_base_url }}/SourceCodePro/SauceCodeProNerdFontMono-Italic.ttf"
   - "{{ terminal_customizations_nerd_fonts_base_url }}/SourceCodePro/SauceCodeProNerdFontMono-Regular.ttf"
+
+  # VictorMono
   - "{{ terminal_customizations_nerd_fonts_base_url }}/VictorMono/Bold-Italic/VictorMonoNerdFontMono-BoldItalic.ttf"
   - "{{ terminal_customizations_nerd_fonts_base_url }}/VictorMono/Bold/VictorMonoNerdFontMono-Bold.ttf"
   - "{{ terminal_customizations_nerd_fonts_base_url }}/VictorMono/Italic/VictorMonoNerdFontMono-Italic.ttf"
   - "{{ terminal_customizations_nerd_fonts_base_url }}/VictorMono/Regular/VictorMonoNerdFontMono-Regular.ttf"
+
+  # DroidSansMono
   - "{{ terminal_customizations_nerd_fonts_base_url }}/DroidSansMono/DroidSansMNerdFontMono-Regular.otf"
 
 terminal_customizations_tmux_plugin_repo: "https://github.com/tmux-plugins/tpm"
