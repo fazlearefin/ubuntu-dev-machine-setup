@@ -1,6 +1,0 @@
----
-- name: Vim Setup
-  hosts: localhost
-  roles:
-    - vim
-...

@@ -144,6 +144,7 @@ base_developer_tools:
   - tmuxp            # Tmux session manager
   - tree             # Directory listing in tree format
   - uget             # Download manager
+  - vim
   - xsel             # Command-line X selection tool
   - yamllint         # YAML linter
   # - zeal             # Offline documentation browser
