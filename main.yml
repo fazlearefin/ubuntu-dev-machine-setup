@@ -2,7 +2,7 @@
 - import_playbook: base.yml
 - import_playbook: zsh.yml
 - import_playbook: terminal_customizations.yml
-- import_playbook: neovim.yml
+# - import_playbook: neovim.yml
 - import_playbook: vscode.yml
 - import_playbook: privacy.yml
 - import_playbook: security.yml
